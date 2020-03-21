@@ -1,0 +1,21 @@
+header#site-header {
+    background: none;
+    .header-inner{
+        &.section-inner {
+            padding-top: 50px;
+        }
+        .header-navigation-wrapper{
+            ul.top-icons{
+                margin: 0px;
+                .container-call-top {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}   
+@media (min-width: 768px){
+.home header#site-header {
+    margin-bottom: -170px !important;
+}
+}

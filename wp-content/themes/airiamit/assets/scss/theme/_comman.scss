@@ -1,0 +1,19 @@
+.container{
+    padding: 0 15px;
+    @media (min-width: 1600px){
+        max-width: 1520px;
+        width: 100%;
+        padding: 0px;
+    }
+}
+@media (min-width: 700px){
+    .section-inner {
+        width: 100%;
+    }
+    .entry-content {
+     @include fontSize(30px);
+     p{
+        line-height: normal;
+     }
+    }
+}
