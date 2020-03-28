@@ -3,16 +3,16 @@
  * Custom page walker for this theme.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
+ * @subpackage Airi_Amit
  * @since 1.0.0
  */
 
-if ( ! class_exists( 'TwentyTwenty_Walker_Page' ) ) {
+if ( ! class_exists( 'airiamit_Walker_Page' ) ) {
 	/**
 	 * CUSTOM PAGE WALKER
 	 * A custom walker for pages.
 	 */
-	class TwentyTwenty_Walker_Page extends Walker_Page {
+	class airiamit_Walker_Page extends Walker_Page {
 
 		/**
 		 * Outputs the beginning of the current element in the tree.
@@ -128,10 +128,10 @@ if ( ! class_exists( 'TwentyTwenty_Walker_Page' ) ) {
 				if ( isset( $args['pages_with_children'][ $page->ID ] ) ) {
 
 					$toggle_target_string = '.menu-modal .page-item-' . $page->ID . ' > ul';
-					$toggle_duration      = twentytwenty_toggle_duration();
+					$toggle_duration      = airiamit_toggle_duration();
 
 					// Add the sub menu toggle.
-					$args['list_item_after'] .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="screen-reader-text">' . __( 'Show sub menu', 'airiamit' ) . '</span>' . twentytwenty_get_theme_svg( 'chevron-down' ) . '</button>';
+					$args['list_item_after'] .= '<button class="toggle sub-menu-toggle fill-children-current-color" data-toggle-target="' . $toggle_target_string . '" data-toggle-type="slidetoggle" data-toggle-duration="' . absint( $toggle_duration ) . '" aria-expanded="false"><span class="screen-reader-text">' . __( 'Show sub menu', 'airiamit' ) . '</span>' . airiamit_get_theme_svg( 'chevron-down' ) . '</button>';
 
 				}
 

@@ -15,21 +15,14 @@ get_header();
 
 		while ( have_posts() ) {
 			the_post();
-
+            get_template_part( 'template-parts/content-home' );
             ?>
-
-                <div class="entry-content">
+                <div class="container">
                     <div class="alignfull no-padding no-margin">
-
                         <?php the_content(); ?>
-
                     </div>
-
                 </div>
-
-            </article>
-
-
+            
             <?php 
 		}
 	}

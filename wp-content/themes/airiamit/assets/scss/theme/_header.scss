@@ -2,7 +2,7 @@ header#site-header {
     background: none;
     .header-inner{
         &.section-inner {
-            padding-top: 50px;
+           
         }
         .header-navigation-wrapper{
             ul.top-icons{
@@ -12,10 +12,19 @@ header#site-header {
                 }
             }
         }
+        .primary-menu{
+            a{
+                color: $gray-5e5;
+            }
+        }
+        .toggle path{
+            color: $green;
+        }
     }
 }   
 @media (min-width: 768px){
 .home header#site-header {
-    margin-bottom: -170px !important;
+    margin-bottom: -230px !important;
+    padding: 50px 0;
 }
 }

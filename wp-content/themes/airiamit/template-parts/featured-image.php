@@ -3,7 +3,7 @@
  * Displays the featured image
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
+ * @subpackage Airi_Amit
  * @since 1.0.0
  */
 

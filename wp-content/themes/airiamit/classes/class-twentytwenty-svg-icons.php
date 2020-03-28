@@ -3,16 +3,16 @@
  * Custom icons for this theme.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
+ * @subpackage Airi_Amit
  * @since 1.0.0
  */
 
-if ( ! class_exists( 'TwentyTwenty_SVG_Icons' ) ) {
+if ( ! class_exists( 'airiamit_SVG_Icons' ) ) {
 	/**
 	 * SVG ICONS CLASS
 	 * Retrieve the SVG code for the specified icon. Based on a solution in Twenty Nineteen.
 	 */
-	class TwentyTwenty_SVG_Icons {
+	class airiamit_SVG_Icons {
 		/**
 		 * GET SVG CODE
 		 * Get the SVG code for the specified icon
@@ -61,7 +61,7 @@ if ( ! class_exists( 'TwentyTwenty_SVG_Icons' ) ) {
 			}
 			foreach ( $regex_map as $icon => $regex ) {
 				if ( preg_match( $regex, $uri ) ) {
-					return twentytwenty_get_theme_svg( $icon, 'social' );
+					return airiamit_get_theme_svg( $icon, 'social' );
 				}
 			}
 			return null;

@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
+ * @subpackage Airi_Amit
  * @since 1.0.0
  */
 
@@ -15,7 +15,7 @@
  * Generate a unique ID for each form and a string containing an aria-label if
  * one was passed to get_search_form() in the args array.
  */
-$unique_id = twentytwenty_unique_id( 'search-form-' );
+$unique_id = airiamit_unique_id( 'search-form-' );
 
 $aria_label = ! empty( $args['label'] ) ? 'aria-label="' . esc_attr( $args['label'] ) . '"' : '';
 ?>

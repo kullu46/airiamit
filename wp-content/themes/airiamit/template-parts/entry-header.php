@@ -3,7 +3,7 @@
  * Displays the post header
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
+ * @subpackage Airi_Amit
  * @since 1.0.0
  */
 
@@ -27,7 +27,7 @@ if ( is_singular() ) {
 			 *
 			 * @param bool   Whether to show the categories in header, Default true.
 			 */
-		$show_categories = apply_filters( 'twentytwenty_show_categories_in_entry_header', true );
+		$show_categories = apply_filters( 'airiamit_show_categories_in_entry_header', true );
 
 		if ( true === $show_categories && has_category() ) {
 			?>
@@ -67,7 +67,7 @@ if ( is_singular() ) {
 		}
 
 		// Default to displaying the post meta.
-		twentytwenty_the_post_meta( get_the_ID(), 'single-top' );
+		airiamit_the_post_meta( get_the_ID(), 'single-top' );
 		?>
 
 	</div><!-- .entry-header-inner -->

@@ -1,53 +1,82 @@
-.home-banner{
-    padding-top: 50px;
-    @media (min-width: 992px){
-        padding-top: 155px;
+.cover-header{
+    .cover-header-inner-wrapper{
+        @include justify-content(center);
+    
     }
-    @media (min-width: 1440px){
-        padding-top: 255px;
+    .entry-header{
+        h2{
+            color: $gray-5e5;
+            font-size: 50px;
+            text-align: left;
+            span{
+                color: $gray-b8b;
+                &.center-text{
+                    display: block;
+                    color: $green;
+                    strong{
+                        color: $green;
+                        font-size: 110px;
+                        sup{
+                            color: $green;
+                        }
+                    }
+
+                }
+            }
+        }
     }
-}
-.filterBtn .wpb_text_column.wpb_content_element {
-    margin: 0;
-    display: inline-block;
-    width: 100%;
 }
 
-.filterBtn .wpb_text_column.wpb_content_element .project-filters {
-    margin: 0;
-    @media (max-width: 767px){
-        float: left;
-    }
-}
-.main-project-list{
-    .vc_column-inner{
-        padding: 0px !important;
-    }
-}
-.vip-projects {
-    padding: 0px;
-    .vip-projects-list{
-        .project {
-            margin-bottom: 30px;
-            .image{
-                margin-bottom: 25px;
-                min-height: 400px;
-                position: relative;
-                .image-inner{
-                    img{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        object-position: center;
-                        position: absolute;
-                        left: 0;
-                        right: 0;
+.investor-form.vc_row{
+    border-radius: 15px;
+    margin: 0px;
+    margin-top: 60px;
+    .vc_column-inner {
+        padding-left: 7px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0;
+        .wpb_single_image {
+            margin-bottom: 0;
+            margin-top: -60px;
+        }
+        .form-container{
+            @include flexbox;
+            .wpcf7-form-control-wrap{
+                padding: 0px 15px;
+                width: 100%;
+                @media (min-width: 768px) {
+                    width: 33%;
+                }
+                input{
+                    border: none;
+                    background: none;
+                    outline: none;
+                    font-family: 'Averta Demo';
+                    font-weight: 400;
+                    color: $white;
+                    border-bottom:1px solid  #6bd89a;
+                    @include input-placeholder{
+                        color: $white;
+                        font-style: normal;       
+                        opacity: 1;                 
+                    }
+                    &:focus{
+                        @include input-placeholder{
+                            opacity: 0;
+                        }
                     }
                 }
-                
             }
-            .title{
-                letter-spacing: 0.9px;
+            .btn{
+                border-radius: 8px;
+                background-color:$white;
+                color: $gray-5e5;
+                text-decoration: none;
+                text-transform: capitalize;
+                box-shadow: 0px 4px 9px hsla(0, 0%, 5%, 0.16);
+                &:hover{
+                    opacity: 0.8;
+                }
             }
         }
     }

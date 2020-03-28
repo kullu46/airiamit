@@ -5,19 +5,19 @@
  * @link https://make.wordpress.org/core/2016/11/30/starter-content-for-themes-in-4-7/
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
+ * @subpackage Airi_Amit
  * @since 1.0.0
  */
 
 /**
  * Function to return the array of starter content for the theme.
  *
- * Passes it through the `twentytwenty_starter_content` filter before returning.
+ * Passes it through the `airiamit_starter_content` filter before returning.
  *
  * @since  Twenty Twenty 1.0.0
  * @return array a filtered array of args for the starter_content.
  */
-function twentytwenty_get_starter_content() {
+function airiamit_get_starter_content() {
 
 	// Define and register starter content to showcase the theme on new sites.
 	$starter_content = array(
@@ -212,6 +212,6 @@ function twentytwenty_get_starter_content() {
 	 *
 	 * @param array $starter_content Array of starter content.
 	 */
-	return apply_filters( 'twentytwenty_starter_content', $starter_content );
+	return apply_filters( 'airiamit_starter_content', $starter_content );
 
 }

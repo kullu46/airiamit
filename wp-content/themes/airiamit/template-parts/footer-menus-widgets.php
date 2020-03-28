@@ -4,7 +4,7 @@
  * Visually, this output is presented as part of the footer element.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
+ * @subpackage Airi_Amit
  * @since 1.0.0
  */
 
@@ -20,7 +20,7 @@ if ( $has_footer_menu || $has_social_menu || $has_sidebar_1 || $has_sidebar_2 ) 
 
 	<div class="footer-nav-widgets-wrapper header-footer-group">
 
-		<div class="footer-inner section-inner">
+		<div class="container">
 
 			<?php
 
@@ -92,19 +92,13 @@ if ( $has_footer_menu || $has_social_menu || $has_sidebar_1 || $has_sidebar_2 ) 
 
 						<?php if ( $has_sidebar_1 ) { ?>
 
-							<div class="footer-widgets column-one grid-item">
+							<div class="footer-widgets">
 								<?php dynamic_sidebar( 'sidebar-1' ); ?>
 							</div>
 
 						<?php } ?>
 
-						<?php if ( $has_sidebar_2 ) { ?>
-
-							<div class="footer-widgets column-two grid-item">
-								<?php dynamic_sidebar( 'sidebar-2' ); ?>
-							</div>
-
-						<?php } ?>
+						
 
 					</div><!-- .footer-widgets-wrapper -->
 

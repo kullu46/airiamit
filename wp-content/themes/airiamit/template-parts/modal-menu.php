@@ -3,7 +3,7 @@
  * Displays the menu icon and modal
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
+ * @subpackage Airi_Amit
  * @since 1.0.0
  */
 
@@ -19,7 +19,7 @@
 
 				<button class="toggle close-nav-toggle fill-children-current-color" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".menu-modal">
 					<span class="toggle-text"><?php _e( 'Close Menu', 'airiamit' ); ?></span>
-					<?php twentytwenty_the_theme_svg( 'cross' ); ?>
+					<?php airiamit_the_theme_svg( 'cross' ); ?>
 				</button><!-- .nav-toggle -->
 
 				<?php
@@ -93,7 +93,7 @@
 									'match_menu_classes' => true,
 									'show_toggles'       => true,
 									'title_li'           => false,
-									'walker'             => new TwentyTwenty_Walker_Page(),
+									'walker'             => new airiamit_Walker_Page(),
 								)
 							);
 

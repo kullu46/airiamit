@@ -4,7 +4,7 @@
  * Twenty Twenty theme.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
+ * @subpackage Airi_Amit
  * @since 1.0.0
  */
 
@@ -60,7 +60,7 @@ if ( $comments ) {
 			<?php
 			wp_list_comments(
 				array(
-					'walker'      => new TwentyTwenty_Walker_Comment(),
+					'walker'      => new airiamit_Walker_Comment(),
 					'avatar_size' => 120,
 					'style'       => 'div',
 				)

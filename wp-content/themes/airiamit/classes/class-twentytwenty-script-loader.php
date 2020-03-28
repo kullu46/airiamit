@@ -7,15 +7,15 @@
  * Based on a solution in WP Rig.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
+ * @subpackage Airi_Amit
  * @since 1.0.0
  */
 
-if ( ! class_exists( 'TwentyTwenty_Script_Loader' ) ) {
+if ( ! class_exists( 'airiamit_Script_Loader' ) ) {
 	/**
 	 * A class that provides a way to add `async` or `defer` attributes to scripts.
 	 */
-	class TwentyTwenty_Script_Loader {
+	class airiamit_Script_Loader {
 
 		/**
 		 * Adds async/defer attributes to enqueued / registered scripts.

@@ -82,17 +82,17 @@ Copyright (c) 2018-2019 WordPress.org
 License: GPLv2
 Source: https://wordpress.org/themes/twentynineteen/
 Included as part of the following classes and functions:
-- TwentyTwenty_SVG_Icons
-- twentytwenty_the_theme_svg()
-- twentytwenty_get_theme_svg()
-- twentytwenty_nav_menu_social_icons()
+- airiamit_SVG_Icons
+- airiamit_the_theme_svg()
+- airiamit_get_theme_svg()
+- airiamit_nav_menu_social_icons()
 
 Code from Twenty Seventeen
 Copyright (c) 2016-2019 WordPress.org
 License: GPLv2
 Source: https://wordpress.org/themes/twentyseventeen/
 Included as part of the following classes and functions:
-- twentytwenty_unique_id()
+- airiamit_unique_id()
 
 Underscores 
 https://underscores.me/, (C) 2012-2019 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

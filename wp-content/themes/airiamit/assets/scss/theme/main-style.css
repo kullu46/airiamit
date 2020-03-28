@@ -1,9 +1,14 @@
-.container, .footer-nav-widgets-wrapper .footer-inner, footer[role="contentinfo"] .section-inner {
+body {
+  font-family: 'Averta Demo';
+}
+
+.container {
   padding: 0 15px;
+  font-family: 'Averta Demo';
 }
 
 @media (min-width: 1600px) {
-  .container, .footer-nav-widgets-wrapper .footer-inner, footer[role="contentinfo"] .section-inner {
+  .container {
     max-width: 1520px;
     width: 100%;
     padding: 0px;
@@ -23,12 +28,42 @@
   }
 }
 
-header#site-header {
-  background: none;
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
-header#site-header .header-inner.section-inner {
-  padding-top: 50px;
+.row .col-sm-12 {
+  width: 100%;
+  padding: 0px 15px;
+}
+
+.row .col-sm-4 {
+  width: 100%;
+  padding: 0px 15px;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .row .col-sm-4 {
+    width: 33.33%;
+  }
+}
+
+.row .col-sm-8 {
+  width: 100%;
+  padding: 0px 15px;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .row .col-sm-8 {
+    width: 67%;
+  }
+}
+
+header#site-header {
+  background: none;
 }
 
 header#site-header .header-inner .header-navigation-wrapper ul.top-icons {
@@ -39,197 +74,287 @@ header#site-header .header-inner .header-navigation-wrapper ul.top-icons .contai
   font-weight: 700;
 }
 
+header#site-header .header-inner .primary-menu a {
+  color: #5e5e5e;
+}
+
+header#site-header .header-inner .toggle path {
+  color: #2dcb73;
+}
+
 @media (min-width: 768px) {
   .home header#site-header {
-    margin-bottom: -170px !important;
+    margin-bottom: -230px !important;
+    padding: 50px 0;
   }
 }
 
-.home-banner {
-  padding-top: 50px;
+.cover-header .cover-header-inner-wrapper {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  justify-content: center;
 }
 
-@media (min-width: 992px) {
-  .home-banner {
-    padding-top: 155px;
-  }
+.cover-header .entry-header h2 {
+  color: #5e5e5e;
+  font-size: 50px;
+  text-align: left;
 }
 
-@media (min-width: 1440px) {
-  .home-banner {
-    padding-top: 255px;
-  }
+.cover-header .entry-header h2 span {
+  color: #b8b8b8;
 }
 
-.filterBtn .wpb_text_column.wpb_content_element {
-  margin: 0;
-  display: inline-block;
-  width: 100%;
+.cover-header .entry-header h2 span.center-text {
+  display: block;
+  color: #2dcb73;
 }
 
-.filterBtn .wpb_text_column.wpb_content_element .project-filters {
-  margin: 0;
+.cover-header .entry-header h2 span.center-text strong {
+  color: #2dcb73;
+  font-size: 110px;
 }
 
-@media (max-width: 767px) {
-  .filterBtn .wpb_text_column.wpb_content_element .project-filters {
-    float: left;
-  }
+.cover-header .entry-header h2 span.center-text strong sup {
+  color: #2dcb73;
 }
 
-.main-project-list .vc_column-inner {
-  padding: 0px !important;
-}
-
-.vip-projects {
-  padding: 0px;
-}
-
-.vip-projects .vip-projects-list .project {
-  margin-bottom: 30px;
-}
-
-.vip-projects .vip-projects-list .project .image {
-  margin-bottom: 25px;
-  min-height: 400px;
-  position: relative;
-}
-
-.vip-projects .vip-projects-list .project .image .image-inner img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-.vip-projects .vip-projects-list .project .title {
-  letter-spacing: 0.9px;
-}
-
-.footer-nav-widgets-wrapper {
-  border-top: 1px solid #ddd;
-}
-
-.footer-nav-widgets-wrapper .footer-inner .footer-widgets-outer-wrapper .widget-title {
-  font-size: 40px;
-  color: #000;
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  letter-spacing: 0.8px;
-}
-
-.footer-nav-widgets-wrapper .footer-inner .footer-widgets-outer-wrapper form {
-  padding: 0px;
-  border: none;
-}
-
-.footer-nav-widgets-wrapper .footer-inner .footer-widgets-outer-wrapper form label {
-  margin-bottom: 30px;
-}
-
-.footer-nav-widgets-wrapper .footer-inner .footer-widgets-outer-wrapper form input {
-  height: 65px;
-}
-
-@media (min-width: 1440px) {
-  .footer-nav-widgets-wrapper .footer-inner .footer-widgets-outer-wrapper form input {
-    height: 75px;
-  }
-}
-
-.footer-nav-widgets-wrapper .footer-inner .footer-widgets-outer-wrapper form input, .footer-nav-widgets-wrapper .footer-inner .footer-widgets-outer-wrapper form textarea {
-  -webkit-box-shadow: 3.392px 2.12px 38px 0px rgba(0, 0, 0, 0.06);
-  box-shadow: 3.392px 2.12px 38px 0px rgba(0, 0, 0, 0.06);
-  border-radius: 5px;
-  border: none;
-}
-
-.footer-nav-widgets-wrapper .footer-inner .footer-widgets-outer-wrapper form span.wpcf7-list-item.first {
-  margin-left: 0;
-}
-
-.footer-nav-widgets-wrapper .footer-inner .footer-widgets-outer-wrapper form .wpcf7-submit {
+.investor-form.vc_row {
+  border-radius: 15px;
+  margin: 0px;
   margin-top: 60px;
-  padding: 25px;
-  min-width: 190px;
-  background-color: #3a7af2;
 }
 
-footer[role="contentinfo"] {
-  padding: 20px 0px;
-  background: #212121;
+.investor-form.vc_row .vc_column-inner {
+  padding-left: 7px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0;
 }
 
-footer[role="contentinfo"] .section-inner {
+.investor-form.vc_row .vc_column-inner .wpb_single_image {
+  margin-bottom: 0;
+  margin-top: -60px;
+}
+
+.investor-form.vc_row .vc_column-inner .form-container {
   display: -webkit-box;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -moz-align-items: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  -moz-justify-content: space-between;
-  justify-content: space-between;
-  padding: 0px;
 }
 
-footer[role="contentinfo"] .section-inner .footer-copyright {
-  font-size: 15px;
-  color: #ffffff;
+.investor-form.vc_row .vc_column-inner .form-container .wpcf7-form-control-wrap {
+  padding: 0px 15px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .investor-form.vc_row .vc_column-inner .form-container .wpcf7-form-control-wrap {
+    width: 33%;
+  }
+}
+
+.investor-form.vc_row .vc_column-inner .form-container .wpcf7-form-control-wrap input {
+  border: none;
+  background: none;
+  outline: none;
+  font-family: 'Averta Demo';
   font-weight: 400;
-  letter-spacing: 0.5px;
-}
-
-@media (max-width: 991px) {
-  footer[role="contentinfo"] .section-inner .footer-copyright {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 991px) {
-  footer[role="contentinfo"] .section-inner .footer-right-links {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-footer[role="contentinfo"] .section-inner .footer-right-links li {
-  display: inline-block;
-  margin: 0px;
-}
-
-footer[role="contentinfo"] .section-inner .footer-right-links li a {
-  font-size: 15px;
   color: #ffffff;
+  border-bottom: 1px solid  #6bd89a;
 }
 
-.footer-contact strong a {
-  color: #000;
+.investor-form.vc_row .vc_column-inner .form-container .wpcf7-form-control-wrap input.placeholder {
+  color: #ffffff;
+  font-style: normal;
+  opacity: 1;
+}
+
+.investor-form.vc_row .vc_column-inner .form-container .wpcf7-form-control-wrap input:-moz-placeholder {
+  color: #ffffff;
+  font-style: normal;
+  opacity: 1;
+}
+
+.investor-form.vc_row .vc_column-inner .form-container .wpcf7-form-control-wrap input::-moz-placeholder {
+  color: #ffffff;
+  font-style: normal;
+  opacity: 1;
+}
+
+.investor-form.vc_row .vc_column-inner .form-container .wpcf7-form-control-wrap input:-ms-input-placeholder {
+  color: #ffffff;
+  font-style: normal;
+  opacity: 1;
+}
+
+.investor-form.vc_row .vc_column-inner .form-container .wpcf7-form-control-wrap input::-webkit-input-placeholder {
+  color: #ffffff;
+  font-style: normal;
+  opacity: 1;
+}
+
+.investor-form.vc_row .vc_column-inner .form-container .wpcf7-form-control-wrap input:focus.placeholder {
+  opacity: 0;
+}
+
+.investor-form.vc_row .vc_column-inner .form-container .wpcf7-form-control-wrap input:focus:-moz-placeholder {
+  opacity: 0;
+}
+
+.investor-form.vc_row .vc_column-inner .form-container .wpcf7-form-control-wrap input:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+.investor-form.vc_row .vc_column-inner .form-container .wpcf7-form-control-wrap input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.investor-form.vc_row .vc_column-inner .form-container .wpcf7-form-control-wrap input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.investor-form.vc_row .vc_column-inner .form-container .btn {
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #5e5e5e;
   text-decoration: none;
-  font-weight: 600;
-  font-family: "Poppins";
+  text-transform: capitalize;
+  -webkit-box-shadow: 0px 4px 9px rgba(13, 13, 13, 0.16);
+          box-shadow: 0px 4px 9px rgba(13, 13, 13, 0.16);
 }
 
-.footer-contact h3 {
-  font-size: 35.668px;
-  font-family: "Playfair Display";
+.investor-form.vc_row .vc_column-inner .form-container .btn:hover {
+  opacity: 0.8;
+}
+
+.footer-nav-widgets-wrapper {
+  background: #fbfbfb;
+}
+
+.footer-nav-widgets-wrapper .container .footer-widgets-outer-wrapper .widget-title {
+  font-size: 40px;
+  color: #5e5e5e;
+  font-family: 'Averta Demo', serif;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}
+
+.footer-nav-widgets-wrapper .container .footer-widgets-outer-wrapper p {
+  color: #5e5e5e;
+}
+
+.footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap {
+  width: 100%;
+}
+
+.footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap input, .footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap textarea {
+  border: none;
+  background: none;
+  outline: none;
+  font-family: 'Averta Demo';
   font-weight: 400;
+  color: #5e5e5e;
+  border-bottom: 1px solid  #ebebeb;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.footer-contact .top-icons {
-  float: none;
+.footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap input.placeholder, .footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap textarea.placeholder {
+  color: #5e5e5e;
+  font-style: normal;
+  opacity: 1;
+}
+
+.footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap input:-moz-placeholder, .footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap textarea:-moz-placeholder {
+  color: #5e5e5e;
+  font-style: normal;
+  opacity: 1;
+}
+
+.footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap input::-moz-placeholder, .footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap textarea::-moz-placeholder {
+  color: #5e5e5e;
+  font-style: normal;
+  opacity: 1;
+}
+
+.footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap input:-ms-input-placeholder, .footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap textarea:-ms-input-placeholder {
+  color: #5e5e5e;
+  font-style: normal;
+  opacity: 1;
+}
+
+.footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap input::-webkit-input-placeholder, .footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap textarea::-webkit-input-placeholder {
+  color: #5e5e5e;
+  font-style: normal;
+  opacity: 1;
+}
+
+.footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap input:focus.placeholder, .footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap textarea:focus.placeholder {
+  opacity: 0;
+}
+
+.footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap input:focus:-moz-placeholder, .footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap textarea:focus:-moz-placeholder {
+  opacity: 0;
+}
+
+.footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap input:focus::-moz-placeholder, .footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap textarea:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+.footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap input:focus:-ms-input-placeholder, .footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap input:focus::-webkit-input-placeholder, .footer-nav-widgets-wrapper .container .form-container .wpcf7-form-control-wrap textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.footer-nav-widgets-wrapper .container .form-container .btn-submit {
+  border-radius: 8px;
+  background-color: #ffb129;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-family: 'Averta Demo', serif;
+  outline: none;
+  margin-top: 40px;
+  -webkit-box-shadow: 0px 4px 9px rgba(13, 13, 13, 0.16);
+          box-shadow: 0px 4px 9px rgba(13, 13, 13, 0.16);
+}
+
+.footer-nav-widgets-wrapper .container .form-container .btn-submit:hover {
+  opacity: 0.8;
+}
+
+.footer-nav-widgets-wrapper .container div.wpcf7-validation-errors, .footer-nav-widgets-wrapper .container div.wpcf7-acceptance-missing {
+  font-size: 14px;
+}
+
+footer.header-footer-group {
+  background: #2d2d2d;
+  padding: 10px;
+}
+
+footer.header-footer-group .footer-contact .social-icons-list {
+  list-style: none;
+  display: table;
+  margin: 0 auto;
+}
+
+footer.header-footer-group .footer-contact .social-icons-list li {
   display: inline-block;
+  margin: 0px 15px;
+}
+
+footer.header-footer-group .footer-contact .social-icons-list li a {
+  color: #4a4a4a;
+}
+
+footer.header-footer-group .footer-contact .social-icons-list li a:hover {
+  color: #2dcb73;
 }
 
 .vip-projects-single {
@@ -246,7 +371,7 @@ footer[role="contentinfo"] .section-inner .footer-right-links li a {
   text-align: left;
   font-weight: 700;
   font-style: normal;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Averta Demo', serif;
 }
 
 .vip-projects-single .project-big-title h3 {
@@ -254,7 +379,7 @@ footer[role="contentinfo"] .section-inner .footer-right-links li a {
   color: #000000;
   text-align: left;
   font-weight: 700;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Averta Demo', serif;
   font-style: normal;
 }
 

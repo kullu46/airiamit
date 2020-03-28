@@ -3,7 +3,7 @@
  * The template for displaying the 404 template in the Twenty Twenty theme.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
+ * @subpackage Airi_Amit
  * @since 1.0.0
  */
 

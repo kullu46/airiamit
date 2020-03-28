@@ -3,7 +3,7 @@
  * Displays the content when the cover template is used.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
+ * @subpackage Airi_Amit
  * @since 1.0.0
  */
 
@@ -61,7 +61,7 @@
 							 *
 							 * @param bool Whether to show the categories in article header, Default true.
 							 */
-							$show_categories = apply_filters( 'twentytwenty_show_categories_in_entry_header', true );
+							$show_categories = apply_filters( 'airiamit_show_categories_in_entry_header', true );
 
 							if ( true === $show_categories && has_category() ) {
 								?>
@@ -84,7 +84,7 @@
 								<div class="to-the-content-wrapper">
 
 									<a href="#post-inner" class="to-the-content fill-children-current-color">
-										<?php twentytwenty_the_theme_svg( 'arrow-down' ); ?>
+										<?php airiamit_the_theme_svg( 'arrow-down' ); ?>
 										<div class="screen-reader-text"><?php _e( 'Scroll Down', 'airiamit' ); ?></div>
 									</a><!-- .to-the-content -->
 
@@ -111,7 +111,7 @@
 									<?php
 								}
 
-								twentytwenty_the_post_meta( get_the_ID(), 'single-top' );
+								airiamit_the_post_meta( get_the_ID(), 'single-top' );
 
 							}
 							?>
@@ -144,7 +144,7 @@
 
 		edit_post_link();
 		// Single bottom post meta.
-		twentytwenty_the_post_meta( get_the_ID(), 'single-bottom' );
+		airiamit_the_post_meta( get_the_ID(), 'single-bottom' );
 
 		if ( is_single() ) {
 

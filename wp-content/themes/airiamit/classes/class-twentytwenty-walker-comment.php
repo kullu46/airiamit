@@ -3,16 +3,16 @@
  * Custom comment walker for this theme.
  *
  * @package WordPress
- * @subpackage Twenty_Twenty
+ * @subpackage Airi_Amit
  * @since 1.0.0
  */
 
-if ( ! class_exists( 'TwentyTwenty_Walker_Comment' ) ) {
+if ( ! class_exists( 'airiamit_Walker_Comment' ) ) {
 	/**
 	 * CUSTOM COMMENT WALKER
 	 * A custom walker for comments, based on the walker in Twenty Nineteen.
 	 */
-	class TwentyTwenty_Walker_Comment extends Walker_Comment {
+	class airiamit_Walker_Comment extends Walker_Comment {
 
 		/**
 		 * Outputs a comment in the HTML5 format.
@@ -112,7 +112,7 @@ if ( ! class_exists( 'TwentyTwenty_Walker_Comment' ) ) {
 						)
 					);
 
-					$by_post_author = twentytwenty_is_comment_by_post_author( $comment );
+					$by_post_author = airiamit_is_comment_by_post_author( $comment );
 
 					if ( $comment_reply_link || $by_post_author ) {
 						?>

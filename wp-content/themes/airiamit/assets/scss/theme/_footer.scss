@@ -1,101 +1,86 @@
 .footer-nav-widgets-wrapper{
-    border-top: 1px solid #ddd ;
-    .footer-inner{
-        @extend .container;
+    background: $gray-fbf;
+    .container{
         .footer-widgets-outer-wrapper{
             .widget-title{
                font-size: 40px;
-                color: #000;
-                font-family: 'Playfair Display', serif;
+               color:  $gray-5e5;
+                font-family: 'Averta Demo', serif;
                 font-weight: 500;
                 letter-spacing: 0.8px;
             }
-            form{
-                padding: 0px;
-                border: none;
-                label{
-                    margin-bottom: 30px;
-                }
-                input{
-                    height: 65px;
-                    @media (min-width: 1440px) {
-                        height: 75px;
-                    }
-                }
+            p{
+                color:  $gray-5e5;
+            }
+          
+        }
+        .form-container{
+            .wpcf7-form-control-wrap{
+                width: 100%;
                 input, textarea{
-                    @include custom-shadow(3.392px 2.12px 38px 0px rgba(0, 0, 0, 0.06));
-                    border-radius: 5px;
                     border: none;
-                }
-                span.wpcf7-list-item.first {
-                    margin-left: 0;
-                }
-                .wpcf7-submit{
-                    margin-top: 60px;
-                    padding: 25px;
-                    min-width: 190px;
-                    background-color: #3a7af2;
+                    background: none;
+                    outline: none;
+                    font-family: 'Averta Demo';
+                    font-weight: 400;
+                    color:  $gray-5e5;
+                    border-bottom:1px solid  #ebebeb;
+                    padding-left: 0;
+                    padding-right: 0;
+                    @include input-placeholder{
+                        color:  $gray-5e5;
+                        font-style: normal;       
+                        opacity: 1;                 
+                    }
+                    &:focus{
+                        @include input-placeholder{
+                            opacity: 0;
+                        }
+                    }
                 }
             }
+            .btn-submit{
+                border-radius: 8px;
+                background-color:$orange;
+                color: $white;
+                text-decoration: none;
+                text-transform: capitalize;
+                font-weight: 400;
+                font-family: 'Averta Demo', serif;
+                outline: none;
+                margin-top: 40px;
+                box-shadow: 0px 4px 9px hsla(0, 0%, 5%, 0.16);
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+            
+        }
+        div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
+            font-size: 14px;
         }
     }
 }
 
-footer{
-    &[role="contentinfo"]{
-        padding: 20px 0px;
-        background: #212121;
-        .section-inner{
-            @extend .container;
-            @include flexbox;
-            @include flex-wrap(wrap);
-            @include align-items(center);
-            @include justify-content (space-between);
-            padding: 0px;
-            .footer-copyright{
-                font-size: 15px;
-                color: #ffffff;
-                font-weight: 400;
-                letter-spacing: 0.5px;
-                @media (max-width: 991px) {
-                    width: 100%;
-                    text-align: center;
-                }
-            }
-            .footer-right-links{
-                @media (max-width: 991px) {
-                    width: 100%;
-                    text-align: center;
-                }
-                li{
-                    display: inline-block;
-                    margin: 0px;
-                    a{
-                        font-size: 15px;
-                        color: #ffffff;
+
+footer.header-footer-group{
+    background: $gray-2d2;
+    padding: 10px;
+    .footer-contact{
+        .social-icons-list{
+            list-style: none;
+            display: table;
+            margin: 0 auto;     
+            li{
+                display: inline-block;
+                margin: 0px 15px;
+                a{
+                    color: $gray-4a4;
+                    &:hover{
+                        color: $green;
                     }
                 }
             }
         }
-    }
-}
-
-.footer-contact{
-    strong{
-        a{
-            color: #000;
-             text-decoration: none;
-             font-weight: 600;
-             font-family: "Poppins";
-        }
-    }
-    h3{
-        font-size: 35.668px;
-        font-family: "Playfair Display";
-        font-weight: 400;
-    }
-    .top-icons{
-        float: none;
-        display: inline-block;
     }
 }
