@@ -2,7 +2,7 @@ header#site-header {
     background: none;
     .header-inner{
         &.section-inner {
-           
+            padding: 0px 15px;
         }
         .header-navigation-wrapper{
             ul.top-icons{
@@ -13,6 +13,11 @@ header#site-header {
             }
         }
         .primary-menu{
+            li.current-menu-item{
+                a{
+                    color: $green;
+                }
+            }
             a{
                 color: $gray-5e5;
             }
@@ -23,8 +28,18 @@ header#site-header {
     }
 }   
 @media (min-width: 768px){
-.home header#site-header {
+header#site-header {
     margin-bottom: -230px !important;
     padding: 50px 0;
 }
+}
+
+.inner-banner {
+    padding-bottom: 0px;
+    .cover-header.bg-image {
+        background-position: center 30%;
+    }
+    .cover-header-inner-wrapper.screen-height {
+        min-height: calc(60vh - 32px);
+    }
 }

@@ -7,7 +7,6 @@ body{
     @media (min-width: 1600px){
         max-width: 1520px;
         width: 100%;
-        padding: 0px;
     }
 }
 @media (min-width: 700px){
@@ -45,4 +44,10 @@ body{
             width: 67%;
         }
     }
+}
+
+.color-accent, .color-accent-hover:hover, .color-accent-hover:focus, :root .has-accent-color, .has-drop-cap:not(:focus):first-letter, .wp-block-button.is-style-outline, a{
+    color: $green;
+    text-decoration: none;
+    outline: none;
 }

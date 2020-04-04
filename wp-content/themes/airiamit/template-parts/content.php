@@ -13,16 +13,13 @@
 
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article <?php  post_class('col-md-6'); ?> id="post-<?php the_ID(); ?>">
 
 	<?php
-
-	get_template_part( 'template-parts/entry-header' );
-
 	if ( ! is_search() ) {
 		get_template_part( 'template-parts/featured-image' );
 	}
-
+	get_template_part( 'template-parts/entry-header' );
 	?>
 
 	<div class="post-inner <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; ?> ">
@@ -31,10 +28,13 @@
 
 			<?php
 			if ( is_search() || ! is_singular() && 'summary' === get_theme_mod( 'blog_content', 'full' ) ) {
-				the_excerpt();
+				echo wp_trim_words( get_the_content(), 40, '...' );
+				?> <a href="<?php the_permalink(); ?>">Read More</a> <?php
 			} else {
 				the_content( __( 'Continue reading', 'airiamit' ) );
 			}
+			
+
 			?>
 
 		</div><!-- .entry-content -->
@@ -92,3 +92,4 @@
 	?>
 
 </article><!-- .post -->
+

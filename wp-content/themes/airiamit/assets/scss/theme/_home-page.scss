@@ -1,13 +1,13 @@
 .cover-header{
     .cover-header-inner-wrapper{
         @include justify-content(center);
-    
     }
     .entry-header{
         h2{
             color: $gray-5e5;
             font-size: 50px;
             text-align: left;
+            padding: 0px 15px;
             span{
                 color: $gray-b8b;
                 &.center-text{
@@ -77,6 +77,145 @@
                 &:hover{
                     opacity: 0.8;
                 }
+            }
+        }
+    }
+}
+
+.testimonial-section{
+    .wpb_wrapper{
+        @include custom-shadow(0px 3px 29px 0px rgba(0, 0, 0, 0.05));
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .rt-col-md-12{
+        padding: 0px;
+    }
+    .single-item-wrapper{
+        @include flexbox;
+        @include flex-wrap(wrap);
+        @include align-items(center);
+        .profile-img-wrapper{
+            height: 330px;
+            position: relative;
+            width: 530px;
+            overflow: hidden;
+            border-bottom-right-radius: 260px;
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                @include bg-opacity($green, 0.4);
+                width: 100%;
+                height: 100%;
+                left: 0px;
+                top: 0;
+            }
+            img{
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                object-fit: cover;
+                height: 100%;
+                object-position: center;
+                @include filtercolor(hue-rotate, 430deg);
+            }
+        }
+        .item-content-wrapper{
+            width: calc(100% - 690px);
+            text-align: left;
+            position: relative;
+            margin: auto;
+            &:before{
+                content: '“';
+                font-size: 234.255px;
+                font-family: "Roboto";
+                color: $gray-5e5;
+                font-weight: bold;
+                position: absolute;
+                top: -40px;            
+            }
+            .author-name{
+                font-size: 25px;
+                font-family: "Averta Demo";
+                color: $green;
+                line-height: normal;
+                text-align: left;
+                min-height: auto;
+                padding: 0px;
+                margin: 0px;
+                padding-left: 100px;
+            }
+            .author-bio {
+                font-size: 22px;
+                font-family: "Averta Demo";
+                color: $gray-b8b !important;
+                line-height: normal;
+                text-align: left;
+                min-height: auto;
+                padding-left: 100px;
+              }
+              .item-content.entry-content{
+                text-align: left;
+                color: $gray-5e5;
+                padding: 0px;
+                margin: 0px;
+                width: 100%;
+                font-style: normal;
+                font-size: 28px;
+                margin: 14px;
+                margin-top: 30px;
+                line-height: 35px;
+                font-style: normal;
+                font-size: 28px;
+                p{
+                    color: $gray-5e5;
+                    text-align: left;
+                    padding: 0px;
+                    width: 100% !important;
+                    margin: 0;
+                    font-style: normal;
+                    font-size: 28px;
+                    line-height: 35px;
+                }
+              }
+        }
+       
+    }
+    .owl-nav {
+        position: absolute;
+        width: 100%;
+        top: 42%;
+        button.owl-prev {
+            float: left;
+        }
+        button.owl-next {
+            float: right;
+        }
+    }
+}
+
+.hot-pre-Construction{
+    h2.wpb_heading{
+        position: absolute;
+        bottom: 0px;
+        z-index: 9;
+        font-size: 25px;
+        color: $white;
+        padding: 20px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10%, #000000 100%);
+        width: 100%;
+    }
+    .wpb_wrapper{
+        position: relative;
+        .vc_single_image-wrapper{
+            height: 390px;
+            width: 100%;
+            position: relative;
+            img{
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
             }
         }
     }

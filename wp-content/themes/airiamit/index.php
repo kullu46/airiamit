@@ -72,16 +72,17 @@ get_header();
 		</header><!-- .archive-header -->
 
 		<?php
-	}
-
-	if ( have_posts() ) {
+	} ?>
+	<div class="container">
+	<div class="row">
+<?php	if ( have_posts() ) {
 
 		$i = 0;
 
 		while ( have_posts() ) {
 			$i++;
-			if ( $i > 1 ) {
-				echo '<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true" />';
+			if ( $i > 2 ) {
+				echo '</div><div class="row">';
 			}
 			the_post();
 
@@ -90,7 +91,8 @@ get_header();
 		}
 	} elseif ( is_search() ) {
 		?>
-
+		</div>
+</div>
 		<div class="no-search-results-form section-inner thin">
 
 			<?php

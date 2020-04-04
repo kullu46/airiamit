@@ -157,7 +157,7 @@ body {
 }
 
 #site-content {
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 
@@ -6389,101 +6389,6 @@ ul.top-icons li .social-icon.instagram{
     z-index: -10;
 }
 .header-inner{padding: 0;}
-.vip-projects .project {
-    padding-bottom: 20px;
-}
-.vip-projects .project .image {
-    border-radius: 4px;
-    overflow: hidden;
-}
-.vip-projects .project .title {
-	font-size: 25px;
-    font-weight: bold;
-    color: #000;
-    margin-top: 20px;
-	letter-spacing: 0.9px;
-	font-family: 'Averta Demo', sans-serif;
-}
-.vip-projects .project .subtitle {
-    font-size: 25px;
-    font-weight: bold;
-    color: #000;
-	margin-top: 4px;
-	margin-bottom: 10px;
-	letter-spacing: 0.9px;
-	font-family: 'Averta Demo', sans-serif;
-}
-.vip-projects .project .author {
-    font-size: 18px;
-}
-.vip-projects .project .author .by {
-    color: #0a6ca5;
-    font-weight: bold;
-    font-style: italic;
-}
-.vip-projects .project .description {
-	padding: 15px 0px;
-	font-size: 18px;
-    line-height: 35px;
-    padding-top: 33px;
-}
-.vip-projects .project .description .read-more {
-    font-size: 18px;
-    text-decoration: none;
-    color: #0a6ca5;
-}
-.no-style{
-	text-decoration: none;
-	color: #444;
-}
-.vip-projects .ajax-loader {
-    z-index: 99;
-    display: none;
-    position: absolute;
-    background: rgba(255,255,255,0.45);
-    width: 100%;
-    height: 100%;
-}
-.vip-projects .ajax-loader img {
-    margin: 40px auto;
-    min-width: 48px;
-}
-.vip-projects .no-results {
-    font-size: 18px;
-    margin: 18px auto;
-    color: #5f5353;
-    border-top: 1px solid #e8e6e6;
-    padding: 18px 0;
-}
-.project-filters-external {
-    position: relative;
-    float: left;
-    width: 100%;
-    display: block;
-}
-.project-filters {
-    margin: 0 auto;
-}
-.project-filters select[name="project[city]"] {
-    border: none;
-    background-color: #aaa;
-    color: #fff;
-	text-align: left;
-    padding: 10px 20px;
-    font-size: 22px;
-    font-weight: 600;
-    font-family: Averta Demo;
-    letter-spacing: 2px;
-}
-.project-filters .item-filter {
-    border: 1px solid #bbb;
-    border-radius: 4px;
-    background-color: #aaa;
-    float: none;
-    margin: 0 4px;
-    width: auto;
-    display: inline-block;
-}
 footer .section-inner {
     padding: 20px 0 10px 0;
 }
