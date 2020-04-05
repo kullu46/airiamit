@@ -2,7 +2,7 @@
 /**
  */
 
-get_header();
+get_header('single-new_homes');
 ?>
 
 <main id="site-content" role="main">
@@ -123,8 +123,38 @@ get_header();
 						</table>
 					</div>
 				<?php } ?>
-
-
+				
+				<?php 
+				
+				
+				$related_args = array(
+						'post_type' => 'new_homes',
+						'posts_per_page' => 10,
+						'post_status' => 'publish',
+						'post__not_in' => array( get_the_ID() ),
+						'orderby' => 'rand',
+						'meta_query' => array(
+							'relation' => 'AND',
+							array(
+								'key'	 	=> 'nh_location',
+								'value'	  	=> array(get_field('nh_location', get_the_ID())),
+								'compare' 	=> 'IN'
+							)
+						)
+					);
+				$related = get_posts( $related_args );
+				if(count($related) > 0){
+				?>
+					<div class="related-projects">
+						<?php foreach($related as $relatedItem){ ?>
+							<div class="related-project">
+								<a href="<?php echo get_permalink($relatedItem->ID); ?>" alt="<?php echo $relatedItem->post_title; ?>" title="<?php echo $relatedItem->post_title; ?>">
+									<?php echo get_the_post_thumbnail($relatedItem->ID, 'medium'); ?>
+								</a>
+							</div>
+						<?php } ?>
+					</div>
+				<?php } ?>
 			<?php } ?>
 		<?php } ?>
 	</div>
@@ -132,4 +162,45 @@ get_header();
 
 <?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
 
-<?php get_footer(); ?>
+<?php //get_footer(); ?>
+			<footer role="contentinfo" class="header-footer-group">
+				<div class="container">
+					<?php dynamic_sidebar( 'sidebar-2' ); ?>
+				</div>
+			</footer>
+		<?php wp_footer(); ?>
+		<style>
+		.owl-item {
+  float: left;
+}
+.owl-carousel {
+  overflow: hidden;
+}
+</style>
+		<link rel='stylesheet' id='vc_pageable_owl-carousel-css-css'  href='<?php echo get_site_url(); ?>/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/assets/owl.min.css' media='all' />
+		<link rel='stylesheet' id='tss-owl-carousel-css'  href='<?php echo get_site_url(); ?>/wp-content/plugins/testimonial-slider-and-showcase/assets/vendor/owl-carousel/owl.carousel.min.css?ver=1586072978' media='all' />
+		<link rel='stylesheet' id='tss-owl-carousel-theme-css'  href='<?php echo get_site_url(); ?>/wp-content/plugins/testimonial-slider-and-showcase/assets/vendor/owl-carousel/owl.theme.default.min.css?ver=1586072978' media='all' />
+		<script src='<?php echo get_site_url(); ?>/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/owl.carousel.min.js?ver=6.1'></script>
+		<script type="text/javascript">
+		jQuery(document).ready(function(){
+			if(jQuery(document).find('.modal-projects-gallery-inner').length){
+				jQuery('.modal-projects-gallery-inner').vcOwlCarousel({
+					items: 1,
+					singleItem: true
+				});
+			}
+			if(jQuery(document).find('.related-projects').length){
+				jQuery('.related-projects').vcOwlCarousel({
+					items: 4,
+					singleItem: true
+				});
+			}
+			jQuery(document).on('keydown', function(event) {
+				if (event.key == "Escape" && jQuery(document).find('.modal-projects-gallery').is(":visible")) {
+					jQuery(document).find('.modal-projects-gallery').hide();
+				}
+			});
+		});
+		</script>
+	</body>
+</html>
