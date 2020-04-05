@@ -45,6 +45,10 @@
                     font-size: 18px;
                     text-decoration: none;
                     color: $green;
+                    &:hover{
+                        color: $drak-green;
+                        text-decoration: underline;
+                    }
                 }
             }
         }

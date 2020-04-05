@@ -13,7 +13,7 @@
 
 ?>
 
-<article <?php  post_class('col-md-6'); ?> id="post-<?php the_ID(); ?>">
+<article <?php  post_class('col-sm-6'); ?> id="post-<?php the_ID(); ?>">
 
 	<?php
 	if ( ! is_search() ) {
@@ -28,7 +28,7 @@
 
 			<?php
 			if ( is_search() || ! is_singular() && 'summary' === get_theme_mod( 'blog_content', 'full' ) ) {
-				echo wp_trim_words( get_the_content(), 40, '...' );
+				echo wp_trim_words( get_the_content(), 35, '...' );
 				?> <a href="<?php the_permalink(); ?>">Read More</a> <?php
 			} else {
 				the_content( __( 'Continue reading', 'airiamit' ) );

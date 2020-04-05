@@ -28,14 +28,14 @@
 		wp_body_open();
 		?>
 
-		<header id="site-header" class="header-footer-group" role="banner">
+		<header id="site-header" class="header-footer-group single-home-header" role="banner">
 
 			<div class="container header-inner section-inner">
 
 				<div class="header-titles-wrapper">
 
 					<div class="back-link">
-						Back to Projects
+						<a href="/airiamit/pre-construction"><i class="fas fa-arrow-left"></i> Back to Projects</a>
 					</div>
 				</div>
 				<div class="header-titles pull-right" style="float: right;">

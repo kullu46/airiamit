@@ -41,7 +41,7 @@
 		</div><!-- .cover-header -->
 	<?php } ?>
 	<?php if ($gallery_images) { ?>
-		<div class="projects-gallery">
+		<div class="projects-gallery container">
 			<?php $i=0; foreach($gallery_images as $img){ $i++;?>
 				<?php if($i < 5){ ?>
 					<div class="gallery-item">
@@ -49,21 +49,23 @@
 					</div>
 				<?php } ?>
 			<?php } ?>
+			<div class="view-all-projects"><a href="javascript:;" onClick="jQuery('.modal-projects-gallery').show();">See All Pictures <i class="fas fa-arrow-right"></i></a></div>
 		</div>
-		<div class="view-all-projects"><a href="javascript:;" onClick="jQuery('.modal-projects-gallery').show();">See All Pictures</a></div>
 	<?php } ?>
 </section>
 
 <?php if ($gallery_images) { ?>
-	<section class="modal-projects-gallery" style="display: none; height: 100%; width: 100%; position: fixed; top: 0; left: 0; z-index: 99999; background: #fff;">
+	<section class="modal-projects-gallery" style="display: none; height: 100%; width: 100%; position: fixed; top: 0; left: 0; z-index: 99999;">
+	<div class="modal-projects-gallery-inner-wrap">
 		<div class="modal-projects-gallery-inner">
 			<?php foreach($gallery_images as $img){ ?>
 				<div class="gallery-item">
 					<img src="<?php echo $img['url']; ?>"/>
 				</div>
-			<?php } ?>
+			<?php } ?>			
 		</div>
 		<a class="close-icon" onclick="jQuery('.modal-projects-gallery').hide();" href="javascript:;">x</a>
+		</div>
 	</section>
 <?php } ?>
 

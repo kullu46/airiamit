@@ -6,7 +6,9 @@ get_header('single-new_homes');
 ?>
 
 <main id="site-content" role="main">
-	<div id="vip-projects-single" class="vip-projects-single container">
+	<div id="vip-projects-single" class="vip-projects-single">
+	<div class="single-gray-section">
+		<div class="container">
 		<?php
 
 		if ( have_posts() ) {
@@ -19,28 +21,34 @@ get_header('single-new_homes');
 					<h3><?php echo get_field('nh_subtitle'); ?></h3>
 				</div>
 				<div class="project-details">
-					<ul class="project-details-list">
-						<li><span>Currently:</span><?php echo get_field( 'nh_currently' ); ?></li>
-						<li><span>Location:</span><?php echo get_field( 'nh_location' ); ?></li>
-						<li><span>Bedrooms:</span><?php echo implode(",", get_field( 'nh_bedrooms' )); ?></li>
-						<!-- <li><span>SQFT:</span> <?php //echo get_field( 'nh_area' ); ?></li> -->
-						<li><span>Type:</span> <?php echo get_field( 'nh_type' ); ?></li>
-						<li><span>Closing Date:</span> <?php echo get_field( 'nh_closing_date' ); ?></li>
-						<li><span>Price Range:</span><?php echo get_field( 'nh_price_range' ); ?></li>
-					</ul>
+					<div class="row">
+						<div class="col-sm-8">
+							<ul class="project-details-list">
+								<li><span>Currently:</span><?php echo get_field( 'nh_currently' ); ?></li>
+								<li><span>Location:</span><?php echo get_field( 'nh_location' ); ?></li>
+								<li><span>Bedrooms:</span><?php echo implode(",", get_field( 'nh_bedrooms' )); ?></li>
+								<li><span>SQFT:</span> <?php echo get_field( 'nh_area' ); ?></li> 
+								<li><span>Type:</span> <?php echo get_field( 'nh_type' ); ?></li>
+								<li><span>Closing Date:</span> <?php echo get_field( 'nh_closing_date' ); ?></li>
+							</ul>
+						</div>
+						<div class="col-sm-4 price">
+							<span>Starting at</span><?php echo get_field( 'nh_price_range' ); ?>
+						</div>
+					</div>
 				</div>
-				<div class="project-image">
-					<?php get_template_part( 'template-parts/featured-image' ); ?>
-				</div>
-				<div class="project-Title_header">
+				<!-- <div class="project-image">
+					<?php //get_template_part( 'template-parts/featured-image' ); ?>
+				</div> -->
+				<!-- <div class="project-Title_header">
 					<div class="project-title">
-						<h4><?php the_title(); ?></h2>
-						<h5><?php echo get_field('nh_subtitle'); ?></h3>
+						<h4><?php //the_title(); ?></h2>
+						<h5><?php //echo get_field('nh_subtitle'); ?></h3>
 					</div>
 					<div class="project-navigation">
-						<?php get_template_part( 'template-parts/navigation' ); ?>
+						<?php //get_template_part( 'template-parts/navigation' ); ?>
 					</div>
-				</div>
+				</div> -->
 				
 				<?php 
 				$intro = get_field("nh_intro_text");
@@ -52,8 +60,9 @@ get_header('single-new_homes');
 				<div class="project-description">
 					<?php the_content(); ?>
 				</div>
-				
-
+				</div>
+				</div>
+				<div class="container">
 				<div class="project-features">
 					<h3>Features</h3>
 					<?php if( have_rows('nh_features') ): ?>
@@ -68,7 +77,7 @@ get_header('single-new_homes');
 					</ul>
 					<?php endif; ?>
 				</div>
-
+				
 				<?php $siteplan = get_field('nh_site_plan'); ?>
 				<?php if(is_array($siteplan) && isset($siteplan['url'])){ ?>
 					<div class="project-siteplan">
@@ -157,6 +166,7 @@ get_header('single-new_homes');
 				<?php } ?>
 			<?php } ?>
 		<?php } ?>
+		</div>
 	</div>
 </main>
 
