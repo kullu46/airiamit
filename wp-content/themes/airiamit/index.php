@@ -74,41 +74,40 @@ get_header();
 		<?php
 	} ?>
 	<div class="container">
-	<div class="row">
-<?php	if ( have_posts() ) {
+		<div class="row">
+			<?php	if ( have_posts() ) {
 
-		$i = 0;
+				$i = 0;
 
-		while ( have_posts() ) {
-			$i++;
-			if ( $i > 2 ) {
-				echo '</div><div class="row">';
-			}
-			the_post();
+				while ( have_posts() ) {
+					if ( $i % 2 == 0) {
+						echo '</div><div class="row">';
+					}
+					the_post();
+					
+					get_template_part( 'template-parts/content', get_post_type() );
+					$i++;
 
-			get_template_part( 'template-parts/content', get_post_type() );
+				}
+			} elseif ( is_search() ) { ?>
 
-		}
-	} elseif ( is_search() ) {
-		?>
-		</div>
-</div>
-		<div class="no-search-results-form section-inner thin">
+			<div class="no-search-results-form section-inner thin">
+
+				<?php
+				get_search_form(
+					array(
+						'label' => __( 'search again', 'airiamit' ),
+					)
+				);
+				?>
+
+			</div><!-- .no-search-results -->
 
 			<?php
-			get_search_form(
-				array(
-					'label' => __( 'search again', 'airiamit' ),
-				)
-			);
-			?>
-
-		</div><!-- .no-search-results -->
-
-		<?php
-	}
-	?>
-
+		}
+		?>
+			</div>
+	</div>
 	<?php get_template_part( 'template-parts/pagination' ); ?>
 
 </main><!-- #site-content -->
