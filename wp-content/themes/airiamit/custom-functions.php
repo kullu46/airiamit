@@ -203,7 +203,7 @@ function vip_projects_filters_output(){
 			$baseUrlClean = ($_SERVER['REQUEST_SCHEME'] ? $_SERVER['REQUEST_SCHEME'] : 'http').'://'.$_SERVER['HTTP_HOST'].$reqUriClean;
 		}
 
-		$output .= '<div class="project-filters-external">';
+		$output .= '<div class="project-filters-external"> <div class="filter-toggle">Filter <i class="fas fa-filter"></i></div>';
 		$fieldBedrooms = get_field_object('nh_bedrooms', $projects[0]->ID);
 		$fieldBedrooms = $fieldBedrooms['choices'];
 		$fieldBathrooms = get_field_object('nh_bathrooms', $projects[0]->ID);

@@ -5589,7 +5589,7 @@ a.to-the-top > * {
 	.header-toggles {
 		display: flex;
 		flex-shrink: 0;
-		margin-right: -3rem;
+		/* margin-right: -3rem; */
 	}
 
 	.header-inner .toggle {
@@ -5620,10 +5620,6 @@ a.to-the-top > * {
 
 	.header-inner .toggle-wrapper:first-child::before {
 		content: none;
-	}
-
-	.header-inner .primary-menu-wrapper + .header-toggles .toggle-wrapper:first-child::before {
-		content: "";
 	}
 
 	.nav-toggle-wrapper:not(.has-expanded-menu) {
@@ -5999,7 +5995,7 @@ a.to-the-top > * {
 	}
 
 	.header-toggles {
-		margin-right: -4rem;
+		/* margin-right: -4rem; */
 	}
 
 	.header-toggles .toggle {

@@ -1,5 +1,17 @@
 header#site-header {
     background: none;
+    @media (max-width: 991px) {
+        padding: 40px 0px;
+        .toggle-text{
+            display: none;
+        }
+    }
+    @media (max-width: 767px) {
+        .site-logo img {
+            max-height: 3rem;
+        }
+    }
+    
     .header-inner{
         &.section-inner {
             padding: 0px 15px;
@@ -27,7 +39,7 @@ header#site-header {
         }
     }
 }   
-@media (min-width: 768px){
+@media (min-width: 992px){
 header#site-header {
     margin-bottom: -230px !important;
     padding: 50px 0;
@@ -41,5 +53,27 @@ header#site-header {
     }
     .cover-header-inner-wrapper.screen-height {
         min-height: calc(60vh - 32px);
+    }
+    @media (max-width: 991px) {
+        padding-top:0px;
+    }
+}
+@media (max-width: 991px) {
+    button.toggle.close-nav-toggle {
+        display: none;
+    }
+    .menu-modal.cover-modal{
+        margin-top: 110px;
+        .mobile-menu{
+            ul{
+                li{
+                    a{
+                        padding: 10px 15px;
+                        font-size: 16px;
+                        color: $gray-5e5;
+                    }
+                }
+            }
+        }
     }
 }

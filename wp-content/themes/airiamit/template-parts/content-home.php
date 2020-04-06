@@ -9,7 +9,7 @@
 
 ?>
 
-<section <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<section <?php post_class('home-page-banner'); ?> id="post-<?php the_ID(); ?>">
 	<?php
 	// On the cover page template, output the cover header.
 	$cover_header_style   = '';
