@@ -136,7 +136,7 @@ get_header('single-new_homes');
 				<?php 
 				
 				
-				$related_args = array(
+				/* $related_args = array(
 						'post_type' => 'new_homes',
 						'posts_per_page' => 10,
 						'post_status' => 'publish',
@@ -163,7 +163,7 @@ get_header('single-new_homes');
 							</div>
 						<?php } ?>
 					</div>
-				<?php } ?>
+				<?php } */ ?>
 			<?php } ?>
 		<?php } ?>
 		</div>
@@ -181,12 +181,12 @@ get_header('single-new_homes');
 		<?php wp_footer(); ?>
 		<style>
 		.owl-item {
-  float: left;
-}
-.owl-carousel {
-  overflow: hidden;
-}
-</style>
+			float: left;
+		}
+		.owl-carousel {
+			overflow: hidden;
+		}
+		</style>
 		<link rel='stylesheet' id='vc_pageable_owl-carousel-css-css'  href='<?php echo get_site_url(); ?>/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/assets/owl.min.css' media='all' />
 		<link rel='stylesheet' id='tss-owl-carousel-css'  href='<?php echo get_site_url(); ?>/wp-content/plugins/testimonial-slider-and-showcase/assets/vendor/owl-carousel/owl.carousel.min.css?ver=1586072978' media='all' />
 		<link rel='stylesheet' id='tss-owl-carousel-theme-css'  href='<?php echo get_site_url(); ?>/wp-content/plugins/testimonial-slider-and-showcase/assets/vendor/owl-carousel/owl.theme.default.min.css?ver=1586072978' media='all' />
