@@ -8,6 +8,9 @@
                 font-family: 'Averta Demo', serif;
                 font-weight: 500;
                 letter-spacing: 0.8px;
+                @media (max-width: 767px) {
+                    font-size: 25px; 
+                }
             }
             p{
                 color:  $gray-5e5;

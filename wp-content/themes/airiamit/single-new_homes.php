@@ -33,7 +33,8 @@ get_header('single-new_homes');
 							</ul>
 						</div>
 						<div class="col-sm-4 price">
-							<span>Starting at</span><?php echo get_field( 'nh_price_range' ); ?>
+							<div>Starting at <?php echo get_field( 'nh_price_range_type' ); ?></div>
+							<div class="big-txt"><small>$ </small><?php echo get_field( 'nh_price_range' ); ?></div>
 						</div>
 					</div>
 				</div>

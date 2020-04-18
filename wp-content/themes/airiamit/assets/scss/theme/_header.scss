@@ -53,9 +53,25 @@ header#site-header {
     }
     .cover-header-inner-wrapper.screen-height {
         min-height: calc(60vh - 32px);
+        @media (max-width: 699px) {
+            min-height: 250px;
+        }
     }
     @media (max-width: 991px) {
         padding-top:0px;
+    }
+
+    .cover-header{
+        .entry-header{
+            @media (max-width: 767px) {
+                height: 100%;
+                @include flexbox;
+                @include align-items(center);
+                h2{
+                    margin: 0px;
+                }
+            }
+        }
     }
 }
 @media (max-width: 991px) {

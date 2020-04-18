@@ -148,9 +148,32 @@ header#site-header .header-inner .toggle path {
   min-height: calc(60vh - 32px);
 }
 
+@media (max-width: 699px) {
+  .inner-banner .cover-header-inner-wrapper.screen-height {
+    min-height: 250px;
+  }
+}
+
 @media (max-width: 991px) {
   .inner-banner {
     padding-top: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner-banner .cover-header .entry-header {
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -moz-align-items: center;
+    align-items: center;
+  }
+  .inner-banner .cover-header .entry-header h2 {
+    margin: 0px;
   }
 }
 
@@ -190,6 +213,7 @@ header#site-header .header-inner .toggle path {
   }
   .cover-header .cover-header-inner-wrapper .cover-header-inner {
     padding: 0px;
+    height: 100%;
   }
 }
 
@@ -657,6 +681,12 @@ header#site-header .header-inner .toggle path {
   letter-spacing: 0.8px;
 }
 
+@media (max-width: 767px) {
+  .footer-nav-widgets-wrapper .container .footer-widgets-outer-wrapper .widget-title {
+    font-size: 25px;
+  }
+}
+
 .footer-nav-widgets-wrapper .container .footer-widgets-outer-wrapper p {
   color: #5e5e5e;
 }
@@ -773,8 +803,32 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   color: #2dcb73;
 }
 
-.projects-filter-section {
-  margin-top: -40px !important;
+@media (max-width: 991px) {
+  body .projects-filter-section {
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .projects-filter-section {
+    margin-top: -40px !important;
+  }
+}
+
+.projects-filter-section .filter-toggle {
+  float: left;
+  background: #2dcb73;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .projects-filter-section .filter-toggle {
+    display: none;
+  }
 }
 
 .projects-filter-section .wpb_text_column {
@@ -792,22 +846,59 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   border-radius: 10px;
   -webkit-box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.05);
-  display: -webkit-box;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  -moz-justify-content: space-between;
-  justify-content: space-between;
-  padding-top: 15px;
-  padding-left: 30px;
-  padding-bottom: 15px;
+}
+
+@media (min-width: 992px) {
+  .projects-filter-section .wpb_text_column .project-filters-external .project-filters {
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .projects-filter-section .wpb_text_column .project-filters-external .project-filters {
+    display: none;
+    top: 80px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 999;
+    background: #fff;
+    height: auto;
+    margin: 0px;
+    padding: 20px;
+    top: 80px;
+  }
+  .projects-filter-section .wpb_text_column .project-filters-external .project-filters.active-filter {
+    display: block;
+  }
 }
 
 .projects-filter-section .wpb_text_column .project-filters-external .project-filters .item-filter {
   background: none;
   border: none;
+}
+
+@media (max-width: 991px) {
+  .projects-filter-section .wpb_text_column .project-filters-external .project-filters .item-filter {
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #b8b8b8;
+    padding-bottom: 20px;
+  }
+  .projects-filter-section .wpb_text_column .project-filters-external .project-filters .item-filter:last-child {
+    border: none;
+  }
 }
 
 .projects-filter-section .wpb_text_column .project-filters-external .project-filters .item-filter label {
@@ -821,6 +912,7 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   color: #b8b8b8;
   font-size: 16px;
   font-family: "Averta Demo";
+  width: 100%;
 }
 
 .projects-filter-section .wpb_text_column .project-filters-external .project-filters .item-filter input.placeholder, .projects-filter-section .wpb_text_column .project-filters-external .project-filters .item-filter select.placeholder {
@@ -858,8 +950,29 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   margin-right: 0px;
 }
 
+@media (max-width: 991px) {
+  .projects-filter-section .wpb_text_column .project-filters-external .project-filters .item-filter input.btn-search.btn-search-listing {
+    margin: 0;
+    padding: 15px 20px;
+    height: auto;
+    width: auto;
+  }
+}
+
 .projects-filter-section .wpb_text_column .project-filters-external .project-filters .item-filter input.btn-search.btn-search-listing:hover {
   background-color: #26b967;
+}
+
+.clear-filters {
+  padding: 10px;
+  display: inline-block;
+}
+
+@media (max-width: 991px) {
+  .clear-filters {
+    float: right;
+    margin-top: 20px;
+  }
 }
 
 .vip-projects {
@@ -950,6 +1063,15 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   color: #444;
 }
 
+.vip-projects.grid.vc_col-sm-12 {
+  padding: 0 !important;
+}
+
+.main-project-list .wpb_text_column.wpb_content_element {
+  display: inline-block;
+  width: 100%;
+}
+
 .blog article .featured-media {
   border-radius: 10px;
   overflow: hidden;
@@ -959,6 +1081,12 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
 .blog article .featured-media .featured-media-inner {
   position: relative;
   height: 350px;
+}
+
+@media (max-width: 767px) {
+  .blog article .featured-media .featured-media-inner {
+    width: 100%;
+  }
 }
 
 .blog article .featured-media .featured-media-inner img {
@@ -992,12 +1120,24 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   margin-bottom: 20px;
 }
 
+@media (max-width: 767px) {
+  .blog article .entry-header .entry-header-inner {
+    width: 100%;
+  }
+}
+
 .blog article .entry-header .entry-title {
   font-size: 34px;
   font-family: "Averta Demo";
   color: #5e5e5e;
   line-height: normal;
   text-align: left;
+}
+
+@media (max-width: 767px) {
+  .blog article .entry-header .entry-title {
+    font-size: 25px;
+  }
 }
 
 .blog article .entry-header .entry-title a {
@@ -1093,6 +1233,13 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   margin-top: -120px !important;
 }
 
+@media (max-width: 991px) {
+  .banner-inner-new-homes .projects-gallery {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
 .banner-inner-new-homes .projects-gallery .gallery-item {
   width: auto;
   display: inline-block;
@@ -1102,7 +1249,25 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   width: 15%;
   overflow: hidden;
   padding: 0px;
-  margin: 0px 15px;
+}
+
+@media (min-width: 992px) {
+  .banner-inner-new-homes .projects-gallery .gallery-item {
+    margin: 0px 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .banner-inner-new-homes .projects-gallery .gallery-item {
+    width: 25%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .banner-inner-new-homes .projects-gallery .gallery-item {
+    height: 90px;
+  }
 }
 
 .banner-inner-new-homes .projects-gallery .gallery-item img {
@@ -1127,9 +1292,22 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   border-bottom: 2px solid;
 }
 
+@media (max-width: 991px) {
+  .banner-inner-new-homes .projects-gallery .view-all-projects a {
+    margin: 10px;
+    display: inline-block;
+  }
+}
+
 .vip-projects-single .single-gray-section {
   background-color: #f8f8f8;
   padding: 50px 0px;
+}
+
+@media (max-width: 767px) {
+  .vip-projects-single .single-gray-section {
+    padding: 20px 0px;
+  }
 }
 
 .vip-projects-single .single-gray-section .project-big-title {
@@ -1139,13 +1317,26 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
 .vip-projects-single .single-gray-section .project-big-title h2 {
   font-size: 45px;
   color: #5e5e5e;
+  text-transform: uppercase;
   margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .vip-projects-single .single-gray-section .project-big-title h2 {
+    font-size: 25px;
+  }
 }
 
 .vip-projects-single .single-gray-section .project-big-title h3 {
   font-size: 30px;
   color: #5e5e5e;
   font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .vip-projects-single .single-gray-section .project-big-title h3 {
+    font-size: 20px;
+  }
 }
 
 .vip-projects-single .single-gray-section .project-big-title h3 span {
@@ -1166,6 +1357,15 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   border-radius: 10px;
 }
 
+@media (max-width: 767px) {
+  .vip-projects-single .single-gray-section .project-details .project-details-list {
+    -webkit-column-count: 2;
+            column-count: 2;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+}
+
 .vip-projects-single .single-gray-section .project-details .project-details-list li {
   border-right: 1px solid;
   margin: 0;
@@ -1178,10 +1378,38 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   border: none;
 }
 
+@media (max-width: 767px) {
+  .vip-projects-single .single-gray-section .project-details .project-details-list li {
+    padding-bottom: 10px;
+  }
+  .vip-projects-single .single-gray-section .project-details .project-details-list li:nth-last-child(3) {
+    border: none;
+  }
+}
+
 .vip-projects-single .single-gray-section .project-details .project-details-list li span {
   color: #5e5e5e;
   min-width: 110px;
   display: inline-block;
+}
+
+.vip-projects-single .single-gray-section .project-details .price {
+  color: #5e5e5e;
+  font-size: 28px;
+  text-align: center;
+}
+
+.vip-projects-single .single-gray-section .project-details .price .big-txt {
+  font-size: 74px;
+  color: #d11919;
+  display: inline-block;
+}
+
+.vip-projects-single .single-gray-section .project-details .price .big-txt small {
+  font-size: 45px;
+  float: left;
+  margin-top: 15px;
+  margin-right: 5px;
 }
 
 .vip-projects-single .single-gray-section .project-intro {
@@ -1205,6 +1433,12 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   padding: 50px 0px;
 }
 
+@media (max-width: 767px) {
+  .vip-projects-single .project-features {
+    padding: 40px 0px 0px;
+  }
+}
+
 .vip-projects-single .project-features h3 {
   color: #5e5e5e;
   font-size: 24px;
@@ -1216,8 +1450,13 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   list-style: none;
   padding: 0px;
   margin: 0px;
-  -webkit-column-count: 2;
-          column-count: 2;
+}
+
+@media (min-width: 768px) {
+  .vip-projects-single .project-features .list {
+    -webkit-column-count: 2;
+            column-count: 2;
+  }
 }
 
 .vip-projects-single .project-features .list li {
@@ -1294,5 +1533,36 @@ section.modal-projects-gallery .modal-projects-gallery-inner-wrap .modal-project
   color: #5e5e5e;
   font-size: 13px;
   cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .single-new_homes header#site-header {
+    margin-bottom: -131px;
+    z-index: 99999;
+  }
+  .single-new_homes header#site-header .header-inner {
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 991px) and (max-width: 767px) {
+  .single-new_homes header#site-header .header-inner {
+    padding: 0px;
+    width: 95%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .single-new_homes header#site-header .header-inner .header-titles-wrapper {
+    padding: 0px;
+  }
 }
 /*# sourceMappingURL=main-style.css.map */

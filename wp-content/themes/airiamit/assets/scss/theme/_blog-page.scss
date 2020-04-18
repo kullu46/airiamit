@@ -7,6 +7,9 @@
             .featured-media-inner {
                 position: relative;
                 height: 350px;
+                @media (max-width: 767px) {
+                    width: 100%;
+                }
                 img{
                     position: absolute;
                     width: 100%;
@@ -35,12 +38,20 @@
 
         .entry-header{
             margin-bottom: 20px;
+            .entry-header-inner{
+                @media (max-width: 767px) {
+                    width: 100%;
+                }
+            }
             .entry-title{
                 font-size: 34px;
                 font-family: "Averta Demo";
                 color: $gray-5e5;
                 line-height: normal;
                 text-align: left;
+                @media (max-width: 767px) {
+                    font-size: 25px;
+                }
                 a{
                     color: $gray-5e5;
                     text-decoration: none;

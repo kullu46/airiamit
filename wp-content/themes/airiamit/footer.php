@@ -4,5 +4,13 @@
 				</div>
 			</footer>
 		<?php wp_footer(); ?>
+		<script type="text/javascript">
+			jQuery(document).ready(function($){
+				$('.filter-toggle').on('click', function(e) {
+					$('.project-filters').slideToggle('active-filter');
+					e.stopPropagation();
+				});
+			});
+		</script>
 	</body>
 </html>
