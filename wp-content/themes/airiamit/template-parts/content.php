@@ -55,7 +55,7 @@
 		edit_post_link();
 
 		// Single bottom post meta.
-		airiamit_the_post_meta( get_the_ID(), 'single-bottom' );
+		//airiamit_the_post_meta( get_the_ID(), 'single-bottom' );
 
 		if ( is_single() ) {
 

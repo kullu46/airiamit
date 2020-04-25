@@ -960,24 +960,10 @@ section {
 .section-inner {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 120rem;
-	width: calc(100% - 4rem);
 }
 
 .section-inner.max-percentage {
 	width: 100%;
-}
-
-.section-inner.thin {
-	max-width: 58rem;
-}
-
-.section-inner.small {
-	max-width: 80rem;
-}
-
-.section-inner.medium {
-	max-width: 100rem;
 }
 
 .section-inner.no-margin {
@@ -2369,7 +2355,7 @@ body:not(.singular) main > article:first-of-type {
 /* Post Header ------------------------------- */
 
 .singular .entry-header {
-	padding: 4rem 0;
+	/* padding: 4rem 0; */
 }
 
 .entry-categories {
@@ -3762,7 +3748,6 @@ div.comment:first-of-type {
 	justify-content: flex-start;
 	letter-spacing: 0.030833333em;
 	line-height: 1;
-	margin: 1.5rem 0 -1rem -1.5rem;
 	text-transform: uppercase;
 }
 
@@ -3851,7 +3836,6 @@ div.comment:first-of-type {
 	color: #6d6d6d;
 	font-size: 1.6rem;
 	line-height: 1.4;
-	margin: -3rem 0 4rem 0;
 	text-align: center;
 }
 
@@ -3870,14 +3854,10 @@ div.comment:first-of-type {
 
 .comment-respond p {
 	line-height: 1.1;
-	margin-bottom: 2rem;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.comment-respond p:not(.comment-notes) {
-	max-width: 58rem;
-}
 
 .comment-form-cookies-consent {
 	align-items: baseline;
@@ -4945,7 +4925,7 @@ a.to-the-top > * {
 	/* POST HEADER */
 
 	.singular .entry-header {
-		padding: 8rem 0;
+		/* padding: 8rem 0; */
 	}
 
 	.entry-categories {
@@ -5303,8 +5283,6 @@ a.to-the-top > * {
 	.comment-respond p.comment-notes,
 	.comment-respond p.logged-in-as {
 		font-size: 1.8rem;
-		letter-spacing: -0.025em;
-		margin: -2.5rem 0 4.4rem 0;
 	}
 
 	.comments .comment,
@@ -5342,13 +5320,13 @@ a.to-the-top > * {
 		margin-top: 0.8rem;
 	}
 
-	.comment-footer-meta {
+	/* .comment-footer-meta {
 		margin-top: 2.5rem;
-	}
+	} */
 
-	.comments-pagination {
+	/* .comments-pagination {
 		margin-top: 8rem;
-	}
+	} */
 
 	/* PINGBACKS & TRACKBACKS */
 
@@ -5362,9 +5340,7 @@ a.to-the-top > * {
 		margin-bottom: 2.5rem;
 	}
 
-	.comment-form p.logged-in-as {
-		margin: -2.5rem 0 4.4rem 0;
-	}
+	
 
 	.comment-respond .comment-form-author,
 	.comment-respond .comment-form-email {
@@ -6094,10 +6070,7 @@ a.to-the-top > * {
 		margin-bottom: 6rem;
 	}
 
-	.comment-respond p.comment-notes,
-	.comment-respond p.logged-in-as {
-		margin: -4rem 0 6rem 0;
-	}
+	
 
 	.comments .comment-respond .comment-reply-title {
 		font-size: 4.8rem;

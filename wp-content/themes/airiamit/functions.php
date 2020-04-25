@@ -711,7 +711,7 @@ function airiamit_get_elements_array() {
 				'background-color' => array( ':root .has-primary-background-color' ),
 			),
 			'secondary'  => array(
-				'color'            => array( 'cite', 'figcaption', '.wp-caption-text', '.post-meta', '.entry-content .wp-block-archives li', '.entry-content .wp-block-categories li', '.entry-content .wp-block-latest-posts li', '.wp-block-latest-comments__comment-date', '.wp-block-latest-posts__post-date', '.wp-block-embed figcaption', '.wp-block-image figcaption', '.wp-block-pullquote cite', '.comment-metadata', '.comment-respond .comment-notes', '.comment-respond .logged-in-as', '.pagination .dots', '.entry-content hr:not(.has-background)', 'hr.styled-separator', ':root .has-secondary-color' ),
+				'color'            => array( 'cite', 'figcaption', '.wp-caption-text', '.post-meta', '.entry-content .wp-block-archives li', '.entry-content .wp-block-categories li', '.entry-content .wp-block-latest-posts li', '.wp-block-latest-comments__comment-date', '.wp-block-latest-posts__post-date', '.wp-block-embed figcaption', '.wp-block-image figcaption', '.wp-block-pullquote cite', '.comment-metadata', '.comment-respond .comment-notes', '.comment-respond .logged-in-as', '.pagination .dots', '.entry-content hr:not(.has-background)',  ':root .has-secondary-color' ),
 				'background-color' => array( ':root .has-secondary-background-color' ),
 			),
 			'borders'    => array(
@@ -777,8 +777,8 @@ include("theme-options.php");
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(
-		'page_title' 	=> 'Theme Header General Settings',
-		'menu_title'	=> 'Theme Header',
+		'page_title' 	=> 'Theme Blog Header General Settings',
+		'menu_title'	=> 'Blog Header',
 		'menu_slug' 	=> 'theme-header-settings',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false

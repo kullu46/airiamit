@@ -1,4 +1,4 @@
-.blog{
+.blog, .related-posts{
     article{
         .featured-media{
             border-radius: 10px;
@@ -7,6 +7,7 @@
             .featured-media-inner {
                 position: relative;
                 height: 350px;
+                left: 0;
                 @media (max-width: 767px) {
                     width: 100%;
                 }

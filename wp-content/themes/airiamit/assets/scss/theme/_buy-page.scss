@@ -1,0 +1,25 @@
+.our-advantages{
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        li{
+            margin: 0px;
+            padding: 0px;
+            border-left: 5px solid #ebf4db;
+            font-size: 35px;
+            line-height: 42px;
+            margin-bottom: 30px;
+            padding-left: 20px;
+            em{
+                font-style: normal;
+                display: block;
+            }
+        }
+    }
+    br{
+        @media (max-width: 600px) {
+            display: none;
+        }
+    }
+}

@@ -1,5 +1,8 @@
 .sell-top-help{
     .vc_col-sm-6.vc_col-has-fill{
+        @media (max-width: 991px){
+            width: 100%;
+        }
         .vc_column-inner{
             border-radius: 25px;
             @include custom-shadow(0px 0px 111px 0px rgba(0, 0, 0, 0.04));
@@ -23,6 +26,10 @@
             }
             .btn{
                 font-size: 35px;
+                @media (max-width: 600px){
+                    font-size: 24px;  
+                    width: 100%;
+                }
                 line-height: 35px;
                 text-transform: capitalize;
                 display: inline-block;
@@ -46,10 +53,33 @@
 
 .why-list-section{
     margin-bottom: 50px !important;
+    @media (max-width: 600px){
+        margin-bottom: 20px !important;
+    }
     .vc_custom_heading{
         margin-bottom: 40px;
     }
     .vc_col-sm-4{
+        @media (max-width: 991px){
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &.center-column{
+            .vc_column-inner{
+                >.wpb_wrapper{
+                    border-radius: 25px;
+                    @include custom-shadow(0px 0px 111px 0px rgba(0, 0, 0, 0.04));
+                    background: $white;
+                    .wpb_text_column{
+                        .wpb_wrapper{
+                            h3{
+                                color: $green-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .vc_column-inner{
             color: $gray-5e5;
             .wpb_single_image{
@@ -86,4 +116,132 @@
             
         }
     }
+}
+
+.proven-marketing-section{
+    padding-bottom: 30px;
+    @media (max-width: 600px){
+        padding-bottom: 0px;
+        .wpb_content_element {
+            margin-bottom: 0px;
+        }
+    }
+    .vc_col-sm-6{
+        @media (max-width: 991px){
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    .content-block{
+        border-radius: 25px;
+        background-color: #fff;
+        @include custom-shadow(0px 0px 111px 0px rgba(0, 0, 0, 0.04));
+        padding: 50px 20px 70px;
+        font-size: 24px;
+        margin-bottom: -40px;
+    }
+    .social-events{
+        .vc_single_image-wrapper{
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .content-block2 {
+            font-size:22px;
+            strong{
+                font-size: 35px;
+                display: block;
+                padding: 10px 0px;
+            }
+            .wpb_text_column.wpb_content_element {
+                max-width: 350px;
+                width: 100%;
+                @media (max-width: 991px){
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.online-exposure-section{
+    .vc_col-sm-6{
+        @media (max-width: 991px){
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    .wpb_single_image {
+        margin-bottom: -8px;
+    }
+    .wpb_wrapper{
+        ul{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            @media (min-width: 601px){
+                columns: 2;
+            }
+            li{
+                width: 100%;
+                margin: 0px;
+                padding: 50px;
+                border-radius: 23px;
+                font-size: 25px;
+                font-family: "Averta Demo";
+                color: #9d9d9d;
+                border: 1px dotted #9d9d9d;
+                line-height: 1.2;
+                text-align: center;
+                height: 110px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+                &:hover, &:first-child{
+                    color: #83b921;
+                    background: $white;
+                    @include custom-shadow(0px 0px 111px 0px rgba(0, 0, 0, 0.04));
+                }
+            }
+        }
+    }
+}
+
+.tip-sell-house{
+    p{
+        line-height: 30px;
+    }
+}
+.virtual-tour-section {
+    .vc_col-sm-6{
+        @media (max-width: 991px){
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 600px){
+            margin-bottom: 0px;
+            .wpb_text_column{
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .wpb_video_widget{
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    h2{
+        margin-bottom: 20px;
+    }
+    p{
+        color: $gray-4a4;
+    }
+}
+
+.page-id-216{
+    @media (max-width: 991px){
+        .vc_custom_heading {
+            font-size: 30px !important;
+        }
+    }
+    
 }

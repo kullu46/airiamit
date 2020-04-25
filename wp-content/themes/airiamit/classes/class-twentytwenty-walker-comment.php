@@ -107,7 +107,7 @@ if ( ! class_exists( 'airiamit_Walker_Comment' ) ) {
 								'depth'     => $depth,
 								'max_depth' => $args['max_depth'],
 								'before'    => '<span class="comment-reply">',
-								'after'     => '</span>',
+								'after'     => '<i class="fa fa-reply"></i></span>',
 							)
 						)
 					);
@@ -124,7 +124,7 @@ if ( ! class_exists( 'airiamit_Walker_Comment' ) ) {
 								echo $comment_reply_link; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped --Link is escaped in https://developer.wordpress.org/reference/functions/get_comment_reply_link/
 							}
 							if ( $by_post_author ) {
-								echo '<span class="by-post-author">' . __( 'By Post Author', 'airiamit' ) . '</span>';
+								//echo '<span class="by-post-author">' . __( 'By Post Author', 'airiamit' ) . '</span>';
 							}
 							?>
 
