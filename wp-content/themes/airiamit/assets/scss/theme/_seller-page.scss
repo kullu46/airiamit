@@ -1,0 +1,89 @@
+.sell-top-help{
+    .vc_col-sm-6.vc_col-has-fill{
+        .vc_column-inner{
+            border-radius: 25px;
+            @include custom-shadow(0px 0px 111px 0px rgba(0, 0, 0, 0.04));
+            background: $white;
+            text-align: center;
+            padding: 20px;
+            padding-bottom: 0px;
+            margin-top: -40px;
+            margin-bottom: 110px;
+            .wpb_wrapper{
+                margin: 0px;
+                .wpb_text_column, .wpb_raw_code {
+                    margin: 0px;
+                }
+                p{
+                    margin: 0px;
+                }
+                h2{
+                    color: $green-1;
+                }
+            }
+            .btn{
+                font-size: 35px;
+                line-height: 35px;
+                text-transform: capitalize;
+                display: inline-block;
+                background: $green-1;
+                border-radius:100px;
+                color: $white;
+                padding: 15px 30px;
+                position: relative;
+                top: 50px;
+                margin-top: -40px;
+                small{
+                    display: block;
+                    width: 100%;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+.why-list-section{
+    margin-bottom: 50px !important;
+    .vc_custom_heading{
+        margin-bottom: 40px;
+    }
+    .vc_col-sm-4{
+        .vc_column-inner{
+            color: $gray-5e5;
+            .wpb_single_image{
+                margin-bottom: 0px;
+                margin-top: 40px;
+            }
+            >.wpb_wrapper{
+                &:hover{
+                    border-radius: 25px;
+                    @include custom-shadow(0px 0px 111px 0px rgba(0, 0, 0, 0.04));
+                    background: $white;
+                    .wpb_text_column{
+                        .wpb_wrapper{
+                            h3{
+                                color: $green-1;
+                            }
+                        }
+                    }
+                }
+            }
+            .wpb_text_column{
+                .wpb_wrapper{
+                    padding: 20px;
+                    h3{
+                        font-size: 32px;
+                        margin-bottom: 25px;
+                    }
+                    p{
+                        font-size: 20px;
+                        padding: 0px 15px;
+                    }
+                }
+            }
+            
+        }
+    }
+}

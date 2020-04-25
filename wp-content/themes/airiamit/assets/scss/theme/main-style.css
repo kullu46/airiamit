@@ -140,8 +140,11 @@ header#site-header .header-inner .toggle path {
   padding-bottom: 0px;
 }
 
-.inner-banner .cover-header.bg-image {
+.inner-banner .cover-header {
   background-position: center 30%;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .inner-banner .cover-header-inner-wrapper.screen-height {
@@ -590,6 +593,7 @@ header#site-header .header-inner .toggle path {
   font-weight: bold;
   position: absolute;
   top: -40px;
+  line-height: normal;
 }
 
 .testimonial-section .single-item-wrapper .item-content-wrapper .author-name {
@@ -1564,5 +1568,267 @@ section.modal-projects-gallery .modal-projects-gallery-inner-wrap .modal-project
   .single-new_homes header#site-header .header-inner .header-titles-wrapper {
     padding: 0px;
   }
+}
+
+.page-id-218 .home-page-banner {
+  padding-bottom: 0px;
+}
+
+.page-id-218 .home-page-banner .cover-header .entry-header h2 span.center-text strong {
+  line-height: normal !important;
+}
+
+@media (max-width: 767px) {
+  .page-id-218 .home-page-banner .screen-height {
+    min-height: 70vh;
+  }
+}
+
+.page-id-218 .investor-form.vc_row {
+  margin-top: -50px !important;
+}
+
+.page-id-218 .investor-form.vc_row .vc_column-inner {
+  padding-left: 7.5px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0;
+}
+
+.page-id-218 .investor-form.vc_row .vc_column-inner .wpb_single_image {
+  margin-top: 0px;
+}
+
+.page-id-218 .investor-form.vc_row .vc_column-inner .wpb_single_image img {
+  vertical-align: middle;
+  width: auto;
+  max-width: 100%;
+  margin-left: 0px;
+}
+
+@media (max-width: 991px) {
+  .page-id-218 .investor-form.vc_row .vc_column-inner .wpb_single_image img {
+    margin: 0px auto !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-id-218 .investor-form.vc_row .vc_column-inner .wpb_single_image figure .vc_single_image-wrapper {
+    width: auto;
+    height: auto;
+    background: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-id-218 .investor-form.vc_row .vc_column-inner h1 {
+    font-size: 25px !important;
+  }
+}
+
+.page-id-218 .investor-form.vc_row .vc_column-inner .form-container {
+  margin-bottom: 0px;
+}
+
+@media (max-width: 767px) {
+  .page-id-218 .investor-form.vc_row .vc_column-inner .form-container {
+    width: 100%;
+  }
+}
+
+.successful-seminars-section {
+  margin-bottom: 60px;
+}
+
+.successful-seminars-section .wpb_text_column .wpb_wrapper h4 {
+  color: #282828;
+  margin: 0px;
+}
+
+@media (min-width: 600px) {
+  .successful-seminars-section .wpb_text_column .wpb_wrapper h4 {
+    font-size: 40px;
+  }
+}
+
+.successful-seminars-section .wpb_text_column .wpb_wrapper p {
+  font-size: 30px;
+  color: #282828;
+}
+
+@media (min-width: 600px) {
+  .successful-seminars-section .wpb_text_column .wpb_wrapper p {
+    font-size: 55px;
+  }
+}
+
+.successful-seminars-section .owl-carousel .owl-item .item {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 210px;
+  padding: 10px;
+}
+
+.successful-seminars-section .owl-carousel .owl-item .item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.successful-seminars-section .owl-carousel .owl-item.center .item {
+  padding: 0px;
+}
+
+@media (max-width: 991px) {
+  .investment-strategies-section {
+    margin-bottom: 60px;
+  }
+}
+
+.investment-strategies-section .wpb_wrapper {
+  color: #fff;
+}
+
+.investment-strategies-section .wpb_wrapper h4 {
+  margin-top: 30px;
+}
+
+.investment-strategies-section .wpb_single_image img {
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: -70px;
+}
+
+@media (max-width: 991px) {
+  .investment-strategies-section .wpb_column.vc_column_container.vc_col-sm-6 {
+    width: 100%;
+  }
+}
+
+#featured-listings ul.simplefilter {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+  #featured-listings ul.simplefilter {
+    text-align: left;
+  }
+}
+
+#featured-listings ul.simplefilter li {
+  margin: 0px;
+  padding: 0px 15px;
+  background: none !important;
+}
+
+@media (max-width: 599px) {
+  #featured-listings ul.simplefilter li {
+    border: 1px solid;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+#featured-listings ul.simplefilter li.active {
+  color: #2dcb73 !important;
+}
+
+#featured-listings .filtr-item img {
+  margin-bottom: 0px;
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+}
+
+.sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner {
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 0px 111px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 0px 111px 0px rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 0px;
+  margin-top: -40px;
+  margin-bottom: 110px;
+}
+
+.sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .wpb_wrapper {
+  margin: 0px;
+}
+
+.sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .wpb_wrapper .wpb_text_column, .sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .wpb_wrapper .wpb_raw_code {
+  margin: 0px;
+}
+
+.sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .wpb_wrapper p {
+  margin: 0px;
+}
+
+.sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .wpb_wrapper h2 {
+  color: #8cc12b;
+}
+
+.sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .btn {
+  font-size: 35px;
+  line-height: 35px;
+  text-transform: capitalize;
+  display: inline-block;
+  background: #8cc12b;
+  border-radius: 100px;
+  color: #ffffff;
+  padding: 15px 30px;
+  position: relative;
+  top: 50px;
+  margin-top: -40px;
+}
+
+.sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .btn small {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.why-list-section {
+  margin-bottom: 50px !important;
+}
+
+.why-list-section .vc_custom_heading {
+  margin-bottom: 40px;
+}
+
+.why-list-section .vc_col-sm-4 .vc_column-inner {
+  color: #5e5e5e;
+}
+
+.why-list-section .vc_col-sm-4 .vc_column-inner .wpb_single_image {
+  margin-bottom: 0px;
+  margin-top: 40px;
+}
+
+.why-list-section .vc_col-sm-4 .vc_column-inner > .wpb_wrapper:hover {
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 0px 111px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 0px 111px 0px rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+}
+
+.why-list-section .vc_col-sm-4 .vc_column-inner > .wpb_wrapper:hover .wpb_text_column .wpb_wrapper h3 {
+  color: #8cc12b;
+}
+
+.why-list-section .vc_col-sm-4 .vc_column-inner .wpb_text_column .wpb_wrapper {
+  padding: 20px;
+}
+
+.why-list-section .vc_col-sm-4 .vc_column-inner .wpb_text_column .wpb_wrapper h3 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.why-list-section .vc_col-sm-4 .vc_column-inner .wpb_text_column .wpb_wrapper p {
+  font-size: 20px;
+  padding: 0px 15px;
 }
 /*# sourceMappingURL=main-style.css.map */

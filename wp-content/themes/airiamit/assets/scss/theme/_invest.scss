@@ -1,0 +1,119 @@
+.page-id-218{
+    .home-page-banner{
+        padding-bottom:0px;
+        .cover-header .entry-header h2 span.center-text strong{
+            line-height: normal !important;
+        }
+        .screen-height {
+            @media (max-width: 767px){
+                min-height: 70vh;
+            }
+        }
+    }
+
+    .investor-form.vc_row{
+        margin-top: -50px !important;
+        .vc_column-inner {
+            padding-left: 7.5px !important;
+            padding-top: 0 !important;
+            padding-bottom: 0;
+            .wpb_single_image {
+                margin-top: 0px;
+                img {
+                    vertical-align: middle;
+                    width:auto;
+                    max-width: 100%;
+                    margin-left: 0px;
+                    @media (max-width: 991px){
+                        margin: 0px auto !important;
+                    }
+                }
+                @media (max-width: 767px){
+                    figure .vc_single_image-wrapper{
+                        width: auto;
+                        height: auto;
+                        background: none;
+                    }
+                }
+            }
+            @media (max-width: 767px){
+                h1{
+                    font-size: 25px !important;
+                }
+            }
+            .form-container{
+                margin-bottom:0px;
+                @media (max-width: 767px){
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.successful-seminars-section{
+    margin-bottom: 60px;
+    .wpb_text_column{
+        .wpb_wrapper{
+            h4{
+                @media (min-width: 600px){
+                    font-size: 40px;
+                }
+                color: #282828;
+                margin: 0px;
+            }
+            p{
+                font-size: 30px;
+                @media (min-width: 600px){
+                    font-size: 55px;
+                }
+               color: #282828;
+            }
+        }
+    }
+    .owl-carousel{
+        .owl-item{
+            .item{
+                border-radius: 10px;
+                overflow: hidden;
+                height: 210px;
+                padding: 10px;               
+                img{
+                    object-fit: cover;
+                    height: 100%;
+                    border-radius: 10px;
+                }
+                
+            }
+            &.center{
+                .item{
+                    padding: 0px;
+                }
+            }
+        }
+    }
+}
+
+.investment-strategies-section{
+    @media (max-width: 991px) {
+        margin-bottom: 60px;       
+       }
+    .wpb_wrapper{
+        color: #fff;
+        h4{
+            margin-top: 30px;
+        }
+    }
+    .wpb_single_image{
+        img{
+            max-width: 500px;
+            width: 100%;
+            margin-bottom: -70px;            
+        }
+    }
+    .wpb_column.vc_column_container.vc_col-sm-6 {
+     @media (max-width: 991px) {
+         width: 100%;
+     }
+    }
+}

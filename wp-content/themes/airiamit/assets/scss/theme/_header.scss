@@ -48,8 +48,11 @@ header#site-header {
 
 .inner-banner {
     padding-bottom: 0px;
-    .cover-header.bg-image {
+    .cover-header{
         background-position: center 30%;
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: cover;    
     }
     .cover-header-inner-wrapper.screen-height {
         min-height: calc(60vh - 32px);

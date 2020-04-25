@@ -786,5 +786,5 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 function is_blog () {
-    return ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag()) && 'post' == get_post_type();
+    return ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag() || is_page()) && 'post' == get_post_type();
 }
