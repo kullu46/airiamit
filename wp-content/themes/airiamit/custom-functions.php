@@ -1,5 +1,5 @@
 <?php 
-
+error_reporting(0); 
 
 // register new_homes post type
 // Register Custom Post Type

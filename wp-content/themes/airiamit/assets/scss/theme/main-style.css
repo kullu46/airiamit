@@ -251,6 +251,10 @@ header#site-header .header-inner .toggle path {
   }
 }
 
+.home-page-banner {
+  padding-bottom: 0px;
+}
+
 @media (max-width: 991px) {
   .home-page-banner {
     padding-top: 0px;
@@ -728,6 +732,104 @@ header#site-header .header-inner .toggle path {
 
 .testimonial-section .owl-nav button.owl-next {
   float: right;
+}
+
+.top-content-slider {
+  margin-top: -100px;
+}
+
+.top-content-slider .top-slider-home .owl-item .item {
+  height: 190px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 30px;
+}
+
+@media (max-width: 991px) {
+  .top-content-slider .top-slider-home .owl-item .item {
+    max-width: 450px;
+    margin: 10px auto !important;
+  }
+}
+
+.top-content-slider .top-slider-home .owl-item .item a {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.06);
+  padding: 20px 30px;
+  font-size: 30px;
+  color: #5e5e5e;
+  min-height: 120px;
+}
+
+@media (max-width: 767px) {
+  .top-content-slider .top-slider-home .owl-item .item a {
+    font-size: 20px;
+  }
+}
+
+.top-content-slider .top-slider-home .owl-item .item a img {
+  margin-right: 20px;
+  max-width: 0px;
+  max-height: 0px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.top-content-slider .top-slider-home .owl-item.center .item {
+  margin: 10px 0px;
+}
+
+.top-content-slider .top-slider-home .owl-item.center .item a {
+  text-align: left;
+}
+
+.top-content-slider .top-slider-home .owl-item.center .item a img {
+  max-width: 140px;
+  display: block;
+  max-height: 200px;
+}
+
+@media (max-width: 767px) {
+  .top-content-slider .top-slider-home .owl-item.center .item a img {
+    max-width: 90px;
+  }
+}
+
+.top-content-slider .top-slider-home .owl-dots {
+  display: block !important;
+  margin: auto;
+  max-width: 93px;
+  background: #2dcb73;
+  padding: 6px 3px 2px;
+  border-radius: 10px;
+}
+
+.top-content-slider .top-slider-home .owl-dots button span {
+  background: #aaeac6;
+}
+
+.top-content-slider .top-slider-home .owl-dots button.active span {
+  background: #ffffff;
 }
 
 .footer-nav-widgets-wrapper {
