@@ -4743,7 +4743,7 @@ a.to-the-top > * {
 	}
 
 	.site-logo img {
-		max-height: 50px;
+		max-height: 48px;
 		transition: height 0.15s linear, width 0.15s linear, max-height 0.15s linear;
 	}
 

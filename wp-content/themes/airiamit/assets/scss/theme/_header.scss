@@ -42,7 +42,7 @@ header#site-header {
 @media (min-width: 992px){
 header#site-header {
     margin-bottom: -230px !important;
-    padding: 50px 0;
+    padding: 65px 0 35px;
 }
 }
 
@@ -55,7 +55,7 @@ header#site-header {
         background-size: cover;    
     }
     .cover-header-inner-wrapper.screen-height {
-        min-height: calc(60vh - 32px);
+        min-height: calc(75vh - 32px);
         @media (max-width: 699px) {
             min-height: 250px;
         }
@@ -80,13 +80,14 @@ header#site-header {
         max-width: 530px;
         text-align: left;
         width: 100%;
-        margin-top: 40px;
-        padding: 0px 15px;
+        margin-top: 60px;
+        padding: 0px;
         @media (max-width: 767px) {
             padding-bottom: 90px;
             margin-top: 200px;
             text-align: center !important;
             background: rgba(255, 255, 255, 0.9294117647058824);
+            padding: 0px 15px;
             padding-top: 20px;
             max-width: 100%;
             .wp-video-popup{
@@ -102,10 +103,13 @@ header#site-header {
             }
         }
         h2{
-            margin-top: 10px;
+            margin-top: 40px;
             padding: 0px !important;
+            color: $black !important;
+            max-width: 380px;
             @media (max-width: 991px) {
                 text-align: left !important;
+                max-width: 100%;
             }
         }
         p{

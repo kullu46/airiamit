@@ -8,9 +8,9 @@ body {
   font-family: 'Averta Demo';
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1400px) {
   .container {
-    max-width: 1520px;
+    max-width: 1385px;
     width: 100%;
   }
 }
@@ -132,7 +132,7 @@ header#site-header .header-inner .toggle path {
 @media (min-width: 992px) {
   header#site-header {
     margin-bottom: -230px !important;
-    padding: 50px 0;
+    padding: 65px 0 35px;
   }
 }
 
@@ -148,7 +148,7 @@ header#site-header .header-inner .toggle path {
 }
 
 .inner-banner .cover-header-inner-wrapper.screen-height {
-  min-height: calc(60vh - 32px);
+  min-height: calc(75vh - 32px);
 }
 
 @media (max-width: 699px) {
@@ -184,8 +184,8 @@ header#site-header .header-inner .toggle path {
   max-width: 530px;
   text-align: left;
   width: 100%;
-  margin-top: 40px;
-  padding: 0px 15px;
+  margin-top: 60px;
+  padding: 0px;
 }
 
 @media (max-width: 767px) {
@@ -194,6 +194,7 @@ header#site-header .header-inner .toggle path {
     margin-top: 200px;
     text-align: center !important;
     background: rgba(255, 255, 255, 0.929412);
+    padding: 0px 15px;
     padding-top: 20px;
     max-width: 100%;
   }
@@ -210,13 +211,16 @@ header#site-header .header-inner .toggle path {
 }
 
 .inner-banner .video-banner h2 {
-  margin-top: 10px;
+  margin-top: 40px;
   padding: 0px !important;
+  color: #000 !important;
+  max-width: 380px;
 }
 
 @media (max-width: 991px) {
   .inner-banner .video-banner h2 {
     text-align: left !important;
+    max-width: 100%;
   }
 }
 
@@ -313,6 +317,7 @@ header#site-header .header-inner .toggle path {
 }
 
 .cover-header .entry-header h2 span.center-text {
+  line-height: 1;
   display: block;
   color: #2dcb73;
 }
@@ -2079,12 +2084,46 @@ section.modal-projects-gallery .modal-projects-gallery-inner-wrap .modal-project
   }
 }
 
+.project-floorplan .btn {
+  background: #D11919;
+  padding: 15px 20px;
+  color: #ffffff;
+  font-size: 20px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.project-floorplan .btn:hover {
+  background: #de2424;
+}
+
+.project-floorplan .btn.downloadfloor-btn {
+  background: #4CCB70;
+}
+
+.project-floorplan .btn.downloadfloor-btn:hover {
+  background: #56e07d;
+}
+
 .page-id-218 .home-page-banner {
   padding-bottom: 0px;
 }
 
+.page-id-218 .home-page-banner .cover-header .cover-header-inner {
+  padding: 4rem 0 4rem 0;
+}
+
+.page-id-218 .home-page-banner .cover-header .entry-header h2 {
+  line-height: 1 !important;
+}
+
 .page-id-218 .home-page-banner .cover-header .entry-header h2 span.center-text strong {
-  line-height: normal !important;
+  line-height: 1 !important;
+}
+
+.page-id-218 .home-page-banner .screen-height {
+  min-height: calc(80vh - 32px);
 }
 
 @media (max-width: 767px) {
@@ -2280,6 +2319,12 @@ section.modal-projects-gallery .modal-projects-gallery-inner-wrap .modal-project
   margin: 0px;
 }
 
+@media (min-width: 1440px) {
+  .sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .wpb_wrapper p {
+    font-size: 25px;
+  }
+}
+
 .sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .wpb_wrapper h2 {
   color: #8cc12b;
 }
@@ -2305,6 +2350,12 @@ section.modal-projects-gallery .modal-projects-gallery-inner-wrap .modal-project
   }
 }
 
+@media (min-width: 1440px) {
+  .sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .btn {
+    padding: 28px 45px;
+  }
+}
+
 .sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .btn small {
   display: block;
   width: 100%;
@@ -2314,10 +2365,16 @@ section.modal-projects-gallery .modal-projects-gallery-inner-wrap .modal-project
 
 .why-list-section {
   margin-bottom: 50px !important;
+  margin-top: 50px !important;
+}
+
+.why-list-section p {
+  line-height: 30px;
 }
 
 @media (max-width: 600px) {
   .why-list-section {
+    margin-top: 0px !important;
     margin-bottom: 20px !important;
   }
 }
@@ -2528,6 +2585,18 @@ section.modal-projects-gallery .modal-projects-gallery-inner-wrap .modal-project
   }
 }
 
+.page-id-216 .sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .btn {
+  padding: 15px 45px;
+}
+
+.page-id-216 .vc_col-sm-6.vc_col-has-fill .vc_column-inner .wpb_wrapper p {
+  margin-bottom: 0px !important;
+}
+
+.page-id-216 .sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .wpb_wrapper h2 {
+  margin-bottom: 15px;
+}
+
 .our-advantages ul {
   margin: 0px;
   padding: 0px;
@@ -2553,5 +2622,29 @@ section.modal-projects-gallery .modal-projects-gallery-inner-wrap .modal-project
   .our-advantages br {
     display: none;
   }
+}
+
+.our-advantages p {
+  line-height: 30px;
+}
+
+.page-id-214 .sell-top-help .vc_col-sm-3, .page-id-216 .sell-top-help .vc_col-sm-3 {
+  width: auto;
+}
+
+.page-id-214 .sell-top-help .vc_col-sm-6.vc_col-has-fill, .page-id-216 .sell-top-help .vc_col-sm-6.vc_col-has-fill {
+  width: 100%;
+  max-width: 850px;
+  margin: auto;
+}
+
+@media (max-width: 991px) {
+  .page-id-214 .sell-top-help .vc_col-sm-6.vc_col-has-fill, .page-id-216 .sell-top-help .vc_col-sm-6.vc_col-has-fill {
+    width: 100%;
+  }
+}
+
+.page-id-214 .sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .wpb_wrapper p, .page-id-216 .sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .wpb_wrapper p {
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=main-style.css.map */

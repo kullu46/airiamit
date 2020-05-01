@@ -18,7 +18,10 @@
                     margin: 0px;
                 }
                 p{
-                    margin: 0px;
+                    margin: 0px;                    
+                    @media (min-width: 1440px){
+                        font-size: 25px;
+                    }
                 }
                 h2{
                     color: $green-1;
@@ -37,6 +40,9 @@
                 border-radius:100px;
                 color: $white;
                 padding: 15px 30px;
+                @media (min-width: 1440px){
+                    padding: 28px 45px;
+                }
                 position: relative;
                 top: 50px;
                 margin-top: -40px;
@@ -53,11 +59,16 @@
 
 .why-list-section{
     margin-bottom: 50px !important;
+    margin-top: 50px !important;
+    p {
+        line-height: 30px;
+    }
     @media (max-width: 600px){
+        margin-top: 0px !important;
         margin-bottom: 20px !important;
     }
     .vc_custom_heading{
-        margin-bottom: 40px;
+        margin-bottom: 40px;       
     }
     .vc_col-sm-4{
         @media (max-width: 991px){
@@ -244,4 +255,14 @@
         }
     }
     
+}
+
+.page-id-216 .sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .btn{
+    padding: 15px 45px;
+}
+.page-id-216 .vc_col-sm-6.vc_col-has-fill .vc_column-inner .wpb_wrapper p{
+    margin-bottom: 0px !important;
+}
+.page-id-216 .sell-top-help .vc_col-sm-6.vc_col-has-fill .vc_column-inner .wpb_wrapper h2{
+    margin-bottom: 15px;
 }

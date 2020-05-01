@@ -22,4 +22,30 @@
             display: none;
         }
     }
+    p {
+        line-height: 30px;
+    }
+}
+.page-id-214, .page-id-216{
+    .sell-top-help{
+        .vc_col-sm-3{
+            width: auto;
+        }
+        .vc_col-sm-6.vc_col-has-fill{
+            width: 100%;
+            max-width: 850px;
+            margin: auto;
+            @media (max-width: 991px){
+                width: 100%;
+            }
+            .vc_column-inner{            
+                .wpb_wrapper{
+                     p{
+                        margin-bottom: 20px;  
+                    }
+                }
+            }
+        }
+        
+    }
 }

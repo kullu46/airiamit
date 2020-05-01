@@ -1,10 +1,19 @@
 .page-id-218{
     .home-page-banner{
         padding-bottom:0px;
-        .cover-header .entry-header h2 span.center-text strong{
-            line-height: normal !important;
+        .cover-header {
+            .cover-header-inner{
+                padding: 4rem 0 4rem 0;
+            }
+            .entry-header h2{
+                line-height: 1 !important;
+                span.center-text strong{
+                    line-height: 1 !important;
+                }
+            }
         }
         .screen-height {
+            min-height: calc(80vh - 32px);
             @media (max-width: 767px){
                 min-height: 70vh;
             }

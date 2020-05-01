@@ -287,3 +287,24 @@ section.modal-projects-gallery{
     }
 }
 
+.project-floorplan{
+    .btn{
+        background: #D11919;
+        padding: 15px 20px;
+        color: #ffffff;
+        font-size: 20px;
+        text-transform: capitalize;
+        border-radius: 5px;
+        margin-right: 20px;
+        &:hover{
+            background: #de2424; 
+        }
+        &.downloadfloor-btn{
+            background: #4CCB70; 
+            &:hover{
+                background: #56e07d;  
+            }
+        }
+    }
+}
+

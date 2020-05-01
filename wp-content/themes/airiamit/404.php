@@ -12,7 +12,7 @@ get_header();
 
 <main id="site-content" role="main">
 
-	<div class="section-inner thin error404-content">
+	<div class="section-inner thin error404-content container">
 
 		<h1 class="entry-title"><?php _e( 'Page Not Found', 'airiamit' ); ?></h1>
 
