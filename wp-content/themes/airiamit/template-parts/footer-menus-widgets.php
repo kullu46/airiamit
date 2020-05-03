@@ -13,6 +13,7 @@ $has_social_menu = has_nav_menu( 'social' );
 
 $has_sidebar_1 = is_active_sidebar( 'sidebar-1' );
 $has_sidebar_2 = is_active_sidebar( 'sidebar-2' );
+$has_blog_sidebar = is_active_sidebar( 'blog-sidebar' );
 
 // Only output the container if there are elements to display.
 if ( $has_footer_menu || $has_social_menu || $has_sidebar_1 || $has_sidebar_2 ) {
@@ -84,11 +85,18 @@ if ( $has_footer_menu || $has_social_menu || $has_sidebar_1 || $has_sidebar_2 ) 
 
 			<?php } ?>
 
-			<?php if ( $has_sidebar_1 || $has_sidebar_2 ) { ?>
+			<?php global $post; ?>
+
+			<?php if ( $has_sidebar_1 || $has_sidebar_2 || $has_blog_sidebar ) { ?>
 
 				<aside class="footer-widgets-outer-wrapper" role="complementary">
 
 					<div class="footer-widgets-wrapper">
+						<?php if($post->post_type == 'post' && $has_blog_sidebar){ ?>
+							<div class="footer-widgets">
+								<?php dynamic_sidebar( 'blog-sidebar' ); ?>
+							</div>
+						<?php } ?>
 
 						<?php if ( $has_sidebar_1 ) { ?>
 

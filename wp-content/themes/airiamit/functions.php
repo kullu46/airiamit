@@ -380,6 +380,12 @@ function airiamit_sidebar_registration() {
 		)
 	);
 
+	register_sidebar( array(
+        'name'          => __( 'Blog Sidebar', 'airiamit' ),
+        'id'            => 'blog-sidebar',
+        'description'   => __( 'Widgets in this area will be shown on all blogposts and on blog page.', 'airiamit' )
+    ) );
+
 }
 
 add_action( 'widgets_init', 'airiamit_sidebar_registration' );
