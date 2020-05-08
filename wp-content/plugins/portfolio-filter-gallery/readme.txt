@@ -5,7 +5,7 @@ Tags: portfolio, gallery, portfolio gallery, responsive, wordpress portfolio plu
 Requires at least: 3.2
 Tested up to: 5.3.2
 Requires PHP: 5.4
-Stable tag: 1.1.6
+Stable tag: 1.1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -177,6 +177,9 @@ After uploading the images choose the image type = (video) from the select box b
 * Open the post/page you want to display the gallery. Paste your gallery shortcode into text editor and press plublish button to show your gallery or Instagram feed. You can also show the gallery in widget like page or post just paste your shortcode into text widget and your gallery is ready to show.
 
 == Changelog ==
+
+= 1.1.7 =
+* Fixed issue with anchor tag (hypertext link)
 
 = 1.1.6 =
 * Mutiple gallery on same page issue fixed

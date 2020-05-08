@@ -273,9 +273,9 @@ h6,
 .faux-heading {
 	font-feature-settings: "lnum";
 	font-variant-numeric: lining-nums;
-	font-weight: 700;
-	letter-spacing: -0.0415625em;
+	font-weight: 400;
 	line-height: 1.25;
+	font-family: 'Averta Demo';
 	/* margin: 3.5rem 0 2rem; */
 }
 
@@ -1760,7 +1760,7 @@ body.touch-enabled .primary-menu ul li.menu-item-has-children > a {
 	right: 99999rem;
 	top: 0;
 	transition: opacity 0.25s ease-in, left 0s 0.25s, right 0s 0.25s;
-	z-index: 99;
+	z-index: 9999;
 }
 
 .admin-bar .menu-modal {
@@ -4278,7 +4278,7 @@ div.comment:first-of-type {
 
 .footer-top-visible .footer-nav-widgets-wrapper,
 .footer-top-hidden #site-footer {
-	margin-top: 5rem;
+	margin-top: 0rem;
 }
 
 .reduced-spacing.footer-top-visible .footer-nav-widgets-wrapper,
@@ -5400,7 +5400,7 @@ a.to-the-top > * {
 
 	.footer-top-visible .footer-nav-widgets-wrapper,
 	.footer-top-hidden #site-footer {
-		margin-top: 8rem;
+		margin-top: 0rem;
 	}
 
 	/* FOOTER TOP */

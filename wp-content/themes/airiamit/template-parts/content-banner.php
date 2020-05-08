@@ -47,9 +47,12 @@
 	<?php
 		if ( get_field('common_banner_image', 'option') ) {
 			$img = get_field('common_banner_image', 'option'); ?>
-			
-	<div class="cover-header <?php echo $cover_header_classes; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>" style="<?php echo 'background-image: url(\'' . $img . '\');'; ?>" >
-		<div class="cover-header-inner-wrapper screen-height">
+	<?php if ( is_blog( )) {   ?> 		
+	<div class="cover-header <?php echo $cover_header_classes; ?>" style="<?php echo 'background-image: url(\'' . $img . '\');'; ?>" >
+	<?php  } else { ?>
+	<div class="cover-header <?php echo $cover_header_classes; ?>"<?php echo $cover_header_style;?>	" >
+	<?php  }  ?> 
+	<div class="cover-header-inner-wrapper screen-height">
 			<div class="cover-header-inner">
 				<div class="cover-color-overlay color-accent<?php echo esc_attr( $color_overlay_classes ); ?>"<?php echo $color_overlay_style; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- We need to double check this, but for now, we want to pass PHPCS ;) ?>></div>
 					<header class="entry-header has-text-align-center container">
@@ -61,6 +64,7 @@
 								<?php echo do_shortcode('[wp-video-popup video="'.get_field('video_link').'"]'); ?>
 								<a href="#" class="wp-video-popup">
 									<img src="../wp-content/uploads/2020/04/play-button.png" alt="Play Button"> 
+									<span>Play to Watch</span>
 								</a>
 								<h2><?php the_field('page_header_title'); ?></h2>
 								<p><?php the_field('page_header_sub_content'); ?></p>
@@ -70,10 +74,21 @@
 								<?php echo do_shortcode('[wp-video-popup video="'.get_field('video_link').'"]'); ?>
 								<a href="#" class="wp-video-popup">
 									<img src="../wp-content/uploads/2020/04/play-button.png" alt="Play Button"> 
+									<span>Play to Watch</span>
 								</a>
 								<h2><?php the_field('page_header_title'); ?></h2>
 								<p><?php the_field('page_header_sub_content'); ?></p>
 							</div>
+						<?php } elseif ( is_page( '218' )) { ?> 
+						<div class="video-banner">
+							<?php echo do_shortcode('[wp-video-popup video="'.get_field('video_link').'"]'); ?>
+							<a href="#" class="wp-video-popup">
+								<img src="../wp-content/uploads/2020/04/play-button.png" alt="Play Button"> 
+								<span>Play to Watch</span>
+							</a>
+							<h2><?php the_field('page_header_title'); ?></h2>
+							<p><?php the_field('page_header_sub_content'); ?></p>
+						</div>
 						<?php  } else { ?>
 							<h2> <?php echo get_the_title(); ?> </h2>
 						<?php  }  ?> 

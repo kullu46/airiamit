@@ -789,8 +789,16 @@ if( function_exists('acf_add_options_page') ) {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
+	acf_add_options_page(array(
+		'page_title' 	=> 'Social Side Bar',
+		'menu_title'	=> 'Social Bar',
+		'menu_slug' 	=> 'social-bar-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
 }
 
 function is_blog () {
     return ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag() || is_page()) && 'post' == get_post_type();
 }
+

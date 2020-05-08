@@ -3,6 +3,24 @@
 					<?php dynamic_sidebar( 'sidebar-2' ); ?>
 				</div>
 			</footer>
+			<div class="social-sidebar">
+				<ul>
+					<?php if(get_field('social_media_list', 'option')): ?>
+						<?php while(has_sub_field('social_media_list', 'option')):
+							$sicon = get_sub_field('social_icon');
+							$slink = get_sub_field('link');
+						?>
+						<li>
+						<a href="<?php echo $slink['url']; ?>" target="_blank">
+							<i class="fab <?php echo $sicon; ?>"></i>
+						</a>
+						</il>
+						<?php endwhile; ?>
+					<?php endif; ?>
+				</ul>
+			</div>
+
+			
 		<?php wp_footer(); ?>
 		<script type="text/javascript">
 			jQuery(document).ready(function($){

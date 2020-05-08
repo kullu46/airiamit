@@ -184,10 +184,8 @@
 		// Output the menu modal.
 		get_template_part( 'template-parts/modal-menu' );
 
-		if ( !is_front_page() && !is_page('218')  ){
+		if ( !is_front_page()){
 			get_template_part( 'template-parts/content-banner' );
 		}
-		if ( is_page('218')  ){
-			get_template_part( 'template-parts/content-home' );
-		}
+		
 		

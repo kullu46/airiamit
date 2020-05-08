@@ -21,7 +21,7 @@ if ( $has_footer_menu || $has_social_menu || $has_sidebar_1 || $has_sidebar_2 ) 
 
 	<div class="footer-nav-widgets-wrapper header-footer-group">
 
-		<div class="container">
+		
 
 			<?php
 
@@ -93,15 +93,19 @@ if ( $has_footer_menu || $has_social_menu || $has_sidebar_1 || $has_sidebar_2 ) 
 
 					<div class="footer-widgets-wrapper">
 						<?php if($post->post_type == 'post' && $has_blog_sidebar){ ?>
-							<div class="footer-widgets">
-								<?php dynamic_sidebar( 'blog-sidebar' ); ?>
+							<div class="footer-widgets fubos-from">
+								<div class="container">
+									<?php dynamic_sidebar( 'blog-sidebar' ); ?>
+								</div>
 							</div>
 						<?php } ?>
 
 						<?php if ( $has_sidebar_1 ) { ?>
 
-							<div class="footer-widgets">
-								<?php dynamic_sidebar( 'sidebar-1' ); ?>
+							<div class="footer-widgets copyright-bottom">
+								<div class="container">
+									<?php dynamic_sidebar( 'sidebar-1' ); ?>
+								</div>
 							</div>
 
 						<?php } ?>
@@ -113,8 +117,6 @@ if ( $has_footer_menu || $has_social_menu || $has_sidebar_1 || $has_sidebar_2 ) 
 				</aside><!-- .footer-widgets-outer-wrapper -->
 
 			<?php } ?>
-
-		</div><!-- .footer-inner -->
 
 	</div><!-- .footer-nav-widgets-wrapper -->
 

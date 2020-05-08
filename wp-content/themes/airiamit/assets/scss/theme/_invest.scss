@@ -1,4 +1,5 @@
 .page-id-218{
+   
     .home-page-banner{
         padding-bottom:0px;
         .cover-header {
@@ -13,7 +14,7 @@
             }
         }
         .screen-height {
-            min-height: calc(80vh - 32px);
+            min-height: calc(75vh - 32px);
             @media (max-width: 767px){
                 min-height: 70vh;
             }
@@ -54,6 +55,25 @@
                 margin-bottom:0px;
                 @media (max-width: 767px){
                     width: 100%;
+                }
+            }
+        }
+    }
+    
+    .investor-page-form{
+        @include custom-shadow(0px 0px 111px 0px rgba(0, 0, 0, 0.14));
+        .vc_column-inner .fub-custom-form .btn-submit{
+            background-color: #4ccb70;
+            color: #fff;
+        }
+        input:not([type="submit"]){
+            color: $gray-5e5 !important;     
+            @include input-placeholder{
+                color: $gray-5e5 !important;                
+            }
+            &:focus{
+                @include input-placeholder{
+                    opacity: 0;
                 }
             }
         }
@@ -108,9 +128,12 @@
         margin-bottom: 60px;       
        }
     .wpb_wrapper{
-        color: #fff;
         h4{
             margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        h2{
+            margin-bottom: 30px;
         }
     }
     .wpb_single_image{

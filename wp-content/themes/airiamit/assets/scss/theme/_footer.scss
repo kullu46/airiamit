@@ -1,70 +1,91 @@
-.footer-nav-widgets-wrapper{
-    background: $gray-fbf;
-    .container{
-        .footer-widgets-outer-wrapper{
-            .widget-title{
-               font-size: 40px;
-               color:  $gray-5e5;
-                font-family: 'Averta Demo', serif;
-                font-weight: 500;
-                letter-spacing: 0.8px;
-                @media (max-width: 767px) {
-                    font-size: 25px; 
-                }
-            }
-            p{
-                color:  $gray-5e5;
-            }
-          
+.copyright-bottom{
+    background: #e6e6e6;
+    margin-top: 0px !important;
+    padding: 20px 0px;
+    .textwidget{
+        p{
+            color:  #929292;
+            font-size: 15px;
+            margin-bottom: 0px;
         }
-        .form-container{
-            .wpcf7-form-control-wrap{
-                width: 100%;
-                input, textarea{
+        ul{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            li{
+                color:  #929292;
+                font-size: 15px;
+                display: inline-block;
+                border-right: 1px solid;
+                padding-right: 10px;
+                margin-right: 5px;
+                line-height: normal;
+                &:last-child{
                     border: none;
-                    background: none;
-                    outline: none;
-                    font-family: 'Averta Demo';
-                    font-weight: 400;
-                    color:  $gray-5e5;
-                    border-bottom:1px solid  #ebebeb;
-                    padding-left: 0;
-                    padding-right: 0;
-                    @include input-placeholder{
-                        color:  $gray-5e5;
-                        font-style: normal;       
-                        opacity: 1;                 
-                    }
-                    &:focus{
-                        @include input-placeholder{
-                            opacity: 0;
-                        }
-                    }
+                    margin: 0px;
+                    padding-right: 0px;
+                }
+                a{
+                    color:   #929292;
+                    font-size: 15px;
+                    line-height: normal;
+                    &:hover{
+                        color: $green;
+                        }  
                 }
             }
-            .btn-submit{
-                border-radius: 8px;
-                background-color:$orange;
-                color: $white;
-                text-decoration: none;
-                text-transform: capitalize;
-                font-weight: 400;
-                font-family: 'Averta Demo', serif;
-                outline: none;
-                margin-top: 40px;
-                box-shadow: 0px 4px 9px hsla(0, 0%, 5%, 0.16);
-                &:hover{
-                    opacity: 0.8;
-                }
-            }
-            
-        }
-        div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
-            font-size: 14px;
         }
     }
+    .form-container{
+        .wpcf7-form-control-wrap{
+            width: 100%;
+            input, textarea{
+                border: none;
+                background: none;
+                outline: none;
+                font-family: 'Averta Demo';
+                font-weight: 400;
+                color:  $gray-5e5;
+                border-bottom:1px solid  #ebebeb;
+                padding-left: 0;
+                padding-right: 0;
+                @include input-placeholder{
+                    color:  $gray-5e5;
+                    font-style: normal;       
+                    opacity: 1;                 
+                }
+                &:focus{
+                    @include input-placeholder{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        .btn-submit{
+            border-radius: 8px;
+            background-color:$orange;
+            color: $white;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-weight: 400;
+            font-family: 'Averta Demo', serif;
+            outline: none;
+            margin-top: 40px;
+            box-shadow: 0px 4px 9px hsla(0, 0%, 5%, 0.16);
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+        
+    }
+    div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
+        font-size: 14px;
+    }
+   
 }
-
+.footer-widgets-outer-wrapper{
+    padding: 0px;
+}
 
 footer.header-footer-group{
     background: $gray-2d2;
@@ -86,4 +107,80 @@ footer.header-footer-group{
             }
         }
     }
+}
+
+.footer-form-row, .fubos-from{
+    padding: 60px 0px 10px;
+    background-color: #fbfbfb;
+    .vc_column-inner{
+        padding: 0px !important;
+    }
+    .form-title, .widgettitle{
+        font-size: 40px;
+        color:  $gray-5e5;
+         font-family: 'Averta Demo', serif;
+         font-weight: 500;
+         letter-spacing: 0.8px;
+         @media (max-width: 767px) {
+             font-size: 25px; 
+         }
+     }
+     .form-subtitle, p{
+        color:  $gray-5e5;
+        font-size: 20px;
+        margin:20px 0px 70px;
+        max-width: 710px;
+        .col-sm-12{
+            padding: 0px;
+        }
+     }
+     input:not([type="submit"]), textarea{
+        border: none;
+        background: none;
+        outline: none;
+        font-family: 'Averta Demo';
+        font-weight: 400;
+        color:  $gray-5e5;
+        border-bottom:1px solid  #ebebeb;
+        padding-left: 0;
+        padding-right: 0;
+        @include input-placeholder{
+            color:  $gray-5e5;
+            font-style: normal;       
+            opacity: 1;                 
+        }
+        &:focus{
+            @include input-placeholder{
+                opacity: 0;
+            }
+        }
+    }
+    .btn-submit{
+        border-radius: 8px;
+        background-color:$orange;
+        color: $white;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-family: 'Averta Demo', serif;
+        outline: none;
+        margin-top: 40px;
+        box-shadow: 0px 4px 9px hsla(0, 0%, 5%, 0.16);
+        &:hover{
+            opacity: 0.8;
+            text-decoration: none;
+        }
+    }
+}
+
+.fubos-from li#text-2 {
+    list-style: none;
+}
+
+.footer-widgets.fubos-from {
+    padding-bottom: 40px;
+}
+
+.related-posts.row {
+    margin-bottom: 60px;
 }

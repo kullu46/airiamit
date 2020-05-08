@@ -69,6 +69,7 @@
                     padding: 10px;
                     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10%, #000000 100%);
                     &.vc_gitem-post-data{
+                        margin: 0px;
                         @media (max-width: 1599px) {
                             margin: 0px;
                         }
@@ -147,8 +148,12 @@
                 margin-left: -9px;
             }
         }
-        .form-container{
-            margin-bottom: 20px;
+        .wpb_content_element{
+            margin-bottom: 0px;
+        }
+        .fub-custom-form{
+            margin-bottom: 0px;
+            @include  flex-wrap (wrap);
             @include flexbox;
             @media (max-width: 991px) {
                 display: block;
@@ -156,33 +161,37 @@
                 width: 80%;
                 margin: 0px auto 40px;
             }
-            .wpcf7-form-control-wrap{
-                padding: 0px 15px;
-                width: 100%;
-                @media (min-width: 768px) {
-                    width: 33%;
-                }
-                input{
-                    border: none;
-                    background: none;
-                    outline: none;
-                    font-family: 'Averta Demo';
-                    font-weight: 400;
-                    color: $white;
-                    border-bottom:1px solid  #6bd89a;
-                    @include input-placeholder{
-                        color: $white;
-                        font-style: normal;       
-                        opacity: 1;                 
-                    }
-                    &:focus{
-                        @include input-placeholder{
-                            opacity: 0;
-                        }
+            @media (min-width: 992px) {
+                .row{
+                    width:calc(100% - 230px);
+                    &+.row{
+                        width: 230px;
                     }
                 }
             }
-            .btn{
+            .fub-response{
+                padding: 0px;
+            }
+            input:not([type="submit"]){
+                border: none;
+                background: none;
+                outline: none;
+                font-family: 'Averta Demo';
+                font-weight: 400;
+                color: $white;
+                border-bottom:1px solid  #6bd89a;
+                @include input-placeholder{
+                    color: $white;
+                    font-style: normal;       
+                    opacity: 1;                 
+                }
+                &:focus{
+                    @include input-placeholder{
+                        opacity: 0;
+                    }
+                }
+            }
+            .btn-submit{
                 border-radius: 8px;
                 background-color:$white;
                 color: $gray-5e5;
