@@ -1,5 +1,7 @@
 header#site-header {
     background: none;
+    position: relative;
+    z-index: 99999;
     @media (max-width: 991px) {
         padding: 40px 0px;
         .toggle-text{

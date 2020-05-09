@@ -28,6 +28,8 @@
 					$('.project-filters').slideToggle('active-filter');
 					e.stopPropagation();
 				});
+
+				
 			});
 
 			jQuery("#soc-carousel-385").owlCarousel({
