@@ -6361,15 +6361,7 @@ ul.top-icons li .social-icon.instagram{
 footer .section-inner {
     padding: 20px 0 10px 0;
 }
-.floating-left{
-	position: absolute;
-	top: 750px;
-}
-.floating-right{
-	position: absolute;
-	top: 750px;
-	right: 0;
-}
+
 .custom-popup{
 	display: none;
 	position: fixed;

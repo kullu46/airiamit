@@ -107,7 +107,7 @@ body {
   margin: 0px;
   position: fixed;
   float: left;
-  top: 230px;
+  top: 30%;
   width: auto;
   z-index: 1100;
   background: #2d2d2d;
@@ -1373,6 +1373,52 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
 .fub-custom-form + p {
   padding: 0;
   margin: 0;
+}
+
+.btn-book-meeting {
+  position: fixed;
+  top: 55%;
+  width: 160px;
+  z-index: 999;
+}
+
+.btn-book-meeting a {
+  font-size: 25px;
+  color: #ffffff;
+  background: #2dcb73;
+  display: inline-block;
+  padding: 14px 20px;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
+@media (max-width: 767px) {
+  .btn-book-meeting {
+    display: none;
+  }
+}
+
+.btn-contact-us {
+  right: 10px;
+  position: fixed;
+  top: 62%;
+  width: 160px;
+  z-index: 999;
+}
+
+@media (max-width: 767px) {
+  .btn-contact-us {
+    display: none;
+  }
+}
+
+.btn-contact-us a {
+  font-size: 25px;
+  color: #ffffff;
+  background: #ffb129;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 40px;
 }
 
 @media (max-width: 991px) {
