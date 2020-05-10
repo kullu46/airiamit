@@ -6361,3 +6361,55 @@ ul.top-icons li .social-icon.instagram{
 footer .section-inner {
     padding: 20px 0 10px 0;
 }
+.floating-left{
+	position: absolute;
+	top: 750px;
+}
+.floating-right{
+	position: absolute;
+	top: 750px;
+	right: 0;
+}
+.custom-popup{
+	display: none;
+	position: fixed;
+	margin: 0 auto;
+	left: 24%;
+	top: 10%;
+	max-width: 920px;
+	z-index: 9999999;
+}
+.popup-contact-us.in{
+	display: block;
+}
+.popup-book-meeting.in{
+	display: block;
+}
+/* body.inline-modal-opened{
+	pointer-events: none;
+} */
+.inline-modal-overlay {
+	display: none;
+	position: fixed;
+	z-index: 9999998;
+	background: rgba(0,0,0,0.6);
+	width: 100%;
+	height: 100%;
+	top: 0;
+  left: 0;
+}
+.inline-modal-overlay.in {
+	display: block;
+}
+.owl-item {
+	float: left;
+}
+.owl-carousel {
+	overflow: hidden;
+}
+.fade{
+	display: none;
+}
+.fade.in{
+	display: block;
+}

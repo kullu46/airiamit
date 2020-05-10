@@ -79,99 +79,44 @@ get_header('single-new_homes');
 					<?php endif; ?>
 				</div>
 				<div class="project-floorplan">
-					<a href="#" class="prebook-btn btn">
+					<a href="javascript:;" onclick="showCustomPopup('.popup-prebook-property');" class="prebook-btn btn">
 						Pre-Book This Property
 					</a>
+					<div class="custom-popup popup-prebook-property fade">
+						<a class="btn-close" onclick="hideCustomPopup('.popup-prebook-property');">x</a>
+						<?php echo do_shortcode('[fub-custom-form lead_type="Property Inquiry" tags="Pre-book - '.get_the_title().'" template="1" submit_btn_text="Pre-book Now"]'); ?>
+					</div>
+
 					<?php $floorplan = get_field('nh_floor_plans'); ?>
 					<?php if(is_array($floorplan) && isset($floorplan['url'])){ ?>
-						<a class="downloadfloor-btn btn" href="<?php echo $floorplan['url']; ?>">
-							Download Floor Plans & Price List
+						<a class="downloadfloor-btn btn" href="javascript:;" onclick="showCustomPopup('.popup-plans-pricing');">
+							Get Floor Plans and Pricing
 						</a>
+						<div class="custom-popup popup-plans-pricing fade">
+							<a class="btn-close" onclick="hideCustomPopup('.popup-plans-pricing');">x</a>
+							<?php echo do_shortcode('[fub-custom-form lead_type="Property Inquiry" tags="'.get_the_title().',Plans and Pricing" template="1" submit_btn_text="Submit Details"]'); ?>
+						</div>
 					<?php } ?>
 				</div>
-
-				
-
-				
-				
-				<?php 
-				
-				
-				/* $related_args = array(
-						'post_type' => 'new_homes',
-						'posts_per_page' => 10,
-						'post_status' => 'publish',
-						'post__not_in' => array( get_the_ID() ),
-						'orderby' => 'rand',
-						'meta_query' => array(
-							'relation' => 'AND',
-							array(
-								'key'	 	=> 'nh_location',
-								'value'	  	=> array(get_field('nh_location', get_the_ID())),
-								'compare' 	=> 'IN'
-							)
-						)
-					);
-				$related = get_posts( $related_args );
-				if(count($related) > 0){
-				?>
-					<div class="related-projects">
-						<?php foreach($related as $relatedItem){ ?>
-							<div class="related-project">
-								<a href="<?php echo get_permalink($relatedItem->ID); ?>" alt="<?php echo $relatedItem->post_title; ?>" title="<?php echo $relatedItem->post_title; ?>">
-									<?php echo get_the_post_thumbnail($relatedItem->ID, 'medium'); ?>
-								</a>
-							</div>
-						<?php } ?>
+				<?php $adBanner = get_field('nh_custom_ad_banner'); ?>
+				<?php if(!empty($adBanner)){ ?>
+					<div class="project-ad-banner">
+						<?php echo $adBanner; ?>	
 					</div>
-				<?php } */ ?>
+				<?php } ?>
 			<?php } ?>
 		<?php } ?>
 		</div>
 	</div>
 </main>
-
+<?php $lead_form_shortcode = get_field('nh_lead_form_shortcode'); ?>
+	<?php if(!empty($lead_form_shortcode)){ ?>
+		<div class="project-lead-form">
+			<div class="container project-lead-form-inner">
+				<?php echo do_shortcode($lead_form_shortcode); ?>		
+			</div>
+		</div>
+	<?php } ?>
 <?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
 
-<?php //get_footer(); ?>
-			<footer role="contentinfo" class="header-footer-group">
-				<div class="container">
-					<?php dynamic_sidebar( 'sidebar-2' ); ?>
-				</div>
-			</footer>
-		<?php wp_footer(); ?>
-		<style>
-		.owl-item {
-			float: left;
-		}
-		.owl-carousel {
-			overflow: hidden;
-		}
-		</style>
-		<link rel='stylesheet' id='vc_pageable_owl-carousel-css-css'  href='<?php echo get_site_url(); ?>/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/assets/owl.min.css' media='all' />
-		<link rel='stylesheet' id='tss-owl-carousel-css'  href='<?php echo get_site_url(); ?>/wp-content/plugins/testimonial-slider-and-showcase/assets/vendor/owl-carousel/owl.carousel.min.css?ver=1586072978' media='all' />
-		<link rel='stylesheet' id='tss-owl-carousel-theme-css'  href='<?php echo get_site_url(); ?>/wp-content/plugins/testimonial-slider-and-showcase/assets/vendor/owl-carousel/owl.theme.default.min.css?ver=1586072978' media='all' />
-		<script src='<?php echo get_site_url(); ?>/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/owl.carousel.min.js?ver=6.1'></script>
-		<script type="text/javascript">
-		jQuery(document).ready(function(){
-			if(jQuery(document).find('.modal-projects-gallery-inner').length){
-				jQuery('.modal-projects-gallery-inner').vcOwlCarousel({
-					items: 1,
-					singleItem: true
-				});
-			}
-			if(jQuery(document).find('.related-projects').length){
-				jQuery('.related-projects').vcOwlCarousel({
-					items: 4,
-					singleItem: true
-				});
-			}
-			jQuery(document).on('keydown', function(event) {
-				if (event.key == "Escape" && jQuery(document).find('.modal-projects-gallery').is(":visible")) {
-					jQuery(document).find('.modal-projects-gallery').hide();
-				}
-			});
-		});
-		</script>
-	</body>
-</html>
+<?php get_footer(); ?>
