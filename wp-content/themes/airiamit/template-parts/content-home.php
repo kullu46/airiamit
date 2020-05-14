@@ -48,7 +48,7 @@
                         <a href="<?php echo $link['url']; ?>">
                     <?php endif; ?>
                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
-                        <?php echo $content; ?>
+                        <p><?php echo $content; ?></p>
                     <?php if( $link ): ?>
                         </a>
                     <?php endif; ?>
@@ -68,8 +68,8 @@ jQuery(document).ready(function($) {
     .owlCarousel({
     items: 1,
     slideSpeed: 2000,
-    nav: false,
-    autoplay: true,
+    nav: false,    
+    autoplay: false,
     autoHeight: false,
     dots: false,
     loop: true,

@@ -109,7 +109,7 @@ footer.header-footer-group{
     }
 }
 
-.footer-form-row, .fubos-from{
+.footer-form-row, .fubos-from, .project-lead-form{
     padding: 60px 0px 10px;
     background-color: #fbfbfb;
     .vc_column-inner{
@@ -225,4 +225,8 @@ footer.header-footer-group{
         padding: 15px;
         border-radius: 40px;
     }
+}
+
+.project-lead-form{
+    padding: 60px 0px 60px;
 }

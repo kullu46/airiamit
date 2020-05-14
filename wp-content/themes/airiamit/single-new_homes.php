@@ -113,6 +113,16 @@ get_header('single-new_homes');
 	<?php if(!empty($lead_form_shortcode)){ ?>
 		<div class="project-lead-form">
 			<div class="container project-lead-form-inner">
+			<div class="row form-title">
+				<div class="col-sm-12">
+					<?php echo get_field('nh_lead_form_title'); ?>
+				</div>
+			</div>
+				<div class="row form-subtitle">
+					<div class="col-sm-12">
+					<?php  echo get_field('nh_lead_form_sub_title'); ?>
+					</div>
+				</div>
 				<?php echo do_shortcode($lead_form_shortcode); ?>		
 			</div>
 		</div>

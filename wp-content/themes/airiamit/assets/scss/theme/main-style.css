@@ -405,7 +405,7 @@ header#site-header .header-inner .toggle path {
 
 .home-page-banner #home-slider .owl-item .item a .slider-content h2 {
   color: #5e5e5e;
-  font-size: 50px;
+  font-size: 44px;
   text-align: left;
   padding: 0px 15px;
 }
@@ -436,7 +436,7 @@ header#site-header .header-inner .toggle path {
 
 .home-page-banner #home-slider .owl-item .item a .slider-content h2 span.center-text strong {
   color: #2dcb73;
-  font-size: 110px;
+  font-size: 94px;
 }
 
 @media (max-width: 991px) {
@@ -455,8 +455,12 @@ header#site-header .header-inner .toggle path {
   color: #2dcb73;
 }
 
+.home-page-banner #home-slider .owl-item .item a .slider-content h2 span.center-text.first {
+  font-size: 74px;
+}
+
 .home-page-banner #thumbs {
-  margin-top: -80px !important;
+  margin-top: -30px !important;
 }
 
 .home-page-banner #thumbs.owl-carousel .owl-stage {
@@ -469,34 +473,79 @@ header#site-header .header-inner .toggle path {
 
 .home-page-banner #thumbs.owl-carousel .owl-item .item {
   height: 100%;
+  margin: 10px 0px;
 }
 
 .home-page-banner #thumbs.owl-carousel .owl-item .item a {
-  display: inline-block;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  justify-content: center;
   position: relative;
-  height: 100%;
   text-align: center;
   font-size: 25px;
-  color: #5e5e5e;
+  color: #ffffff;
+}
+
+.home-page-banner #thumbs.owl-carousel .owl-item .item a:before {
+  background: #000;
+  opacity: 0.7;
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .home-page-banner #thumbs.owl-carousel .owl-item .item a img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 160px;
+  height: 140px;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.home-page-banner #thumbs.owl-carousel .owl-item .item a p {
+  position: absolute;
+  z-index: 2;
+}
+
+.home-page-banner #thumbs.owl-carousel .owl-item.current {
+  margin: -10px 0px;
 }
 
 .home-page-banner #thumbs.owl-carousel .owl-item.current .item a {
   color: #2dcb73;
 }
 
+.home-page-banner #thumbs.owl-carousel .owl-item.current .item a::before {
+  display: none;
+}
+
 .home-page-banner #thumbs.owl-carousel .owl-item.current .item a img {
   -webkit-box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 3px 29px 0px rgba(0, 0, 0, 0.05);
-  border: 2px solid;
+  height: 160px;
+}
+
+.home-page-banner #thumbs.owl-carousel .owl-item.current .item a p {
+  position: relative;
 }
 
 .cover-header .cover-header-inner-wrapper {
@@ -1243,16 +1292,16 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   color: #2dcb73;
 }
 
-.footer-form-row, .fubos-from {
+.footer-form-row, .fubos-from, .project-lead-form {
   padding: 60px 0px 10px;
   background-color: #fbfbfb;
 }
 
-.footer-form-row .vc_column-inner, .fubos-from .vc_column-inner {
+.footer-form-row .vc_column-inner, .fubos-from .vc_column-inner, .project-lead-form .vc_column-inner {
   padding: 0px !important;
 }
 
-.footer-form-row .form-title, .footer-form-row .widgettitle, .fubos-from .form-title, .fubos-from .widgettitle {
+.footer-form-row .form-title, .footer-form-row .widgettitle, .fubos-from .form-title, .fubos-from .widgettitle, .project-lead-form .form-title, .project-lead-form .widgettitle {
   font-size: 40px;
   color: #5e5e5e;
   font-family: 'Averta Demo', serif;
@@ -1261,23 +1310,23 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
 }
 
 @media (max-width: 767px) {
-  .footer-form-row .form-title, .footer-form-row .widgettitle, .fubos-from .form-title, .fubos-from .widgettitle {
+  .footer-form-row .form-title, .footer-form-row .widgettitle, .fubos-from .form-title, .fubos-from .widgettitle, .project-lead-form .form-title, .project-lead-form .widgettitle {
     font-size: 25px;
   }
 }
 
-.footer-form-row .form-subtitle, .footer-form-row p, .fubos-from .form-subtitle, .fubos-from p {
+.footer-form-row .form-subtitle, .footer-form-row p, .fubos-from .form-subtitle, .fubos-from p, .project-lead-form .form-subtitle, .project-lead-form p {
   color: #5e5e5e;
   font-size: 20px;
   margin: 20px 0px 70px;
   max-width: 710px;
 }
 
-.footer-form-row .form-subtitle .col-sm-12, .footer-form-row p .col-sm-12, .fubos-from .form-subtitle .col-sm-12, .fubos-from p .col-sm-12 {
+.footer-form-row .form-subtitle .col-sm-12, .footer-form-row p .col-sm-12, .fubos-from .form-subtitle .col-sm-12, .fubos-from p .col-sm-12, .project-lead-form .form-subtitle .col-sm-12, .project-lead-form p .col-sm-12 {
   padding: 0px;
 }
 
-.footer-form-row input:not([type="submit"]), .footer-form-row textarea, .fubos-from input:not([type="submit"]), .fubos-from textarea {
+.footer-form-row input:not([type="submit"]), .footer-form-row textarea, .fubos-from input:not([type="submit"]), .fubos-from textarea, .project-lead-form input:not([type="submit"]), .project-lead-form textarea {
   border: none;
   background: none;
   outline: none;
@@ -1289,57 +1338,57 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   padding-right: 0;
 }
 
-.footer-form-row input:not([type="submit"]).placeholder, .footer-form-row textarea.placeholder, .fubos-from input:not([type="submit"]).placeholder, .fubos-from textarea.placeholder {
+.footer-form-row input:not([type="submit"]).placeholder, .footer-form-row textarea.placeholder, .fubos-from input:not([type="submit"]).placeholder, .fubos-from textarea.placeholder, .project-lead-form input:not([type="submit"]).placeholder, .project-lead-form textarea.placeholder {
   color: #5e5e5e;
   font-style: normal;
   opacity: 1;
 }
 
-.footer-form-row input:not([type="submit"]):-moz-placeholder, .footer-form-row textarea:-moz-placeholder, .fubos-from input:not([type="submit"]):-moz-placeholder, .fubos-from textarea:-moz-placeholder {
+.footer-form-row input:not([type="submit"]):-moz-placeholder, .footer-form-row textarea:-moz-placeholder, .fubos-from input:not([type="submit"]):-moz-placeholder, .fubos-from textarea:-moz-placeholder, .project-lead-form input:not([type="submit"]):-moz-placeholder, .project-lead-form textarea:-moz-placeholder {
   color: #5e5e5e;
   font-style: normal;
   opacity: 1;
 }
 
-.footer-form-row input:not([type="submit"])::-moz-placeholder, .footer-form-row textarea::-moz-placeholder, .fubos-from input:not([type="submit"])::-moz-placeholder, .fubos-from textarea::-moz-placeholder {
+.footer-form-row input:not([type="submit"])::-moz-placeholder, .footer-form-row textarea::-moz-placeholder, .fubos-from input:not([type="submit"])::-moz-placeholder, .fubos-from textarea::-moz-placeholder, .project-lead-form input:not([type="submit"])::-moz-placeholder, .project-lead-form textarea::-moz-placeholder {
   color: #5e5e5e;
   font-style: normal;
   opacity: 1;
 }
 
-.footer-form-row input:not([type="submit"]):-ms-input-placeholder, .footer-form-row textarea:-ms-input-placeholder, .fubos-from input:not([type="submit"]):-ms-input-placeholder, .fubos-from textarea:-ms-input-placeholder {
+.footer-form-row input:not([type="submit"]):-ms-input-placeholder, .footer-form-row textarea:-ms-input-placeholder, .fubos-from input:not([type="submit"]):-ms-input-placeholder, .fubos-from textarea:-ms-input-placeholder, .project-lead-form input:not([type="submit"]):-ms-input-placeholder, .project-lead-form textarea:-ms-input-placeholder {
   color: #5e5e5e;
   font-style: normal;
   opacity: 1;
 }
 
-.footer-form-row input:not([type="submit"])::-webkit-input-placeholder, .footer-form-row textarea::-webkit-input-placeholder, .fubos-from input:not([type="submit"])::-webkit-input-placeholder, .fubos-from textarea::-webkit-input-placeholder {
+.footer-form-row input:not([type="submit"])::-webkit-input-placeholder, .footer-form-row textarea::-webkit-input-placeholder, .fubos-from input:not([type="submit"])::-webkit-input-placeholder, .fubos-from textarea::-webkit-input-placeholder, .project-lead-form input:not([type="submit"])::-webkit-input-placeholder, .project-lead-form textarea::-webkit-input-placeholder {
   color: #5e5e5e;
   font-style: normal;
   opacity: 1;
 }
 
-.footer-form-row input:not([type="submit"]):focus.placeholder, .footer-form-row textarea:focus.placeholder, .fubos-from input:not([type="submit"]):focus.placeholder, .fubos-from textarea:focus.placeholder {
+.footer-form-row input:not([type="submit"]):focus.placeholder, .footer-form-row textarea:focus.placeholder, .fubos-from input:not([type="submit"]):focus.placeholder, .fubos-from textarea:focus.placeholder, .project-lead-form input:not([type="submit"]):focus.placeholder, .project-lead-form textarea:focus.placeholder {
   opacity: 0;
 }
 
-.footer-form-row input:not([type="submit"]):focus:-moz-placeholder, .footer-form-row textarea:focus:-moz-placeholder, .fubos-from input:not([type="submit"]):focus:-moz-placeholder, .fubos-from textarea:focus:-moz-placeholder {
+.footer-form-row input:not([type="submit"]):focus:-moz-placeholder, .footer-form-row textarea:focus:-moz-placeholder, .fubos-from input:not([type="submit"]):focus:-moz-placeholder, .fubos-from textarea:focus:-moz-placeholder, .project-lead-form input:not([type="submit"]):focus:-moz-placeholder, .project-lead-form textarea:focus:-moz-placeholder {
   opacity: 0;
 }
 
-.footer-form-row input:not([type="submit"]):focus::-moz-placeholder, .footer-form-row textarea:focus::-moz-placeholder, .fubos-from input:not([type="submit"]):focus::-moz-placeholder, .fubos-from textarea:focus::-moz-placeholder {
+.footer-form-row input:not([type="submit"]):focus::-moz-placeholder, .footer-form-row textarea:focus::-moz-placeholder, .fubos-from input:not([type="submit"]):focus::-moz-placeholder, .fubos-from textarea:focus::-moz-placeholder, .project-lead-form input:not([type="submit"]):focus::-moz-placeholder, .project-lead-form textarea:focus::-moz-placeholder {
   opacity: 0;
 }
 
-.footer-form-row input:not([type="submit"]):focus:-ms-input-placeholder, .footer-form-row textarea:focus:-ms-input-placeholder, .fubos-from input:not([type="submit"]):focus:-ms-input-placeholder, .fubos-from textarea:focus:-ms-input-placeholder {
+.footer-form-row input:not([type="submit"]):focus:-ms-input-placeholder, .footer-form-row textarea:focus:-ms-input-placeholder, .fubos-from input:not([type="submit"]):focus:-ms-input-placeholder, .fubos-from textarea:focus:-ms-input-placeholder, .project-lead-form input:not([type="submit"]):focus:-ms-input-placeholder, .project-lead-form textarea:focus:-ms-input-placeholder {
   opacity: 0;
 }
 
-.footer-form-row input:not([type="submit"]):focus::-webkit-input-placeholder, .footer-form-row textarea:focus::-webkit-input-placeholder, .fubos-from input:not([type="submit"]):focus::-webkit-input-placeholder, .fubos-from textarea:focus::-webkit-input-placeholder {
+.footer-form-row input:not([type="submit"]):focus::-webkit-input-placeholder, .footer-form-row textarea:focus::-webkit-input-placeholder, .fubos-from input:not([type="submit"]):focus::-webkit-input-placeholder, .fubos-from textarea:focus::-webkit-input-placeholder, .project-lead-form input:not([type="submit"]):focus::-webkit-input-placeholder, .project-lead-form textarea:focus::-webkit-input-placeholder {
   opacity: 0;
 }
 
-.footer-form-row .btn-submit, .fubos-from .btn-submit {
+.footer-form-row .btn-submit, .fubos-from .btn-submit, .project-lead-form .btn-submit {
   border-radius: 8px;
   background-color: #ffb129;
   color: #ffffff;
@@ -1353,7 +1402,7 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
           box-shadow: 0px 4px 9px rgba(13, 13, 13, 0.16);
 }
 
-.footer-form-row .btn-submit:hover, .fubos-from .btn-submit:hover {
+.footer-form-row .btn-submit:hover, .fubos-from .btn-submit:hover, .project-lead-form .btn-submit:hover {
   opacity: 0.8;
   text-decoration: none;
 }
@@ -1419,6 +1468,10 @@ footer.header-footer-group .footer-contact .social-icons-list li a:hover {
   display: inline-block;
   padding: 15px;
   border-radius: 40px;
+}
+
+.project-lead-form {
+  padding: 60px 0px 60px;
 }
 
 @media (max-width: 991px) {
