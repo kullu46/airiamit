@@ -71,22 +71,31 @@
         margin-bottom: 40px;       
     }
     .vc_col-sm-4{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        transition: all 0.3s ease-out;
+        cursor: pointer;
         @media (max-width: 991px){
             width: 100%;
             margin-bottom: 20px;
         }
         .vc_column-inner{
+           
             >.wpb_wrapper{
                 border-radius: 25px;
                 @include custom-shadow(0px 0px 111px 0px rgba(0, 0, 0, 0.04));
                 margin-top: 140px;
+                transition: all 0.3s ease-out;
             }
         }
-        &.center-column{
+        &:hover{
+            padding-top: 0px;
+            padding-bottom: 0px;
             .vc_column-inner{
                 >.wpb_wrapper{
                     border-radius: 25px;
-                    @include custom-shadow(0px 0px 111px 0px rgba(0, 0, 0, 0.04));
+                    padding: 30px 0px;
+                    @include custom-shadow(0px 0px 111px 0px rgba(0, 0, 0, 0.15));
                     background: $white;
                     .wpb_text_column{
                         .wpb_wrapper{
@@ -104,28 +113,17 @@
                 margin-bottom: 0px;                
                img{
                 margin-top: -120px;
+                height: 180px;
+                width: auto;
+            
                }
-            }
-            >.wpb_wrapper{
-                &:hover{
-                    border-radius: 25px;
-                    @include custom-shadow(0px 0px 111px 0px rgba(0, 0, 0, 0.04));
-                    background: $white;
-                    .wpb_text_column{
-                        .wpb_wrapper{
-                            h3{
-                                color: $green-1;
-                            }
-                        }
-                    }
-                }
             }
             .wpb_text_column{
                 .wpb_wrapper{
                     padding: 20px;
                     h3{
-                        font-size: 32px;
-                        margin-bottom: 25px;
+                        font-size: 24px;
+                        margin-bottom: 10px;
                     }
                     p{
                         font-size: 20px;
@@ -197,14 +195,11 @@
         ul{
             list-style: none;
             margin: 0px;
-            padding: 0px;
-            @media (min-width: 601px){
-                columns: 2;
-            }
+            padding: 0px;            
             li{
                 width: 100%;
                 margin: 0px;
-                padding: 50px;
+                padding: 20px;
                 border-radius: 23px;
                 font-size: 25px;
                 font-family: "Averta Demo";
@@ -212,15 +207,16 @@
                 border: 1px dotted #9d9d9d;
                 line-height: 1.2;
                 text-align: center;
-                height: 110px;
+                min-height: 90px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 margin-bottom: 20px;
+                cursor: pointer;
                 &:hover, &:first-child{
                     color: #83b921;
                     background: $white;
-                    @include custom-shadow(0px 0px 111px 0px rgba(0, 0, 0, 0.04));
+                    @include custom-shadow(0px 0px 111px 0px rgba(0, 0, 0, 0.1));
                 }
             }
         }

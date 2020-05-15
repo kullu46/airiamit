@@ -110,6 +110,22 @@
 				jQuery('body').removeClass('inline-modal-opened');
 				jQuery('.inline-modal-overlay').removeClass('in');
 			}
+
+
+			jQuery(document).ready(function($) {
+				var yourNavigation = $(".header-wrap");
+				stickyDiv = "sticky";
+				yourHeader = $('header').height();
+
+				$(window).scroll(function() {
+					if( $(this).scrollTop() > yourHeader ) {
+						yourNavigation.addClass(stickyDiv);
+					} else {
+						yourNavigation.removeClass(stickyDiv);
+					}
+				});
+			});
+
 		</script>
 	</body>
 </html>

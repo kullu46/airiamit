@@ -2,15 +2,48 @@ header#site-header {
     background: none;
     position: relative;
     z-index: 99999;
-    @media (max-width: 991px) {
-        padding: 40px 0px;
+    min-height: 138px;
+    .header-wrap{       
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        transition: all 0.3s ease-out;
+    }
+        .header-wrap{
+            &.sticky{
+            background-color: $white;
+            @include custom-shadow(0px 3px 29px 0px rgba(0, 0, 0, 0.05));
+            position: fixed;
+            padding: 25px 0 25px;
+            .header-inner{
+                .primary-menu{
+                    a{
+                        color: $gray-5e5;
+                    }
+                }
+               .site-logo{
+                a{
+                    img{
+                        filter: none;
+                    }
+                }
+               }
+            }
+        }
+    }
+    
+    @media (max-width: 991px) {       
         .toggle-text{
             display: none;
+        }
+        min-height: 110px;
+        .header-wrap{
+            padding: 31px 0px;
         }
     }
     @media (max-width: 767px) {
         .site-logo img {
-            max-height: 3rem;
+            max-height: 5rem;
         }
     }
     @media (min-width: 992px){
@@ -52,7 +85,10 @@ header#site-header {
 @media (min-width: 992px){
 header#site-header {
     margin-bottom: -230px !important;
-    padding: 65px 0 35px;
+    .header-wrap{
+        padding: 45px 0 45px;
+    }
+    
 }
 }
 
@@ -166,7 +202,7 @@ header#site-header {
 }
 
 
-.page-id-220, .page-id-210, .blog, .single-post{
+.page-id-220, .page-id-210, .blog, .single-post, .page-id-639{
     .inner-banner{
         .cover-header-inner-wrapper.screen-height {
             height: 345px;

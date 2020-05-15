@@ -1,0 +1,74 @@
+.featured-list-section{
+    .custom-listings-list{
+        .project{
+            .content-box{
+                margin-bottom: 40px;
+                a{
+                    display: inline-block;
+                    width: 100%;
+                    .image{
+                        width: 100%;
+                        height: 240px;
+                        margin-bottom: 15px;
+                        .image-inner{
+                            width: 100%;
+                            height: 100%;
+                            border-radius:10px;
+                            overflow: hidden;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;  
+                            }
+                        }
+                    }
+                    .content{
+                        line-height: normal;
+                        .price{
+                            display: inline-block;
+                            font-size: 30px;
+                            color: $gray-5e5;
+                            margin-right: 5px;
+                        }
+                        .bed-bath{
+                            display: inline-block;
+                            font-size: 18px;
+                            color:  #aeaeae;
+                        }
+                        .address{
+                            @include flexbox;
+                            font-size: 18px;
+                            color: $gray-5e5;
+                            margin-top: 15px;
+                            i{
+                                color: #de292a;
+                                margin-right: 5px;
+                                float: left;
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+                .btn-book{
+                    margin-top: 0px;
+                    display: inline-block;
+                    width: 100%;
+                    .btn-book-showing{
+                        width: auto;
+                        text-decoration: none;
+                        font-size: 15px;
+                        color: $gray-5e5;
+                        border: 1px dashed;
+                        border-radius:10px;
+                        padding: 15px 20px;
+                        &:hover{
+                            background: $green;
+                            color: $white;
+                            border-color: $green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

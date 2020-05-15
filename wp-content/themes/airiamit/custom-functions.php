@@ -526,33 +526,36 @@ function custom_listings_output( $atts, $content ) {
 		$output .= '<div class="vc_row">';
 		$count=0; foreach($projects as $project){ $count++;
 			$author = get_field('cl_author', $project->ID);
-			$output .= '<div class="project vc_col-md-'.$colClass.' vc_col-sm-12 vc_col-xs-12">';
+			$output .= '<div class="project vc_col-md-'.$colClass.' vc_col-sm-6 vc_col-xs-12 ">';
 			switch($atts['layout']){
 				case 'grid-featured':
-					$output .= '<div class="content">
+					$output .= '<div class="content-box">
 								<a href="'.get_permalink($project->ID).'" class="no-style">
 								<div class="image"><div class="image-inner">'.get_the_post_thumbnail($project->ID, array(600, 380)).'</div></div>
+								<div class="content">
 								<div class="price">$'.get_field('cl_price', $project->ID).'</div>
 								<div class="bed-bath">'.get_field('cl_bedrooms', $project->ID).'/'.get_field('cl_bathrooms', $project->ID).'</div>
 								<div class="address"><i class="fa fa-map-marker"></i>'.get_field('cl_address', $project->ID).'</div>
+								</div>
 								<div class="btn-book"><a href="'.get_permalink($project->ID).'" class="btn btn-book-showing">Book A Showing</a></div>
 							</a>
 						</div>';
 					break;
 				default:
-					$output .= '<div class="content">
+					$output .= '<div class="content-box">
 						<div class="image"><div class="image-inner">'.get_the_post_thumbnail($project->ID, array(600, 380)).'</div></div>
+						<div class="content">
 						<div class="title"><a href="'.get_permalink($project->ID).'" class="no-style">'.$project->post_title.'</a></div>
 						<div class="subtitle"><a href="'.get_permalink($project->ID).'" class="no-style">'.get_field('cl_subtitle', $project->ID).'</a></div>
 						<div class="author"><span class="by">By</span>&nbsp;'.$author['nickname'].'</div>
 						<div class="description">'.(strlen(strip_tags($project->post_content)) > 130 ? substr(strip_tags($project->post_content), 0, 147).'...' : strip_tags($project->post_content)).'&nbsp;<a href="'.get_permalink($project->ID).'" class="read-more">Read more</a></div>
-						</div>';
+						</div></div>';
 					break;
 			}
 					
 					
 			$output .= '</div>';
-			if($count%$colClass==0){
+			if($count%$atts['columns']==0){
 				$output .= '</div><div class="vc_row">';
 			}
 		}

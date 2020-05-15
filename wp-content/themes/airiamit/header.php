@@ -18,6 +18,7 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/fontawesome/css/all.min.css" type="text/css" media="screen" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 		<?php wp_head(); ?>
 
 	</head>
@@ -29,7 +30,7 @@
 		?>
 
 		<header id="site-header" class="header-footer-group" role="banner">
-
+		<div class="header-wrap">
 			<div class="container header-inner section-inner">
 
 				<div class="header-titles-wrapper">
@@ -177,7 +178,7 @@
 				get_template_part( 'template-parts/modal-search' );
 			}
 			?>
-
+		</div>
 		</header><!-- #site-header -->
 
 		<?php

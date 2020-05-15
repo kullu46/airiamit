@@ -7,13 +7,17 @@
 
     #home-slider{
        height: calc(75vh - 32px);
+       min-height: 430px;
         @media (max-width: 767px){
             height: 70vh;
+            min-height: auto;
         }
         .owl-item{
             height: calc(75vh - 32px);
+            min-height: 430px;
             @media (max-width: 767px){
                 height: 70vh;
+                min-height: auto;
             }
             .item{
                 height: 100%;
@@ -49,7 +53,7 @@
                                 text-align: center;
                             }
                             @media (max-width: 767px) {
-                                margin-top: 60px;   
+                                margin-top: 0px;   
                                 font-size: 30px;
                             }
                             span{
@@ -73,6 +77,9 @@
                                     }
                                     &.first{
                                         font-size: 74px;
+                                        @media (max-width: 767px) {
+                                            font-size: 45px;
+                                        }
                                     }
                                 }
                             }
