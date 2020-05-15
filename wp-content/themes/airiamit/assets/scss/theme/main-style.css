@@ -2607,11 +2607,11 @@ section.modal-projects-gallery .modal-projects-gallery-inner-wrap .modal-project
 }
 
 @media (max-width: 991px) {
-  .single-new_homes header#site-header {
+  .single-new_homes header#site-header, .single-custom_listings header#site-header {
     margin-bottom: -131px;
     z-index: 99999;
   }
-  .single-new_homes header#site-header .header-inner {
+  .single-new_homes header#site-header .header-inner, .single-custom_listings header#site-header .header-inner {
     display: -webkit-box;
     display: -moz-flex;
     display: -ms-flexbox;
@@ -2624,7 +2624,7 @@ section.modal-projects-gallery .modal-projects-gallery-inner-wrap .modal-project
 }
 
 @media (max-width: 991px) and (max-width: 767px) {
-  .single-new_homes header#site-header .header-inner {
+  .single-new_homes header#site-header .header-inner, .single-custom_listings header#site-header .header-inner {
     padding: 0px;
     width: 95%;
     font-size: 16px;
@@ -2632,7 +2632,7 @@ section.modal-projects-gallery .modal-projects-gallery-inner-wrap .modal-project
 }
 
 @media (max-width: 991px) {
-  .single-new_homes header#site-header .header-inner .header-titles-wrapper {
+  .single-new_homes header#site-header .header-inner .header-titles-wrapper, .single-custom_listings header#site-header .header-inner .header-titles-wrapper {
     padding: 0px;
   }
 }

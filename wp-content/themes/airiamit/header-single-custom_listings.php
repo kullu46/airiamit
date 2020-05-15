@@ -29,7 +29,7 @@
 		?>
 
 		<header id="site-header" class="header-footer-group single-home-header" role="banner">
-
+		<div class="header-wrap">
 			<div class="container header-inner section-inner">
 
 				<div class="header-titles-wrapper">
@@ -44,6 +44,7 @@
 
 				</div>
 
+			</div>
 			</div>
 
 		</header>
