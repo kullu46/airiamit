@@ -779,6 +779,7 @@ add_filter('vc_google_fonts_get_fonts_filter', 'helper_vc_fonts1');
 include("custom-functions.php");
 include("fub-functions.php");
 include("theme-options.php");
+include("duplicate-post-functions.php");
 
 if( function_exists('acf_add_options_page') ) {
 	

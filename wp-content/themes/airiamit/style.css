@@ -6405,3 +6405,15 @@ footer .section-inner {
 .fade.in{
 	display: block;
 }
+.ajax-loader {
+	z-index: 99;
+	display: none;
+	position: absolute;
+	background: rgba(255,255,255,0.45);
+	width: 100%;
+	height: 100%;
+}
+.ajax-loader img {
+	margin: 40px auto;
+	min-width: 48px;
+}

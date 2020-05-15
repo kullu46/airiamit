@@ -21,12 +21,12 @@
 		</div>
 
 		<div class="floating-left btn-book-meeting">
-			<a href="javascript:;" onclick="showCustomPopup('.popup-book-meeting');">BOOK Virtual Meeting</a>
+			<a href="<?php echo home_url('/virtual-appointment'); ?>" alt="BOOK Virtual Meeting" title="BOOK Virtual Meeting">BOOK Virtual Meeting</a>
 		</div>
-		<div class="custom-popup popup-book-meeting fade">
+		<!-- <div class="custom-popup popup-book-meeting fade">
 			<a class="btn-close" onclick="hideCustomPopup('.popup-book-meeting');">x</a>
 			<?php echo do_shortcode('[fub-custom-form lead_type="Inquiry" tags="Book Virtual Meeting" title="Book Virtual Meeting" template="1" submit_btn_text="Book Now"]'); ?>
-		</div>
+		</div> -->
 
 		<div class="floating-right btn-contact-us">
 			<a href="javascript:;" onclick="showCustomPopup('.popup-contact-us')">Contact Us</a>
