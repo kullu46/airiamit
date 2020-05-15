@@ -51,6 +51,6 @@
 		<?php
 
 		if ( !is_front_page() ){
-			get_template_part( 'template-parts/content-banner-new-homes' );
+			get_template_part( 'template-parts/content-banner-custom-listings' );
 		}
 		
