@@ -27,13 +27,18 @@
 			<a class="btn-close" onclick="hideCustomPopup('.popup-book-meeting');">x</a>
 			<?php echo do_shortcode('[fub-custom-form lead_type="Inquiry" tags="Book Virtual Meeting" title="Book Virtual Meeting" template="1" submit_btn_text="Book Now"]'); ?>
 		</div> -->
-
+		<?php global $post; ?>
+		<?php $contact_us_form = get_field('contact_us_form'); ?>
 		<div class="floating-right btn-contact-us">
 			<a href="javascript:;" onclick="showCustomPopup('.popup-contact-us')">Contact Us</a>
 		</div>
 		<div class="custom-popup popup-contact-us fade">
 			<a class="btn-close" onclick="hideCustomPopup('.popup-contact-us');">x</a>
-			<?php echo do_shortcode('[fub-custom-form lead_type="General Inquiry" tags="Contact Us" title="Contact Us" show_title="true" subtitle="Please fill the form to get your questions answered"  template="1" submit_btn_text="Enquire Now"]'); ?>
+			<?php if($contact_us_form != ''){ ?>
+				<?php echo do_shortcode($contact_us_form); ?>
+			<?php } else { ?>
+				<?php echo do_shortcode('[fub-custom-form lead_type="General Inquiry" tags="Contact Us" title="Contact Us" show_title="true" subtitle="Please fill the form to get your questions answered"  template="contact-info" submit_btn_text="Submit"]'); ?>
+			<?php } ?>
 		</div>
 		<div class="inline-modal-overlay fade"></div>
 			
@@ -94,6 +99,14 @@
 							items: 5
 							}
 						}
+					});
+				}
+
+				if($(document).find('.has-datepicker').length){
+					$(".has-datepicker").each(function(i,el){
+						$(el).datepicker({
+							dateFormat: $(el).attr('data-format') ? $(el).attr('date-format') : 'mm/dd/yy'
+						});
 					});
 				}
 			});

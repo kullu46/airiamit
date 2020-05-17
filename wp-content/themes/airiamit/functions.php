@@ -802,4 +802,9 @@ if( function_exists('acf_add_options_page') ) {
 function is_blog () {
     return ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag() || is_page()) && 'post' == get_post_type();
 }
-
+function wpse_enqueue_datepicker() {
+	wp_enqueue_script( 'jquery-ui-datepicker' );
+	wp_register_style( 'jquery-ui', '//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css' );
+	wp_enqueue_style( 'jquery-ui' );  
+}
+add_action( 'wp_enqueue_scripts', 'wpse_enqueue_datepicker' );
