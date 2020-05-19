@@ -55,14 +55,14 @@ body {
   flex-wrap: wrap;
 }
 
-.row .col-sm-6 {
+.row .col-sm-6, .virtual-appointment-form form .row .col-sm-6 .checkbox {
   width: 100%;
   padding: 0px 15px;
   display: inline-block;
 }
 
 @media (min-width: 768px) {
-  .row .col-sm-6 {
+  .row .col-sm-6, .virtual-appointment-form form .row .col-sm-6 .checkbox {
     width: 50%;
   }
 }
@@ -349,16 +349,16 @@ header#site-header .header-inner .toggle path {
   color: #5e5e5e;
 }
 
-.page-id-220 .inner-banner .cover-header-inner-wrapper.screen-height, .page-id-210 .inner-banner .cover-header-inner-wrapper.screen-height, .blog .inner-banner .cover-header-inner-wrapper.screen-height, .single-post .inner-banner .cover-header-inner-wrapper.screen-height, .page-id-639 .inner-banner .cover-header-inner-wrapper.screen-height {
+.page-id-220 .inner-banner .cover-header-inner-wrapper.screen-height, .page-id-210 .inner-banner .cover-header-inner-wrapper.screen-height, .blog .inner-banner .cover-header-inner-wrapper.screen-height, .single-post .inner-banner .cover-header-inner-wrapper.screen-height, .page-id-639 .inner-banner .cover-header-inner-wrapper.screen-height, .page-id-695 .inner-banner .cover-header-inner-wrapper.screen-height {
   height: 345px;
   min-height: auto;
 }
 
-.page-id-220 .inner-banner .cover-header-inner-wrapper.screen-height header, .page-id-210 .inner-banner .cover-header-inner-wrapper.screen-height header, .blog .inner-banner .cover-header-inner-wrapper.screen-height header, .single-post .inner-banner .cover-header-inner-wrapper.screen-height header, .page-id-639 .inner-banner .cover-header-inner-wrapper.screen-height header {
+.page-id-220 .inner-banner .cover-header-inner-wrapper.screen-height header, .page-id-210 .inner-banner .cover-header-inner-wrapper.screen-height header, .blog .inner-banner .cover-header-inner-wrapper.screen-height header, .single-post .inner-banner .cover-header-inner-wrapper.screen-height header, .page-id-639 .inner-banner .cover-header-inner-wrapper.screen-height header, .page-id-695 .inner-banner .cover-header-inner-wrapper.screen-height header {
   text-align: center;
 }
 
-.page-id-220 .inner-banner .cover-header-inner-wrapper.screen-height header h2, .page-id-210 .inner-banner .cover-header-inner-wrapper.screen-height header h2, .blog .inner-banner .cover-header-inner-wrapper.screen-height header h2, .single-post .inner-banner .cover-header-inner-wrapper.screen-height header h2, .page-id-639 .inner-banner .cover-header-inner-wrapper.screen-height header h2 {
+.page-id-220 .inner-banner .cover-header-inner-wrapper.screen-height header h2, .page-id-210 .inner-banner .cover-header-inner-wrapper.screen-height header h2, .blog .inner-banner .cover-header-inner-wrapper.screen-height header h2, .single-post .inner-banner .cover-header-inner-wrapper.screen-height header h2, .page-id-639 .inner-banner .cover-header-inner-wrapper.screen-height header h2, .page-id-695 .inner-banner .cover-header-inner-wrapper.screen-height header h2 {
   text-align: center;
   color: #ffffff;
 }
@@ -3444,5 +3444,408 @@ section.modal-projects-gallery .modal-projects-gallery-inner-wrap .modal-project
 
 .custom-popup form input.btn-submit:hover {
   background-color: #1d62ce;
+}
+
+.virtual-appointment-header p {
+  line-height: 28px;
+}
+
+.virtual-appointment-form {
+  margin: 60px 0px;
+  padding-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .virtual-appointment-form form .row {
+    margin-bottom: 40px;
+  }
+}
+
+.virtual-appointment-form form .row label {
+  margin-bottom: 30px;
+}
+
+.virtual-appointment-form form .row input[type="text"], .virtual-appointment-form form .row input[type="email"], .virtual-appointment-form form .row textarea, .virtual-appointment-form form .row select {
+  width: 100%;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.08);
+  border: 1px solid transparent;
+  font-size: 15px;
+  color: #000;
+  font-style: normal;
+  font-family: "Averta Demo";
+  outline: none;
+  border-radius: 4px;
+  height: 65px;
+  padding: 10px 15px;
+}
+
+.virtual-appointment-form form .row input[type="text"]:focus, .virtual-appointment-form form .row input[type="email"]:focus, .virtual-appointment-form form .row textarea:focus, .virtual-appointment-form form .row select:focus {
+  background: transparent;
+  outline: none;
+  border: 1px solid #8bbbe8;
+}
+
+.virtual-appointment-form form .row .col-sm-6 .checkbox {
+  margin: 0px;
+  float: left;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .virtual-appointment-form form .row .col-sm-6 .checkbox {
+    padding: 0;
+  }
+}
+
+.virtual-appointment-form form .row .col-sm-6 .checkbox input {
+  margin-right: 5px;
+  outline: none;
+}
+
+.virtual-appointment-form form .row .connect-via {
+  border: 1px solid #dcebfe;
+  border-radius: 6px;
+  width: 100%;
+  display: inline-block;
+  padding: 20px 20px 40px;
+  margin: 15px;
+  margin-top: 40px;
+}
+
+.virtual-appointment-form form .row .connect-via .title h3 {
+  font-size: 37px;
+  margin-bottom: 15px;
+}
+
+.virtual-appointment-form form .row .connect-via .social-check .rdio {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.virtual-appointment-form form .row .connect-via .social-check label {
+  position: relative;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  width: auto;
+  height: 22px;
+  text-align: center;
+  margin: 15px auto;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.virtual-appointment-form form .row .connect-via .social-check input[type="radio"] {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0px;
+}
+
+.virtual-appointment-form form .row .connect-via .social-check input[type="radio"]:checked + label + .img-block {
+  -webkit-box-shadow: 0px 0px 15px rgba(9, 83, 156, 0.18);
+          box-shadow: 0px 0px 15px rgba(9, 83, 156, 0.18);
+  border-color: transparent;
+}
+
+.virtual-appointment-form form .row .connect-via .social-check input[type="radio"]:hover + label + .img-block {
+  -webkit-box-shadow: 0px 0px 15px rgba(9, 83, 156, 0.18);
+          box-shadow: 0px 0px 15px rgba(9, 83, 156, 0.18);
+  border-color: transparent;
+}
+
+.virtual-appointment-form form .row .connect-via .social-check .img-block {
+  height: 160px;
+  background: #ffffff;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+}
+
+.virtual-appointment-form form .row .connect-via .social-check .img-block img {
+  padding: 15px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.virtual-appointment-form form .row .connect-via .date-section {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.virtual-appointment-form form .row .connect-via .date-section input {
+  padding-right: 30px;
+}
+
+.virtual-appointment-form form .row .connect-via .date-section i {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 30px;
+  color: #2dcb73;
+}
+
+.virtual-appointment-form form .row .connect-via .col-sm-8 .rdio label {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.virtual-appointment-form form .row textarea {
+  min-height: 190px;
+  margin-bottom: 30px;
+}
+
+.virtual-appointment-form form input.btn-submit {
+  border-radius: 5px;
+  background-color: #2d7af2;
+  min-width: 291px;
+  height: 81px;
+  text-decoration: none;
+  outline: none;
+}
+
+.virtual-appointment-form form input.btn-submit:hover {
+  background-color: #1d62ce;
+}
+
+.virtual-appointment-form form .title {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .virtual-appointment-form form .title {
+    margin-top: 20px;
+  }
+}
+
+.rdio {
+  position: relative;
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.rdio input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.rdio label {
+  padding-left: 27px;
+  cursor: pointer;
+  margin-bottom: 7px !important;
+  color: #a3a3a3;
+}
+
+.rdio label:before {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  content: '';
+  display: inline-block;
+  border-radius: 50px;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.rdio input[type="radio"] {
+  margin: 0px;
+}
+
+.rdio input[type="radio"]:disabled + label {
+  color: #999;
+}
+
+.rdio input[type="radio"]:disabled + label:before {
+  background-color: #92bff6;
+}
+
+.rdio input[type="radio"]:checked + label {
+  color: #000;
+}
+
+.rdio input[type="radio"]:checked + label::before {
+  border: 1px solid #92bff6;
+}
+
+.rdio input[type="radio"]:checked + label::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 6px;
+  display: inline-block;
+  font-size: 11px;
+  width: 10px;
+  height: 10px;
+  background-color: #0d569d;
+  border-radius: 50px;
+}
+
+.cust-checkbox {
+  display: inline-block;
+  width: 100%;
+}
+
+.checkbox {
+  position: relative;
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.checkbox > [type="checkbox"], .checkbox label {
+  /*margin-bottom:0px !important;*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox > [type="checkbox"]:not(:checked), .checkbox > [type="checkbox"]:checked {
+  position: absolute;
+  left: 4px;
+  z-index: 99;
+  opacity: 0;
+  top: 6px;
+  width: 100%;
+  height: 22px;
+}
+
+.checkbox > [type="checkbox"]:not(:checked) + label {
+  color: #a3a3a3;
+}
+
+.checkbox > [type="checkbox"]:not(:checked) + label, .checkbox > [type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.checkbox > [type="checkbox"]:not(:checked) + label:before, .checkbox > [type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #e5e5e5;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+.checkbox > [type="checkbox"]:not(:checked) + label:after, .checkbox > [type="checkbox"]:checked + label:after {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 4px;
+  color: #000;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.checkbox > [type="checkbox"]:checked + label {
+  color: #000;
+}
+
+.checkbox > [type="checkbox"]:checked + label:before {
+  border: 1px solid #92bff6;
+}
+
+.checkbox > [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.checkbox > [type="checkbox"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.checkbox > [type="checkbox"][data-indeterminate] + label:after {
+  content: '\2212';
+  left: 2px;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.checkbox > [type="checkbox"]:disabled:not(:checked) + label:before {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #eeeeee;
+  border-color: #eeeeee;
+  cursor: not-allowed;
+  opacity: 1;
+  color: #dadada;
+}
+
+.checkbox > [type="checkbox"]:disabled:checked + label:before {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #eeeeee;
+  border-color: #eeeeee;
+  cursor: not-allowed;
+  opacity: 1;
+  color: #92bff6;
+}
+
+.checkbox > [type="checkbox"]:disabled:checked + label:after {
+  color: #92bff6;
+  cursor: not-allowed;
+}
+
+.checkbox > [type="checkbox"]:disabled + label {
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.checkbox > [type="checkbox"]:checked:focus + label:before, .checkbox > [type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px solid #92bff6;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.checkbox label:hover:before {
+  border: 1px solid #92bff6 !important;
+}
+
+.checkbox [type="checkbox"]:disabled:not(:checked) + label:hover:before, .checkbox [type="checkbox"]:disabled:checked + label:hover:before {
+  border: 1px solid #92bff6 !important;
 }
 /*# sourceMappingURL=main-style.css.map */
