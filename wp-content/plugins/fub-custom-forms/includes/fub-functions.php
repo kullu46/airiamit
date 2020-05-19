@@ -81,12 +81,68 @@ class FollowupBoss {
 			);
 		switch($data['fub_template']){
 			case 'generic':
-				$args["message"] = ($data['fub_message']) ? $data['fub_message'] : "";
+				$noteSubject = "General inquiry form submitted with following details:";
+				if(isset($data["fub_property_type"]) && !empty($data["fub_property_type"])){
+					$note .= '<strong>Property Type: </strong>&nbsp;'.(is_array($data["fub_property_type"]) ? implode(', ', $data["fub_property_type"]) : $data["fub_property_type"]).'<br/>';
+				}
+				if(isset($data["fub_is_realtor"]) && !empty($data["fub_is_realtor"])){
+					$note .= '<strong>Are you a realtor?: </strong>&nbsp;'.(is_array($data["fub_is_realtor"]) ? implode(', ', $data["fub_is_realtor"]) : $data["fub_is_realtor"]).'<br/>';
+				}
+				if(isset($data["fub_is_working_with_realtor"]) && !empty($data["fub_is_working_with_realtor"])){
+					$note .= '<strong>Are you working with a Realtor?: </strong>&nbsp;'.(is_array($data["fub_is_working_with_realtor"]) ? implode(', ', $data["fub_is_working_with_realtor"]) : $data["fub_is_working_with_realtor"]).'<br/>';
+				}
 				break;
 			case 'generic-full':
-				$args["message"] = ($data['fub_message']) ? $data['fub_message'] : "";
+				$noteSubject = "Buyer inquiry form submitted with following details:";
+				if(isset($data["fub_property_type"]) && !empty($data["fub_property_type"])){
+					$note .= '<strong>Property Type: </strong>&nbsp;'.(is_array($data["fub_property_type"]) ? implode(', ', $data["fub_property_type"]) : $data["fub_property_type"]).'<br/>';
+				}
+				if(isset($data["fub_is_realtor"]) && !empty($data["fub_is_realtor"])){
+					$note .= '<strong>Are you a realtor?: </strong>&nbsp;'.(is_array($data["fub_is_realtor"]) ? implode(', ', $data["fub_is_realtor"]) : $data["fub_is_realtor"]).'<br/>';
+				}
+				if(isset($data["fub_is_working_with_realtor"]) && !empty($data["fub_is_working_with_realtor"])){
+					$note .= '<strong>Are you working with a Realtor?: </strong>&nbsp;'.(is_array($data["fub_is_working_with_realtor"]) ? implode(', ', $data["fub_is_working_with_realtor"]) : $data["fub_is_working_with_realtor"]).'<br/>';
+				}
+				if(isset($data["fub_looking_for"]) && !empty($data["fub_looking_for"])){
+					$note .= '<strong>Looking For: </strong>&nbsp;'.(is_array($data["fub_looking_for"]) ? implode(', ', $data["fub_looking_for"]) : $data["fub_looking_for"]).'<br/>';
+				}
+				if(isset($data["fub_ownership"]) && !empty($data["fub_ownership"])){
+					$note .= '<strong>Ownership: </strong>&nbsp;'.(is_array($data["fub_ownership"]) ? implode(', ', $data["fub_ownership"]) : $data["fub_ownership"]).'<br/>';
+				}
+				if(isset($data["fub_type"]) && !empty($data["fub_type"])){
+					$note .= '<strong>Type: </strong>&nbsp;'.(is_array($data["fub_type"]) ? implode(', ', $data["fub_type"]) : $data["fub_type"]).'<br/>';
+				}
+				if(isset($data["fub_area_of_interest"]) && !empty($data["fub_area_of_interest"])){
+					$note .= '<strong>Area of Interest: </strong>&nbsp;'.(is_array($data["fub_area_of_interest"]) ? implode(', ', $data["fub_area_of_interest"]) : $data["fub_area_of_interest"]).'<br/>';
+				}
+				if(isset($data["fub_area_sqft"]) && !empty($data["fub_area_sqft"])){
+					$note .= '<strong>What size do you weant your home to be?: </strong>&nbsp;'.(is_array($data["fub_area_sqft"]) ? implode(', ', $data["fub_area_sqft"]) : $data["fub_area_sqft"]).'<br/>';
+				}
+				if(isset($data["fub_budget"]) && !empty($data["fub_budget"])){
+					$note .= '<strong>What is your budget?: </strong>&nbsp;'.(is_array($data["fub_budget"]) ? implode(', ', $data["fub_budget"]) : $data["fub_budget"]).'<br/>';
+				}
+				if(isset($data["fub_use"]) && !empty($data["fub_use"])){
+					$note .= '<strong>Use: </strong>&nbsp;'.(is_array($data["fub_use"]) ? implode(', ', $data["fub_use"]) : $data["fub_use"]).'<br/>';
+				}
+				if(isset($data["fub_first_time_buyer"]) && !empty($data["fub_first_time_buyer"])){
+					$note .= '<strong>First time buyer?: </strong>&nbsp;'.(is_array($data["fub_first_time_buyer"]) ? implode(', ', $data["fub_first_time_buyer"]) : $data["fub_first_time_buyer"]).'<br/>';
+				}
+				if(isset($data["fub_mortgage_approved"]) && !empty($data["fub_mortgage_approved"])){
+					$note .= '<strong>Mortgage Approved?: </strong>&nbsp;'.(is_array($data["fub_mortgage_approved"]) ? implode(', ', $data["fub_mortgage_approved"]) : $data["fub_mortgage_approved"]).'<br/>';
+				}
+				if(isset($data["fub_working_with_agent"]) && !empty($data["fub_working_with_agent"])){
+					$note .= '<strong>Currently working with agent?: </strong>&nbsp;'.(is_array($data["fub_working_with_agent"]) ? implode(', ', $data["fub_working_with_agent"]) : $data["fub_working_with_agent"]).'<br/>';
+				}
 				break;
 			case 'investor':
+				$noteSubject = "Investor form submitted with following details:";
+				if(isset($data["fub_investor_type"]) && !empty($data["fub_investor_type"])){
+					$note .= '<strong>Investor Type: </strong>&nbsp;'.(is_array($data["fub_investor_type"]) ? implode(', ', $data["fub_investor_type"]) : $data["fub_investor_type"]).'<br/>';
+				}
+				if(isset($data["fub_is_realtor"]) && !empty($data["fub_is_realtor"])){
+					$note .= '<strong>Are you a realtor?: </strong>&nbsp;'.(is_array($data["fub_is_realtor"]) ? implode(', ', $data["fub_is_realtor"]) : $data["fub_is_realtor"]).'<br/>';
+				}
+				break;
 				break;
 			case 'seller':
 				break;

@@ -19,27 +19,29 @@
 				<?php endif; ?>
 			</ul>
 		</div>
+		<?php $hasFloatingButtons = get_field('hide_floating_buttons'); ?>
+		<?php if($hasFloatingButtons != 'Yes'){ ?>
+			<div class="floating-left btn-book-meeting">
+				<a href="<?php echo home_url('/virtual-appointment'); ?>" alt="BOOK Virtual Meeting" title="BOOK Virtual Meeting">BOOK Virtual Meeting</a>
+			</div>
+			<!-- <div class="custom-popup popup-book-meeting fade">
+				<a class="btn-close" onclick="hideCustomPopup('.popup-book-meeting');">x</a>
+				<?php echo do_shortcode('[fub-custom-form lead_type="Inquiry" tags="Book Virtual Meeting" title="Book Virtual Meeting" template="1" submit_btn_text="Book Now"]'); ?>
+			</div> -->
 
-		<div class="floating-left btn-book-meeting">
-			<a href="<?php echo home_url('/virtual-appointment'); ?>" alt="BOOK Virtual Meeting" title="BOOK Virtual Meeting">BOOK Virtual Meeting</a>
-		</div>
-		<!-- <div class="custom-popup popup-book-meeting fade">
-			<a class="btn-close" onclick="hideCustomPopup('.popup-book-meeting');">x</a>
-			<?php echo do_shortcode('[fub-custom-form lead_type="Inquiry" tags="Book Virtual Meeting" title="Book Virtual Meeting" template="1" submit_btn_text="Book Now"]'); ?>
-		</div> -->
-		<?php global $post; ?>
-		<?php $contact_us_form = get_field('contact_us_form'); ?>
-		<div class="floating-right btn-contact-us">
-			<a href="javascript:;" onclick="showCustomPopup('.popup-contact-us')">Contact Us</a>
-		</div>
-		<div class="custom-popup popup-contact-us fade">
-			<a class="btn-close" onclick="hideCustomPopup('.popup-contact-us');">x</a>
-			<?php if($contact_us_form != ''){ ?>
-				<?php echo do_shortcode($contact_us_form); ?>
-			<?php } else { ?>
-				<?php echo do_shortcode('[fub-custom-form lead_type="General Inquiry" tags="Contact Us" title="Contact Us" show_title="true" subtitle="Please fill the form to get your questions answered"  template="contact-info" submit_btn_text="Submit"]'); ?>
-			<?php } ?>
-		</div>
+			<?php $contact_us_form = get_field('contact_us_form'); ?>
+			<div class="floating-right btn-contact-us">
+				<a href="javascript:;" onclick="showCustomPopup('.popup-contact-us')">Contact Us</a>
+			</div>
+			<div class="custom-popup popup-contact-us fade">
+				<a class="btn-close" onclick="hideCustomPopup('.popup-contact-us');">x</a>
+				<?php if($contact_us_form != ''){ ?>
+					<?php echo do_shortcode($contact_us_form); ?>
+				<?php } else { ?>
+					<?php echo do_shortcode('[fub-custom-form lead_type="General Inquiry" tags="Contact Us" title="Contact Us" show_title="true" subtitle="Please fill the form to get your questions answered"  template="contact-info" submit_btn_text="Submit"]'); ?>
+				<?php } ?>
+			</div>
+		<?php } ?>
 		<div class="inline-modal-overlay fade"></div>
 			
 		<?php wp_footer(); ?>
@@ -104,9 +106,13 @@
 
 				if($(document).find('.has-datepicker').length){
 					$(".has-datepicker").each(function(i,el){
-						$(el).datepicker({
+						var options = {
 							dateFormat: $(el).attr('data-format') ? $(el).attr('date-format') : 'mm/dd/yy'
-						});
+						};
+						if($(el).attr('data-min-date')){
+							options.minDate = new Date($(el).attr('data-min-date'));
+						}
+						$(el).datepicker(options);
 					});
 				}
 			});

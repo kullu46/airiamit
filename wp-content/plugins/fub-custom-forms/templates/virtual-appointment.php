@@ -42,7 +42,7 @@
     <span class="title">Are you a Realtor?</span>
     <div class="radiobuttons">
       <div class="rdio"> 
-        <input type="radio" name="fub_is_realtor" value="Yes" checked>
+        <input type="radio" name="fub_is_realtor" value="Yes">
         <label for="fub_is_realtor">Yes</label>
       </div>
       <div class="rdio">
@@ -55,7 +55,7 @@
       <span class="title">Are you working with a Realtor?</span>
       <div class="radiobuttons">
         <div class="rdio"> 
-          <input type="radio" name="fub_is_working_with_realtor" value="Yes" checked>
+          <input type="radio" name="fub_is_working_with_realtor" value="Yes">
           <label for="fub_is_working_with_realtor">Yes</label>
         </div>
         <div class="rdio">
@@ -102,7 +102,7 @@
       <div class="col-sm-4 col-xs-12">
           <span class="title">Date *</span>
           <div class="date-section">
-            <input type="text" class="has-datepicker" name="fub_appointment_date" placeholder="20-12-2021" required/>
+            <input type="text" class="has-datepicker" name="fub_appointment_date" value="<?php echo date('d/m/Y', strtotime('+1 day')); ?>" placeholder="<?php echo date('d/m/Y', strtotime('+1 day')); ?>" data-min-date="<?php echo date('Y-m-d'); ?>" required/>
             <i class="fas fa-calendar-alt"></i>
           </div>
       </div>
@@ -152,7 +152,7 @@
       <span class="title">Looking for</span>
       <div class="cust-checkbox">
         <div class="checkbox"> 
-          <input type="checkbox" name="fub_looking_for[]" value="New Build" checked/>
+          <input type="checkbox" name="fub_looking_for[]" value="New Build"/>
           <label class="checkbox-custom-label">New Build</label>
         </div>
         <div class="checkbox"> 
@@ -169,7 +169,7 @@
       <span class="title">Ownership</span>
       <div class="cust-checkbox">
         <div class="checkbox"> 
-          <input type="checkbox" name="fub_ownership[]" value="Freehold" checked/>
+          <input type="checkbox" name="fub_ownership[]" value="Freehold"/>
           <label class="checkbox-custom-label">Freehold</label>
         </div>
         <div class="checkbox"> 
@@ -182,7 +182,7 @@
       <span class="title">Type</span>
       <div class="cust-checkbox">
         <div class="checkbox"> 
-          <input type="checkbox" name="fub_type[]" value="Detached" checked/>
+          <input type="checkbox" name="fub_type[]" value="Detached"/>
           <label class="checkbox-custom-label">Detached</label>
         </div>
         <div class="checkbox"> 
@@ -207,23 +207,100 @@
 <div class="row">
   <div class="col-sm-4">
       <span class="title">Area of Interest</span>
-      <select name="fub_area_of_interest" >
-        <option value="Cambridge">Cambridge</option>
-      </select>
+      <div class="cust-checkbox">
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_area_of_interest[]" value="Cambridge"/>
+          <label class="checkbox-custom-label">Cambridge</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_area_of_interest[]" value="Kitchener"/>
+          <label class="checkbox-custom-label">Kitchener</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_area_of_interest[]" value="Waterloo"/>
+          <label class="checkbox-custom-label">Waterloo</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_area_of_interest[]" value="Guelph"/>
+          <label class="checkbox-custom-label">Guelph</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_area_of_interest[]" value="Woodstock"/>
+          <label class="checkbox-custom-label">Woodstock</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_area_of_interest[]" value="Brampton"/>
+          <label class="checkbox-custom-label">Brampton</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_area_of_interest[]" value="Toronto"/>
+          <label class="checkbox-custom-label">Toronto</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_area_of_interest[]" value="GTA"/>
+          <label class="checkbox-custom-label">GTA</label>
+        </div>
+      </div>
   </div>
   <div class="col-sm-4">
     <label>
       <span class="title">What size do you weant your home to be?</span>
-      <select name="fub_area_sqft" >
-        <option value="1200-1500 Sqft">1200-1500 Sqft</option>
-      </select>
+      <div class="cust-checkbox">
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_area_sqft[]" value="600-800 Sqft"/>
+          <label class="checkbox-custom-label">600-800 Sqft</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_area_sqft[]" value="800-1000 Sqft"/>
+          <label class="checkbox-custom-label">800-1000 Sqft</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_area_sqft[]" value="1000-1200 Sqft"/>
+          <label class="checkbox-custom-label">1000-1200 Sqft</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_area_sqft[]" value="1200-1400 Sqft"/>
+          <label class="checkbox-custom-label">1200-1400 Sqft</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_area_sqft[]" value="1400-1600 Sqft"/>
+          <label class="checkbox-custom-label">1400-1600 Sqft</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_area_sqft[]" value="1600-1800 Sqft"/>
+          <label class="checkbox-custom-label">1600-1800 Sqft</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_area_sqft[]" value="1800-2000 Sqft"/>
+          <label class="checkbox-custom-label">1800-2000 Sqft</label>
+        </div>
+      </div>
     </label>
   </div>
   <div class="col-sm-4">
       <span class="title">What is your budget?</span>
-      <select name="fub_budget" >
-        <option value="500K-800K">500K-800K</option>
-      </select>
+      <div class="cust-checkbox">
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_budget[]" value="$200K-$400K"/>
+          <label class="checkbox-custom-label">$200K-$400K</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_budget[]" value="$400K-$600K"/>
+          <label class="checkbox-custom-label">$400K-$600K</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_budget[]" value="$600K-$800K"/>
+          <label class="checkbox-custom-label">$600K-$800K</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_budget[]" value="$800K-$1Mil"/>
+          <label class="checkbox-custom-label">$800K-$1Mil</label>
+        </div>
+        <div class="checkbox"> 
+          <input type="checkbox" name="fub_budget[]" value="$1M+"/>
+          <label class="checkbox-custom-label">$1M+</label>
+        </div>
+      </div>
   </div>
 </div>
 <div class="row">
@@ -231,6 +308,7 @@
       <span class="title">Use?</span>
       <select name="fub_use" >
         <option value="Personal">Personal</option>
+        <option value="Investment">Investment</option>
       </select>
   </div>
   <div class="col-sm-8">
@@ -275,6 +353,7 @@
     </div>
   </div>
 </div>
+
 </div>
 </div>
 <div class="row">
