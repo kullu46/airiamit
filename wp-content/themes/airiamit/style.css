@@ -6366,13 +6366,16 @@ footer .section-inner {
 	display: none;
 	position: fixed;
 	margin: 0 auto;
-	left: 24%;
+	left: 0px;
+	right: 0px;
 	top: 10%;
-	max-width: 920px;
 	z-index: 9999999;
+	width: 100%;
+	max-width: 1200px;
 }
 .popup-contact-us.in{
 	display: block;
+	opacity: 1;
 }
 .popup-book-meeting.in{
 	display: block;
@@ -6392,6 +6395,7 @@ footer .section-inner {
 }
 .inline-modal-overlay.in {
 	display: block;
+	opacity: 1;
 }
 .owl-item {
 	float: left;

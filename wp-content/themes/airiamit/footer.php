@@ -19,6 +19,7 @@
 				<?php endif; ?>
 			</ul>
 		</div>
+		<div class="inline-modal-overlay fade"></div>
 		<?php $hasFloatingButtons = get_field('hide_floating_buttons'); ?>
 		<?php if($hasFloatingButtons != 'Yes'){ ?>
 			<div class="floating-left btn-book-meeting">
@@ -42,7 +43,7 @@
 				<?php } ?>
 			</div>
 		<?php } ?>
-		<div class="inline-modal-overlay fade"></div>
+		
 			
 		<?php wp_footer(); ?>
 		<?php global $wp_scripts; ?>

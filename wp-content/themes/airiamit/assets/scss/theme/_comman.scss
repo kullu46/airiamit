@@ -26,6 +26,10 @@ body{
     margin-right: -15px;
     @include flexbox;
     @include flex-wrap(wrap);
+    .col-xs-12{
+        width: 100%;
+        padding: 0px 15px; 
+    }
     .col-sm-6{
         width: 100%;
         padding: 0px 15px;

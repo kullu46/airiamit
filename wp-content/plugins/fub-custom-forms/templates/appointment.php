@@ -71,8 +71,8 @@
     <div class="title"><h3>Meet At:</h3></div>
       <div class="radiobuttons row">
         <div class="col-xs-12">
-          <div class="input-prefix">
-            <span class="input-prefix-item"><i class="fas fa-map-marker">&nbsp;</i></span>
+          <div class="input-prefix address">
+            <span class="input-prefix-item"><i class="fa fa-map-marker">&nbsp;</i></span>
             <input type="text" name="fub_meet_at" value="Remax, 766 Hespeler Rd, Cambridge, Ontario" required/>
           </div>
         </div>

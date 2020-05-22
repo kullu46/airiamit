@@ -18,8 +18,8 @@
   </div>
   <div class="col-sm-6 col-xs-12">
     <label>
-      <div class="input-prefix">
-        <span class="input-prefix-item"><i class="fas fa-map-marker">&nbsp;</i></span>
+      <div class="input-prefix address">
+        <span class="input-prefix-item"><i class="fa fa-map-marker">&nbsp;</i></span>
         <input type="text" name="fub_seller_address" value="" placeholder="Type your address.." required/>
       </div>
     </label> 
